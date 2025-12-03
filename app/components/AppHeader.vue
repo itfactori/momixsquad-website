@@ -4,7 +4,7 @@ const { y: scrollY } = useWindowScroll();
 const colorMode = useColorMode();
 
 const links = [
-  { label: 'Home', to: '/', icon: 'i-heroicons-home' },
+  { label: 'Home', to: '/home', icon: 'i-heroicons-home' },
   { label: 'Development', to: '/development', icon: 'i-heroicons-academic-cap' },
   { label: 'Care', to: '/care', icon: 'i-heroicons-heart' },
   { label: 'Hobbies', to: '/hobbies', icon: 'i-heroicons-sparkles' },
@@ -46,28 +46,12 @@ const isDark = computed(() => colorMode.value === 'dark');
         :animate="{ opacity: 1, x: 0 }"
         :transition="{ duration: 0.5, ease: 'easeOut' }"
       >
-        <NuxtLink to="/" class="group flex items-center gap-3 transition-transform hover:scale-105">
-          <!-- Animated Logo Icon -->
-          <div class="relative">
-            <div
-              class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg shadow-primary-500/30 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary-500/40"
-            >
-              <UIcon name="i-heroicons-heart" class="h-6 w-6 text-white" />
-            </div>
-            <!-- Glow effect on hover -->
-            <div
-              class="absolute inset-0 rounded-xl bg-primary-500/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            />
-          </div>
-
-          <!-- Logo Text -->
-          <span class="font-display text-2xl font-bold tracking-tight">
-            <span
-              class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent"
-              >Momix</span
-            >
-            <span class="text-teal-600 dark:text-teal-400">Squad</span>
-          </span>
+        <NuxtLink to="/home" class="group flex items-center transition-transform hover:scale-105">
+          <img
+            src="/logo.png"
+            alt="Momix Squad"
+            class="h-12 w-auto transition-all duration-300 group-hover:opacity-90"
+          />
         </NuxtLink>
       </Motion>
 
