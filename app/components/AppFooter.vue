@@ -202,7 +202,7 @@ const socialLinks = [
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->
             <p class="text-sm text-neutral-500 dark:text-neutral-400">
-              © {{ currentYear }} Momix Squad. All rights reserved. Made with
+              © {{ currentYear }} Momix Squad. All rights reserved. Made
               <UIcon name="i-heroicons-heart" class="inline h-4 w-4 text-primary-500" />
               for moms everywhere.
             </p>
