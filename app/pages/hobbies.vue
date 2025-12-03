@@ -389,7 +389,7 @@ const colorClasses = {
           <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">
             Ready to explore new interests?
           </h2>
-          <p class="mt-4 text-lg text-teal-100">
+          <p class="mt-4 text-lg text-teal-50">
             Connect with our community and discover hobbies that spark joy.
           </p>
           <div class="mt-8">

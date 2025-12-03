@@ -34,19 +34,35 @@ const isSubmitted = ref(false);
 
 const handleSubmit = async () => {
   isSubmitting.value = true;
+  
+  try {
+    const response = await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        category: form.category,
+        message: form.message
+      }
+    });
 
-  // Simulate form submission
-  await new Promise(resolve => setTimeout(resolve, 1500));
-
-  isSubmitting.value = false;
-  isSubmitted.value = true;
-
-  // Reset form
-  form.name = '';
-  form.email = '';
-  form.subject = '';
-  form.category = '';
-  form.message = '';
+    if (response.success) {
+      isSubmitted.value = true;
+      // Reset form
+      form.name = '';
+      form.email = '';
+      form.subject = '';
+      form.category = '';
+      form.message = '';
+    }
+  } catch (error: any) {
+    console.error('Error submitting form:', error);
+    // You could add error handling/toast notification here
+    alert('There was an error sending your message. Please try again or email us directly at aliya.asim@aispk.org');
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 
 const contactInfo = [
@@ -54,15 +70,15 @@ const contactInfo = [
     icon: 'i-heroicons-envelope',
     title: 'Email Us',
     description: "We'll respond within 24 hours",
-    value: 'hello@momixsquad.com',
-    href: 'mailto:hello@momixsquad.com'
+    value: 'aliya.asim@aispk.org',
+    href: 'mailto:aliya.asim@aispk.org'
   },
   {
-    icon: 'i-heroicons-globe-alt',
-    title: 'Community',
-    description: 'Join our worldwide mom community',
-    value: 'Global Support Network',
-    href: '#'
+    icon: 'i-heroicons-phone',
+    title: 'Call Us',
+    description: 'Available for urgent inquiries',
+    value: '+92 310 0207414',
+    href: 'tel:+923100207414'
   },
   {
     icon: 'i-heroicons-clock',
@@ -164,9 +180,12 @@ const socialLinks = [
                 <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
                   {{ info.description }}
                 </p>
-                <p class="mt-2 font-medium text-primary-600 dark:text-primary-400">
+                <a 
+                  :href="info.href"
+                  class="mt-2 block font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                >
                   {{ info.value }}
-                </p>
+                </a>
               </div>
             </a>
           </Motion>
@@ -469,7 +488,7 @@ const socialLinks = [
           <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">
             Join the Momix Squad Community
           </h2>
-          <p class="mt-4 text-lg text-primary-100">
+          <p class="mt-4 text-lg text-primary-50">
             Be part of a supportive community of mothers helping each other thrive.
           </p>
           <div class="mt-8 flex flex-wrap justify-center gap-4">

@@ -49,7 +49,7 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
   <UApp>
     <NuxtLayout>
       <UMain class="relative">
-        <NuxtPage />
+        <NuxtPage :key="$route.fullPath" />
       </UMain>
     </NuxtLayout>
 

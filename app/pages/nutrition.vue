@@ -403,7 +403,7 @@ const nutritionByAge = [
           <h2 class="font-display text-2xl font-bold text-white sm:text-3xl">
             Have nutrition questions?
           </h2>
-          <p class="mt-4 text-lg text-emerald-100">
+          <p class="mt-4 text-lg text-emerald-50">
             Our team is here to help you with personalized nutrition guidance.
           </p>
           <div class="mt-8">
