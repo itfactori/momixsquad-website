@@ -452,7 +452,13 @@ const momStages = [
               other thrive.
             </p>
             <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <UButton to="/contact" color="white" size="xl" variant="solid" class="shadow-xl">
+              <UButton
+                to="/contact"
+                color="neutral"
+                size="xl"
+                variant="solid"
+                class="bg-white text-neutral-900 hover:bg-neutral-50 shadow-xl"
+              >
                 Get in Touch
                 <template #trailing>
                   <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />

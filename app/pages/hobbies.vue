@@ -393,7 +393,13 @@ const colorClasses = {
             Connect with our community and discover hobbies that spark joy.
           </p>
           <div class="mt-8">
-            <UButton to="/contact" color="white" size="xl" variant="solid">
+            <UButton
+              to="/contact"
+              color="neutral"
+              size="xl"
+              variant="solid"
+              class="bg-white text-neutral-900 hover:bg-neutral-50"
+            >
               Join the Community
               <template #trailing>
                 <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />

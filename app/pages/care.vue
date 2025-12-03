@@ -145,6 +145,12 @@ const balanceCategories = [
 ];
 
 const activeCategory = ref(0);
+
+const activeBalanceCategory = computed(() => {
+  const index = activeCategory.value;
+  const category = balanceCategories[index];
+  return category ?? balanceCategories[0]!;
+});
 </script>
 
 <template>
@@ -381,15 +387,15 @@ const activeCategory = ref(0);
                   <div
                     class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400"
                   >
-                    <UIcon :name="balanceCategories[activeCategory].icon" class="h-6 w-6" />
+                    <UIcon :name="activeBalanceCategory.icon" class="h-6 w-6" />
                   </div>
                   <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
-                    {{ balanceCategories[activeCategory].title }}
+                    {{ activeBalanceCategory.title }}
                   </h3>
                 </div>
                 <ul class="grid gap-3 sm:grid-cols-2">
                   <li
-                    v-for="item in balanceCategories[activeCategory].items"
+                    v-for="item in activeBalanceCategory.items"
                     :key="item"
                     class="flex items-start gap-3"
                   >
@@ -617,7 +623,13 @@ const activeCategory = ref(0);
             Connect with our coaches for personalized wellness guidance.
           </p>
           <div class="mt-8">
-            <UButton to="/contact" color="white" size="xl" variant="solid">
+            <UButton
+              to="/contact"
+              color="neutral"
+              size="xl"
+              variant="solid"
+              class="bg-white text-neutral-900 hover:bg-neutral-50"
+            >
               Get Support
               <template #trailing>
                 <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />

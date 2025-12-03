@@ -494,7 +494,13 @@ const socialLinks = [
             Be part of a supportive community of mothers helping each other thrive.
           </p>
           <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <UButton to="/" color="white" size="xl" variant="solid">
+            <UButton
+              to="/"
+              color="neutral"
+              size="xl"
+              variant="solid"
+              class="bg-white text-neutral-900 hover:bg-neutral-50"
+            >
               Explore Resources
               <template #trailing>
                 <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />

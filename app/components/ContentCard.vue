@@ -58,7 +58,6 @@ const colorClasses = computed(() => {
     :animate="{ opacity: 1, y: 0 }"
     :transition="{ duration: 0.3, ease: 'easeOut' }"
     class="motion-content"
-    style="opacity: 1; transform: translateY(0)"
   >
     <component
       :is="to ? 'NuxtLink' : 'div'"

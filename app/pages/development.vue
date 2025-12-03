@@ -325,7 +325,13 @@ const colorClasses = {
             Our mom coaches are here to support you through every stage.
           </p>
           <div class="mt-8">
-            <UButton to="/contact" color="white" size="xl" variant="solid">
+            <UButton
+              to="/contact"
+              color="neutral"
+              size="xl"
+              variant="solid"
+              class="bg-white text-neutral-900 hover:bg-neutral-50"
+            >
               Contact Us
               <template #trailing>
                 <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />
