@@ -45,7 +45,7 @@ useHead({
         <div class="mb-8 flex justify-center">
           <div class="animate-float">
             <img
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Momix Squad Logo"
               class="h-32 w-auto sm:h-40 md:h-48 lg:h-56 drop-shadow-2xl"
             />
