@@ -66,11 +66,11 @@ const colorClasses = computed(() => {
       :class="[colorClasses.shadow, colorClasses.ring]"
     >
       <!-- Gradient background on hover -->
-      <div 
+      <div
         class="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none"
         :class="colorClasses.hoverBg"
       />
-      
+
       <!-- Content -->
       <div class="relative z-10">
         <!-- Icon -->
@@ -83,7 +83,10 @@ const colorClasses = computed(() => {
         </div>
 
         <!-- Title -->
-        <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors" :class="colorClasses.hoverText">
+        <h3
+          class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors"
+          :class="colorClasses.hoverText"
+        >
           {{ title }}
         </h3>
 

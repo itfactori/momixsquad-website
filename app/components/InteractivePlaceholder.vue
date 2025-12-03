@@ -16,11 +16,17 @@ defineProps<{
       <UIcon :name="icon || 'i-heroicons-wrench-screwdriver'" class="h-7 w-7" />
     </div>
     <h3 class="font-display text-lg font-bold text-amber-900 dark:text-amber-100">{{ title }}</h3>
-    <p v-if="description" class="mt-2 text-sm text-amber-700 dark:text-amber-300">{{ description }}</p>
+    <p v-if="description" class="mt-2 text-sm text-amber-700 dark:text-amber-300">
+      {{ description }}
+    </p>
     <div class="mt-6">
-      <span class="inline-flex items-center gap-2 rounded-full bg-amber-200/50 dark:bg-amber-800/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+      <span
+        class="inline-flex items-center gap-2 rounded-full bg-amber-200/50 dark:bg-amber-800/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400"
+      >
         <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"
+          ></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
         </span>
         Coming Soon

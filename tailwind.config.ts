@@ -18,9 +18,9 @@ export default <Partial<Config>>{
         'slide-in-right': 'slideInRight 0.6s ease-out forwards',
         'scale-in': 'scaleIn 0.4s ease-out forwards',
         'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2s linear infinite',
+        float: 'float 6s ease-in-out infinite',
+        glow: 'glow 2s ease-in-out infinite alternate',
+        shimmer: 'shimmer 2s linear infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite'
       },
       keyframes: {

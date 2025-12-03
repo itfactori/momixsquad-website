@@ -17,19 +17,33 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: 'i-simple-icons-instagram', href: 'https://instagram.com/momixsquad', label: 'Instagram' },
+  {
+    icon: 'i-simple-icons-instagram',
+    href: 'https://instagram.com/momixsquad',
+    label: 'Instagram'
+  },
   { icon: 'i-simple-icons-facebook', href: 'https://facebook.com/momixsquad', label: 'Facebook' },
   { icon: 'i-simple-icons-twitter', href: 'https://twitter.com/momixsquad', label: 'Twitter' },
-  { icon: 'i-simple-icons-linkedin', href: 'https://linkedin.com/company/momixsquad', label: 'LinkedIn' }
+  {
+    icon: 'i-simple-icons-linkedin',
+    href: 'https://linkedin.com/company/momixsquad',
+    label: 'LinkedIn'
+  }
 ];
 </script>
 
 <template>
-  <footer class="relative overflow-hidden border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950">
+  <footer
+    class="relative overflow-hidden border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950"
+  >
     <!-- Decorative background -->
     <div class="absolute inset-0 overflow-hidden opacity-30 dark:opacity-20">
-      <div class="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-primary-200 dark:bg-primary-900/50 blur-3xl" />
-      <div class="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-teal-200 dark:bg-teal-900/50 blur-3xl" />
+      <div
+        class="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-primary-200 dark:bg-primary-900/50 blur-3xl"
+      />
+      <div
+        class="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-teal-200 dark:bg-teal-900/50 blur-3xl"
+      />
     </div>
 
     <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -52,7 +66,10 @@ const socialLinks = [
                   <UIcon name="i-heroicons-heart" class="h-7 w-7 text-white" />
                 </div>
                 <span class="font-display text-2xl font-bold">
-                  <span class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent">Momix</span>
+                  <span
+                    class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent"
+                    >Momix</span
+                  >
                   <span class="text-teal-600 dark:text-teal-400">Squad</span>
                 </span>
               </NuxtLink>
@@ -65,7 +82,9 @@ const socialLinks = [
 
               <!-- Newsletter -->
               <div class="space-y-3">
-                <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Stay connected with us</p>
+                <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                  Stay connected with us
+                </p>
                 <form class="flex gap-2" @submit.prevent>
                   <input
                     type="email"
@@ -91,7 +110,9 @@ const socialLinks = [
             :transition="{ duration: 0.5, delay: 0.1 }"
           >
             <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
+              <h3
+                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100"
+              >
                 Resources
               </h3>
               <ul class="space-y-3">
@@ -100,7 +121,9 @@ const socialLinks = [
                     :to="link.to"
                     class="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 transition-all hover:translate-x-1 hover:text-primary-600 dark:hover:text-primary-400"
                   >
-                    <span class="h-1 w-1 rounded-full bg-primary-500 opacity-0 transition-opacity group-hover:opacity-100" />
+                    <span
+                      class="h-1 w-1 rounded-full bg-primary-500 opacity-0 transition-opacity group-hover:opacity-100"
+                    />
                     {{ link.label }}
                   </NuxtLink>
                 </li>
@@ -116,7 +139,9 @@ const socialLinks = [
             :transition="{ duration: 0.5, delay: 0.2 }"
           >
             <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
+              <h3
+                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100"
+              >
                 Support
               </h3>
               <ul class="space-y-3">
@@ -140,7 +165,9 @@ const socialLinks = [
             :transition="{ duration: 0.5, delay: 0.3 }"
           >
             <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
+              <h3
+                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100"
+              >
                 Get in Touch
               </h3>
               <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
@@ -169,7 +196,7 @@ const socialLinks = [
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->
             <p class="text-sm text-neutral-500 dark:text-neutral-400">
-              © {{ currentYear }} Momix Squad. All rights reserved. Made with 
+              © {{ currentYear }} Momix Squad. All rights reserved. Made with
               <UIcon name="i-heroicons-heart" class="inline h-4 w-4 text-primary-500" />
               for moms everywhere.
             </p>

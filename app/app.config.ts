@@ -2,7 +2,8 @@ export default defineAppConfig({
   global: {
     picture: {
       dark: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop',
-      light: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop',
+      light:
+        'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop',
       alt: 'Momix Squad logo'
     },
     meetingLink: '/contact',
@@ -31,7 +32,8 @@ export default defineAppConfig({
     pageHero: {
       slots: {
         container: 'py-20 sm:py-28 lg:py-36',
-        title: 'mx-auto max-w-4xl text-pretty text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight',
+        title:
+          'mx-auto max-w-4xl text-pretty text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight',
         description: 'mt-6 text-lg sm:text-xl mx-auto max-w-3xl text-pretty leading-relaxed'
       }
     }

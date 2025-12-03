@@ -34,8 +34,13 @@ const handleError = () => clearError({ redirect: '/' });
       >
         <div class="mx-auto max-w-lg text-center">
           <!-- Error Icon -->
-          <div class="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50">
-            <UIcon name="i-heroicons-exclamation-triangle" class="h-12 w-12 text-primary-600 dark:text-primary-400" />
+          <div
+            class="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50"
+          >
+            <UIcon
+              name="i-heroicons-exclamation-triangle"
+              class="h-12 w-12 text-primary-600 dark:text-primary-400"
+            />
           </div>
 
           <!-- Error Code -->
@@ -44,12 +49,17 @@ const handleError = () => clearError({ redirect: '/' });
           </p>
 
           <!-- Error Message -->
-          <h1 class="mt-4 font-display text-3xl font-bold text-neutral-900 dark:text-neutral-50 sm:text-4xl">
+          <h1
+            class="mt-4 font-display text-3xl font-bold text-neutral-900 dark:text-neutral-50 sm:text-4xl"
+          >
             {{ error?.statusCode === 404 ? 'Page Not Found' : 'Something went wrong' }}
           </h1>
 
           <p class="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
-            {{ error?.message || 'We couldn\'t find the page you\'re looking for. It may have been moved or doesn\'t exist.' }}
+            {{
+              error?.message ||
+              "We couldn't find the page you're looking for. It may have been moved or doesn't exist."
+            }}
           </p>
 
           <!-- Actions -->

@@ -4,7 +4,8 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Nurturing Mothers to give children the best start in life. Expert guidance, supportive community, and practical resources for every mom.'
+      content:
+        'Nurturing Mothers to give children the best start in life. Expert guidance, supportive community, and practical resources for every mom.'
     }
   ]
 });
@@ -90,29 +91,36 @@ const momStages = [
     <section class="relative overflow-hidden bg-white dark:bg-neutral-900 py-20 sm:py-28">
       <!-- Background decoration -->
       <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-radial from-primary-100/50 dark:from-primary-900/20 to-transparent blur-3xl" />
+        <div
+          class="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-radial from-primary-100/50 dark:from-primary-900/20 to-transparent blur-3xl"
+        />
       </div>
-      
+
       <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 30 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.7 }"
         >
           <div class="text-center">
-            <div class="mb-8 inline-flex items-center gap-2 rounded-full bg-primary-100 dark:bg-primary-900/50 px-6 py-2 text-sm font-semibold text-primary-700 dark:text-primary-300">
+            <div
+              class="mb-8 inline-flex items-center gap-2 rounded-full bg-primary-100 dark:bg-primary-900/50 px-6 py-2 text-sm font-semibold text-primary-700 dark:text-primary-300"
+            >
               <UIcon name="i-heroicons-heart" class="h-5 w-5" />
               Our Mission
             </div>
             <blockquote class="space-y-6">
-              <p class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-neutral-50 sm:text-3xl lg:text-4xl">
-                "Our journey, lessons & sessions are here to make yours a little easier, a little lighter
-                and a lot more joyful."
+              <p
+                class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-neutral-50 sm:text-3xl lg:text-4xl"
+              >
+                "Our journey, lessons & sessions are here to make yours a little easier, a little
+                lighter and a lot more joyful."
               </p>
-              <p class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-xl">
-                We share experience-based, heartfelt guidance so that every mom feels supported, informed
-                and confident in giving her child the very best.
+              <p
+                class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-xl"
+              >
+                We share experience-based, heartfelt guidance so that every mom feels supported,
+                informed and confident in giving her child the very best.
               </p>
             </blockquote>
           </div>
@@ -124,19 +132,22 @@ const momStages = [
     <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-20 sm:py-28">
       <!-- Mesh background -->
       <div class="absolute inset-0 mesh-bg" />
-      
+
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.6 }"
         >
           <div class="text-center">
-            <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl lg:text-5xl">
+            <h2
+              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl lg:text-5xl"
+            >
               Explore Our Resources
             </h2>
-            <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
+            <p
+              class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl"
+            >
               Choose the area you'd like to learn more about
             </p>
           </div>
@@ -147,8 +158,7 @@ const momStages = [
             v-for="(category, index) in categories"
             :key="category.to"
             :initial="{ opacity: 0, y: 30 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, y: 0 }"
+            :animate="{ opacity: 1, y: 0 }"
             :transition="{ duration: 0.5, delay: index * 0.1 }"
           >
             <NuxtLink
@@ -159,17 +169,23 @@ const momStages = [
               <div
                 class="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
                 :class="{
-                  'from-primary-500 to-primary-600 shadow-primary-500/30 group-hover:shadow-primary-500/50': category.color === 'primary',
-                  'from-amber-500 to-amber-600 shadow-amber-500/30 group-hover:shadow-amber-500/50': category.color === 'secondary',
-                  'from-teal-500 to-teal-600 shadow-teal-500/30 group-hover:shadow-teal-500/50': category.color === 'accent',
-                  'from-emerald-500 to-emerald-600 shadow-emerald-500/30 group-hover:shadow-emerald-500/50': category.color === 'success'
+                  'from-primary-500 to-primary-600 shadow-primary-500/30 group-hover:shadow-primary-500/50':
+                    category.color === 'primary',
+                  'from-amber-500 to-amber-600 shadow-amber-500/30 group-hover:shadow-amber-500/50':
+                    category.color === 'secondary',
+                  'from-teal-500 to-teal-600 shadow-teal-500/30 group-hover:shadow-teal-500/50':
+                    category.color === 'accent',
+                  'from-emerald-500 to-emerald-600 shadow-emerald-500/30 group-hover:shadow-emerald-500/50':
+                    category.color === 'success'
                 }"
               >
                 <UIcon :name="category.icon" class="h-10 w-10 text-white" />
               </div>
 
               <!-- Title -->
-              <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors group-hover:text-primary-600 dark:group-hover:text-primary-400">
+              <h3
+                class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors group-hover:text-primary-600 dark:group-hover:text-primary-400"
+              >
                 {{ category.title }}
               </h3>
 
@@ -179,7 +195,9 @@ const momStages = [
               </p>
 
               <!-- Arrow -->
-              <div class="mt-6 flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400">
+              <div
+                class="mt-6 flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400"
+              >
                 <span>Explore</span>
                 <UIcon
                   name="i-heroicons-arrow-right"
@@ -193,8 +211,7 @@ const momStages = [
         <!-- Contact CTA -->
         <Motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.6, delay: 0.4 }"
           class="mt-12 text-center"
         >
@@ -202,7 +219,10 @@ const momStages = [
             to="/contact"
             class="group inline-flex items-center gap-3 rounded-2xl border-2 border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-8 py-4 font-semibold text-neutral-900 dark:text-neutral-50 shadow-sm transition-all hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg"
           >
-            <UIcon name="i-heroicons-envelope" class="h-6 w-6 text-primary-600 dark:text-primary-400" />
+            <UIcon
+              name="i-heroicons-envelope"
+              class="h-6 w-6 text-primary-600 dark:text-primary-400"
+            />
             <span>Have Questions? Contact Us</span>
             <UIcon
               name="i-heroicons-arrow-right"
@@ -218,16 +238,19 @@ const momStages = [
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.6 }"
         >
           <div class="text-center">
-            <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-100 dark:bg-teal-900/50 px-4 py-2 text-sm font-semibold text-teal-700 dark:text-teal-300">
+            <div
+              class="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-100 dark:bg-teal-900/50 px-4 py-2 text-sm font-semibold text-teal-700 dark:text-teal-300"
+            >
               <UIcon name="i-heroicons-academic-cap" class="h-4 w-4" />
               Mom Development
             </div>
-            <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl">
+            <h2
+              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl"
+            >
               Guidance for Every Stage
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400">
@@ -241,26 +264,32 @@ const momStages = [
             v-for="(stage, index) in momStages"
             :key="stage.name"
             :initial="{ opacity: 0, scale: 0.9 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, scale: 1 }"
+            :animate="{ opacity: 1, scale: 1 }"
             :transition="{ duration: 0.4, delay: index * 0.1 }"
           >
             <NuxtLink
               to="/development"
               class="group flex items-center gap-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 px-5 py-3 transition-all duration-300 hover:bg-primary-100 dark:hover:bg-primary-900/50 hover:shadow-md"
             >
-              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-neutral-700 shadow-sm transition-colors group-hover:bg-primary-500">
-                <UIcon :name="stage.icon" class="h-5 w-5 text-primary-600 dark:text-primary-400 group-hover:text-white" />
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-neutral-700 shadow-sm transition-colors group-hover:bg-primary-500"
+              >
+                <UIcon
+                  :name="stage.icon"
+                  class="h-5 w-5 text-primary-600 dark:text-primary-400 group-hover:text-white"
+                />
               </div>
-              <span class="text-sm font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-primary-700 dark:group-hover:text-primary-300">{{ stage.name }}</span>
+              <span
+                class="text-sm font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-primary-700 dark:group-hover:text-primary-300"
+                >{{ stage.name }}</span
+              >
             </NuxtLink>
           </Motion>
         </div>
 
         <Motion
           :initial="{ opacity: 0 }"
-          :visible-once="true"
-          :visible="{ opacity: 1 }"
+          :animate="{ opacity: 1 }"
           :transition="{ duration: 0.5, delay: 0.6 }"
           class="mt-8 text-center"
         >
@@ -277,19 +306,22 @@ const momStages = [
     <!-- Features/Benefits Section -->
     <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-20 sm:py-28">
       <div class="absolute inset-0 mesh-bg opacity-50" />
-      
+
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.6 }"
         >
           <div class="text-center">
-            <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl lg:text-5xl">
+            <h2
+              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl lg:text-5xl"
+            >
               Why Join Momix Squad?
             </h2>
-            <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
+            <p
+              class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl"
+            >
               Everything you need to thrive as a mother
             </p>
           </div>
@@ -311,31 +343,41 @@ const momStages = [
     <!-- Quiz/Interactive Teaser -->
     <section class="relative overflow-hidden bg-white dark:bg-neutral-900 py-20 sm:py-28">
       <div class="absolute inset-0 overflow-hidden opacity-30 dark:opacity-20">
-        <div class="absolute -left-48 top-0 h-96 w-96 rounded-full bg-emerald-200 dark:bg-emerald-900/50 blur-3xl" />
-        <div class="absolute -right-48 bottom-0 h-96 w-96 rounded-full bg-primary-200 dark:bg-primary-900/50 blur-3xl" />
+        <div
+          class="absolute -left-48 top-0 h-96 w-96 rounded-full bg-emerald-200 dark:bg-emerald-900/50 blur-3xl"
+        />
+        <div
+          class="absolute -right-48 bottom-0 h-96 w-96 rounded-full bg-primary-200 dark:bg-primary-900/50 blur-3xl"
+        />
       </div>
 
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, scale: 0.95 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, scale: 1 }"
+          :animate="{ opacity: 1, scale: 1 }"
           :transition="{ duration: 0.7 }"
         >
-          <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-primary-50 to-teal-50 dark:from-primary-950/50 dark:to-teal-950/50 shadow-2xl ring-1 ring-neutral-200/50 dark:ring-neutral-700/50">
+          <div
+            class="overflow-hidden rounded-3xl bg-gradient-to-br from-primary-50 to-teal-50 dark:from-primary-950/50 dark:to-teal-950/50 shadow-2xl ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
+          >
             <div class="grid gap-12 p-8 md:p-12 lg:grid-cols-2 lg:items-center lg:gap-16">
               <!-- Content -->
               <div class="space-y-6">
-                <div class="inline-flex items-center gap-2 rounded-full bg-amber-100 dark:bg-amber-900/50 px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-300">
+                <div
+                  class="inline-flex items-center gap-2 rounded-full bg-amber-100 dark:bg-amber-900/50 px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-300"
+                >
                   <UIcon name="i-heroicons-sparkles" class="h-5 w-5" />
                   Coming Soon
                 </div>
-                <h2 class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl">
+                <h2
+                  class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl"
+                >
                   Which Mom Are You?
                 </h2>
                 <p class="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">
-                  Take our fun personality quiz to discover your parenting style and get personalized
-                  tips tailored to your unique journey as a mother. Interactive, ice-breaking quizzes designed just for moms!
+                  Take our fun personality quiz to discover your parenting style and get
+                  personalized tips tailored to your unique journey as a mother. Interactive,
+                  ice-breaking quizzes designed just for moms!
                 </p>
                 <div class="flex flex-wrap gap-4">
                   <UButton color="primary" size="lg" variant="solid" disabled class="opacity-70">
@@ -344,7 +386,13 @@ const momStages = [
                       <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />
                     </template>
                   </UButton>
-                  <UButton to="/development" color="neutral" size="lg" variant="outline" class="border-neutral-300 dark:border-neutral-700">
+                  <UButton
+                    to="/development"
+                    color="neutral"
+                    size="lg"
+                    variant="outline"
+                    class="border-neutral-300 dark:border-neutral-700"
+                  >
                     Explore Stages
                   </UButton>
                 </div>
@@ -352,12 +400,20 @@ const momStages = [
 
               <!-- Visual -->
               <div class="relative">
-                <div class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary-200/50 to-teal-200/50 dark:from-primary-900/30 dark:to-teal-900/30 p-8 ring-1 ring-white/50 dark:ring-neutral-700/50">
+                <div
+                  class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-primary-200/50 to-teal-200/50 dark:from-primary-900/30 dark:to-teal-900/30 p-8 ring-1 ring-white/50 dark:ring-neutral-700/50"
+                >
                   <div class="flex h-full flex-col items-center justify-center text-center">
                     <div class="relative">
-                      <UIcon name="i-heroicons-question-mark-circle" class="h-32 w-32 text-primary-400 dark:text-primary-500" />
+                      <UIcon
+                        name="i-heroicons-question-mark-circle"
+                        class="h-32 w-32 text-primary-400 dark:text-primary-500"
+                      />
                       <div class="absolute inset-0 animate-ping">
-                        <UIcon name="i-heroicons-question-mark-circle" class="h-32 w-32 text-primary-400/30 dark:text-primary-500/30" />
+                        <UIcon
+                          name="i-heroicons-question-mark-circle"
+                          class="h-32 w-32 text-primary-400/30 dark:text-primary-500/30"
+                        />
                       </div>
                     </div>
                     <p class="mt-6 text-lg font-semibold text-primary-700 dark:text-primary-300">
@@ -376,20 +432,24 @@ const momStages = [
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-gradient-to-br from-primary-600 to-primary-700 dark:from-primary-800 dark:to-primary-900 py-20 sm:py-28">
+    <section
+      class="bg-gradient-to-br from-primary-600 to-primary-700 dark:from-primary-800 dark:to-primary-900 py-20 sm:py-28"
+    >
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
-          :visible-once="true"
-          :visible="{ opacity: 1, y: 0 }"
+          :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.6 }"
         >
           <div class="text-center">
-            <h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2
+              class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+            >
               Ready to Join the Squad?
             </h2>
             <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-100">
-              Connect with us and become part of a supportive community of mothers helping each other thrive.
+              Connect with us and become part of a supportive community of mothers helping each
+              other thrive.
             </p>
             <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <UButton to="/contact" color="white" size="xl" variant="solid" class="shadow-xl">
@@ -398,7 +458,12 @@ const momStages = [
                   <UIcon name="i-heroicons-arrow-right" class="h-5 w-5" />
                 </template>
               </UButton>
-              <UButton to="/development" size="xl" variant="outline" class="border-white/30 text-white hover:bg-white/10">
+              <UButton
+                to="/development"
+                size="xl"
+                variant="outline"
+                class="border-white/30 text-white hover:bg-white/10"
+              >
                 Explore Resources
               </UButton>
             </div>

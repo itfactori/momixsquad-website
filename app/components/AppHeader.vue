@@ -46,10 +46,7 @@ const isDark = computed(() => colorMode.value === 'dark');
         :animate="{ opacity: 1, x: 0 }"
         :transition="{ duration: 0.5, ease: 'easeOut' }"
       >
-        <NuxtLink
-          to="/"
-          class="group flex items-center gap-3 transition-transform hover:scale-105"
-        >
+        <NuxtLink to="/" class="group flex items-center gap-3 transition-transform hover:scale-105">
           <!-- Animated Logo Icon -->
           <div class="relative">
             <div
@@ -58,12 +55,17 @@ const isDark = computed(() => colorMode.value === 'dark');
               <UIcon name="i-heroicons-heart" class="h-6 w-6 text-white" />
             </div>
             <!-- Glow effect on hover -->
-            <div class="absolute inset-0 rounded-xl bg-primary-500/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div
+              class="absolute inset-0 rounded-xl bg-primary-500/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
           </div>
-          
+
           <!-- Logo Text -->
           <span class="font-display text-2xl font-bold tracking-tight">
-            <span class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent">Momix</span>
+            <span
+              class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent"
+              >Momix</span
+            >
             <span class="text-teal-600 dark:text-teal-400">Squad</span>
           </span>
         </NuxtLink>
@@ -85,7 +87,9 @@ const isDark = computed(() => colorMode.value === 'dark');
           >
             <span class="relative z-10">{{ link.label }}</span>
             <!-- Hover background -->
-            <span class="absolute inset-0 rounded-lg bg-primary-50 dark:bg-primary-950/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+            <span
+              class="absolute inset-0 rounded-lg bg-primary-50 dark:bg-primary-950/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+            />
             <!-- Active/hover underline -->
             <span
               class="absolute inset-x-2 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-primary-500 to-amber-500 transition-transform duration-300 group-hover:scale-x-100"
@@ -103,9 +107,9 @@ const isDark = computed(() => colorMode.value === 'dark');
       >
         <!-- Color Mode Toggle -->
         <button
-          @click="toggleColorMode"
           class="relative flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 shadow-sm transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-md"
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          @click="toggleColorMode"
         >
           <!-- Sun icon -->
           <UIcon
@@ -131,7 +135,10 @@ const isDark = computed(() => colorMode.value === 'dark');
         >
           Join the Squad
           <template #trailing>
-            <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <UIcon
+              name="i-heroicons-arrow-right"
+              class="h-4 w-4 transition-transform group-hover:translate-x-1"
+            />
           </template>
         </UButton>
 

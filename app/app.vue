@@ -18,7 +18,8 @@ useHead({
 useSeoMeta({
   titleTemplate: '%s - Momix Squad',
   ogImage: '/og-image.png',
-  description: 'Nurturing Mothers to give children the best start in life. Expert guidance, supportive community, and practical resources for every mom.'
+  description:
+    'Nurturing Mothers to give children the best start in life. Expert guidance, supportive community, and practical resources for every mom.'
 });
 
 const [{ data: navigation }, { data: files }] = await Promise.all([

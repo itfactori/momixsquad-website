@@ -14,8 +14,12 @@
 
 /* Keyframe animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -30,7 +34,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
@@ -48,14 +53,19 @@
 }
 
 @keyframes pulseSoft {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 /* CSS Custom Properties for themes */
 :root {
   --ui-container: var(--container-7xl);
-  
+
   ::selection {
     color: #ffffff;
     background-color: #f97316;
@@ -77,7 +87,12 @@ html {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: bold;
   letter-spacing: -0.025em;
@@ -88,13 +103,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Interactive elements */
-button, a, [role="button"] {
+button,
+a,
+[role='button'] {
   transition: all 0.3s ease-out;
 }
 
 /* Mesh background utility */
 .mesh-bg {
-  background-image: 
+  background-image:
     radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.1) 0px, transparent 50%),
     radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
     radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
@@ -103,7 +120,7 @@ button, a, [role="button"] {
 }
 
 .dark .mesh-bg {
-  background-image: 
+  background-image:
     radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.15) 0px, transparent 50%),
     radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.1) 0px, transparent 50%),
     radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.1) 0px, transparent 50%),
