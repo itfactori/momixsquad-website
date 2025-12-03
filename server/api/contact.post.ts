@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async event => {
   const body = await readBody(event);
 
   const { name, email, subject, category, message } = body;
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   // Email configuration - using environment variables
   const recipientEmail = process.env.CONTACT_EMAIL || 'aliya.asim@aispk.org';
   const emailSubject = `Contact Form: ${subject}${category ? ` (${category})` : ''}`;
-  
+
   const emailBody = `
 New contact form submission from Momix Squad website:
 
@@ -36,7 +36,7 @@ This email was sent from the Momix Squad contact form.
   // - AWS SES
   // - Nodemailer with SMTP
   // - Formspree (client-side)
-  
+
   // For now, we'll log it and return success
   // In production, replace this with actual email sending logic
   console.log('Contact form submission:', {
@@ -61,4 +61,3 @@ This email was sent from the Momix Squad contact form.
     message: 'Thank you for your message! We will get back to you soon.'
   };
 });
-

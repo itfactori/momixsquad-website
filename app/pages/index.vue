@@ -447,10 +447,10 @@ const momStages = [
             >
               Ready to Join the Squad?
             </h2>
-              <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-50">
-               Connect with us and become part of a supportive community of mothers helping each
-               other thrive.
-             </p>
+            <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-50">
+              Connect with us and become part of a supportive community of mothers helping each
+              other thrive.
+            </p>
             <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <UButton to="/contact" color="white" size="xl" variant="solid" class="shadow-xl">
                 Get in Touch

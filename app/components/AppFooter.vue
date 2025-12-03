@@ -172,11 +172,19 @@ const socialLinks = [
               <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
                 <li class="flex items-center gap-2">
                   <UIcon name="i-heroicons-envelope" class="h-4 w-4 text-primary-500" />
-                  <a href="mailto:aliya.asim@aispk.org" class="hover:text-primary-600 dark:hover:text-primary-400">aliya.asim@aispk.org</a>
+                  <a
+                    href="mailto:aliya.asim@aispk.org"
+                    class="hover:text-primary-600 dark:hover:text-primary-400"
+                    >aliya.asim@aispk.org</a
+                  >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-heroicons-phone" class="h-4 w-4 text-primary-500" />
-                  <a href="tel:+923100207414" class="hover:text-primary-600 dark:hover:text-primary-400">+92 310 0207414</a>
+                  <a
+                    href="tel:+923100207414"
+                    class="hover:text-primary-600 dark:hover:text-primary-400"
+                    >+92 310 0207414</a
+                  >
                 </li>
               </ul>
             </div>
@@ -185,11 +193,11 @@ const socialLinks = [
       </div>
 
       <!-- Bottom section -->
-        <Motion
-          :initial="{ opacity: 0 }"
-          :animate="{ opacity: 1 }"
-          :transition="{ duration: 0.5, delay: 0.4 }"
-        >
+      <Motion
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 0.5, delay: 0.4 }"
+      >
         <div class="mt-12 border-t border-neutral-200 dark:border-neutral-800 pt-8">
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->

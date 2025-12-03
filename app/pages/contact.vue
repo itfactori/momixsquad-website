@@ -34,7 +34,7 @@ const isSubmitted = ref(false);
 
 const handleSubmit = async () => {
   isSubmitting.value = true;
-  
+
   try {
     const response = await $fetch('/api/contact', {
       method: 'POST',
@@ -59,7 +59,9 @@ const handleSubmit = async () => {
   } catch (error: any) {
     console.error('Error submitting form:', error);
     // You could add error handling/toast notification here
-    alert('There was an error sending your message. Please try again or email us directly at aliya.asim@aispk.org');
+    alert(
+      'There was an error sending your message. Please try again or email us directly at aliya.asim@aispk.org'
+    );
   } finally {
     isSubmitting.value = false;
   }
@@ -180,7 +182,7 @@ const socialLinks = [
                 <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
                   {{ info.description }}
                 </p>
-                <a 
+                <a
                   :href="info.href"
                   class="mt-2 block font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                 >
