@@ -35,7 +35,7 @@ const isDark = computed(() => colorMode.value === 'dark');
     class="sticky top-0 z-50 w-full transition-all duration-500"
     :class="[
       isScrolled
-        ? 'bg-white/90 dark:bg-neutral-950/90 shadow-lg shadow-neutral-900/5 dark:shadow-neutral-950/50 backdrop-blur-xl border-b border-neutral-200/50 dark:border-neutral-800/50'
+        ? 'bg-white/90 dark:bg-deep-purple-950/90 shadow-lg shadow-neutral-900/5 dark:shadow-deep-purple-950/50 backdrop-blur-xl border-b border-neutral-200/50 dark:border-purple-800/50'
         : 'bg-transparent'
     ]"
   >
@@ -66,17 +66,17 @@ const isDark = computed(() => colorMode.value === 'dark');
             v-for="link in links"
             :key="link.to"
             :to="link.to"
-            class="group relative rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-neutral-300 transition-all hover:text-neutral-900 dark:hover:text-white"
-            active-class="!text-primary-600 dark:!text-primary-400 !font-semibold"
+            class="group relative rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all hover:text-neutral-900 dark:hover:text-pink-50"
+            active-class="!text-pink-600 dark:!text-pink-400 !font-semibold"
           >
             <span class="relative z-10">{{ link.label }}</span>
             <!-- Hover background -->
             <span
-              class="absolute inset-0 rounded-lg bg-primary-50 dark:bg-primary-950/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              class="absolute inset-0 rounded-lg bg-pink-50 dark:bg-pink-950/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
             />
             <!-- Active/hover underline -->
             <span
-              class="absolute inset-x-2 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-primary-500 to-amber-500 transition-transform duration-300 group-hover:scale-x-100"
+              class="absolute inset-x-2 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 transition-transform duration-300 group-hover:scale-x-100"
             />
           </NuxtLink>
         </nav>
@@ -91,7 +91,7 @@ const isDark = computed(() => colorMode.value === 'dark');
       >
         <!-- Color Mode Toggle -->
         <button
-          class="relative flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 shadow-sm transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-md"
+          class="relative flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-200 dark:border-purple-700 bg-white dark:bg-deep-purple-800 text-neutral-600 dark:text-pink-200 shadow-sm transition-all duration-300 hover:border-pink-300 dark:hover:border-pink-700 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-600 dark:hover:text-pink-400 hover:shadow-md"
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           @click="toggleColorMode"
         >
@@ -128,7 +128,7 @@ const isDark = computed(() => colorMode.value === 'dark');
 
         <!-- Mobile Menu Button -->
         <button
-          class="flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 shadow-sm transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-md active:scale-95 lg:hidden"
+          class="flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 dark:border-purple-700 bg-white dark:bg-deep-purple-800 text-neutral-700 dark:text-pink-200 shadow-sm transition-all duration-300 hover:border-pink-300 dark:hover:border-pink-700 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-600 dark:hover:text-pink-400 hover:shadow-md active:scale-95 lg:hidden"
           aria-label="Toggle menu"
           @click="isOpen = !isOpen"
         >
@@ -152,20 +152,20 @@ const isDark = computed(() => colorMode.value === 'dark');
     >
       <div
         v-if="isOpen"
-        class="absolute left-0 right-0 top-full border-b border-neutral-200 dark:border-neutral-800 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-xl shadow-xl lg:hidden"
+        class="absolute left-0 right-0 top-full border-b border-neutral-200 dark:border-purple-800 bg-white/95 dark:bg-deep-purple-950/95 backdrop-blur-xl shadow-xl lg:hidden"
       >
         <nav class="mx-auto max-w-7xl space-y-1 px-4 py-6">
           <NuxtLink
             v-for="(link, index) in links"
             :key="link.to"
             :to="link.to"
-            class="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-neutral-200 transition-all duration-200 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-700 dark:hover:text-primary-400"
-            active-class="!bg-primary-50 dark:!bg-primary-950/50 !text-primary-700 dark:!text-primary-400 !font-semibold"
+            class="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-700 dark:hover:text-pink-400"
+            active-class="!bg-pink-50 dark:!bg-pink-950/50 !text-pink-700 dark:!text-pink-400 !font-semibold"
             :style="{ animationDelay: `${index * 50}ms` }"
             @click="isOpen = false"
           >
             <div
-              class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800 transition-colors group-hover:bg-primary-100 dark:group-hover:bg-primary-900/50"
+              class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
             >
               <UIcon :name="link.icon" class="h-5 w-5" />
             </div>

@@ -88,11 +88,11 @@ const momStages = [
     />
 
     <!-- Mission Statement -->
-    <section class="relative overflow-hidden bg-white dark:bg-neutral-900 py-20 sm:py-28">
+    <section class="relative overflow-hidden bg-white dark:bg-deep-purple-900 py-20 sm:py-28">
       <!-- Background decoration -->
       <div class="absolute inset-0 overflow-hidden">
         <div
-          class="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-radial from-primary-100/50 dark:from-primary-900/20 to-transparent blur-3xl"
+          class="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-radial from-pink-100/50 dark:from-pink-900/20 to-transparent blur-3xl"
         />
       </div>
 
@@ -104,20 +104,20 @@ const momStages = [
         >
           <div class="text-center">
             <div
-              class="mb-8 inline-flex items-center gap-2 rounded-full bg-primary-100 dark:bg-primary-900/50 px-6 py-2 text-sm font-semibold text-primary-700 dark:text-primary-300"
+              class="mb-8 inline-flex items-center gap-2 rounded-full bg-pink-100 dark:bg-pink-900/50 px-6 py-2 text-sm font-semibold text-pink-700 dark:text-pink-300"
             >
               <UIcon name="i-heroicons-heart" class="h-5 w-5" />
               Our Mission
             </div>
             <blockquote class="space-y-6">
               <p
-                class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-neutral-50 sm:text-3xl lg:text-4xl"
+                class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-pink-50 sm:text-3xl lg:text-4xl"
               >
                 "Our journey, lessons & sessions are here to make yours a little easier, a little
                 lighter and a lot more joyful."
               </p>
               <p
-                class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-xl"
+                class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-pink-300 sm:text-xl"
               >
                 We share experience-based, heartfelt guidance so that every mom feels supported,
                 informed and confident in giving her child the very best.
@@ -129,7 +129,7 @@ const momStages = [
     </section>
 
     <!-- "I am Interested in" Categories -->
-    <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-20 sm:py-28">
+    <section class="relative overflow-hidden bg-neutral-50 dark:bg-deep-purple-950 py-20 sm:py-28">
       <!-- Mesh background -->
       <div class="absolute inset-0 mesh-bg" />
 
@@ -141,12 +141,12 @@ const momStages = [
         >
           <div class="text-center">
             <h2
-              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl lg:text-5xl"
+              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-pink-50 sm:text-4xl lg:text-5xl"
             >
               Explore Our Resources
             </h2>
             <p
-              class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl"
+              class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-pink-300 sm:text-xl"
             >
               Choose the area you'd like to learn more about
             </p>
@@ -163,19 +163,19 @@ const momStages = [
           >
             <NuxtLink
               :to="category.to"
-              class="group relative flex flex-col items-center rounded-3xl bg-white dark:bg-neutral-900 p-8 text-center shadow-lg ring-1 ring-neutral-200 dark:ring-neutral-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-primary-300 dark:hover:ring-primary-700"
+              class="group relative flex flex-col items-center rounded-3xl bg-white dark:bg-deep-purple-900 p-8 text-center shadow-lg ring-1 ring-neutral-200 dark:ring-purple-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-pink-300 dark:hover:ring-pink-700"
             >
               <!-- Icon -->
               <div
                 class="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
                 :class="{
-                  'from-primary-500 to-primary-600 shadow-primary-500/30 group-hover:shadow-primary-500/50':
+                  'from-pink-500 to-pink-600 shadow-pink-500/30 group-hover:shadow-pink-500/50':
                     category.color === 'primary',
-                  'from-amber-500 to-amber-600 shadow-amber-500/30 group-hover:shadow-amber-500/50':
+                  'from-purple-500 to-purple-600 shadow-purple-500/30 group-hover:shadow-purple-500/50':
                     category.color === 'secondary',
-                  'from-teal-500 to-teal-600 shadow-teal-500/30 group-hover:shadow-teal-500/50':
+                  'from-pink-400 to-purple-500 shadow-pink-500/30 group-hover:shadow-pink-500/50':
                     category.color === 'accent',
-                  'from-emerald-500 to-emerald-600 shadow-emerald-500/30 group-hover:shadow-emerald-500/50':
+                  'from-pink-500 to-pink-600 shadow-pink-500/30 group-hover:shadow-pink-500/50':
                     category.color === 'success'
                 }"
               >
@@ -184,19 +184,19 @@ const momStages = [
 
               <!-- Title -->
               <h3
-                class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                class="font-display text-xl font-bold text-neutral-900 dark:text-pink-50 transition-colors group-hover:text-pink-600 dark:group-hover:text-pink-400"
               >
                 {{ category.title }}
               </h3>
 
               <!-- Description -->
-              <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
+              <p class="mt-3 text-sm text-neutral-600 dark:text-pink-300">
                 {{ category.description }}
               </p>
 
               <!-- Arrow -->
               <div
-                class="mt-6 flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400"
+                class="mt-6 flex items-center gap-2 text-sm font-semibold text-pink-600 dark:text-pink-400"
               >
                 <span>Explore</span>
                 <UIcon
@@ -217,11 +217,11 @@ const momStages = [
         >
           <NuxtLink
             to="/contact"
-            class="group inline-flex items-center gap-3 rounded-2xl border-2 border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-8 py-4 font-semibold text-neutral-900 dark:text-neutral-50 shadow-sm transition-all hover:-translate-y-1 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg"
+            class="group inline-flex items-center gap-3 rounded-2xl border-2 border-neutral-200 dark:border-purple-700 bg-white dark:bg-deep-purple-900 px-8 py-4 font-semibold text-neutral-900 dark:text-pink-50 shadow-sm transition-all hover:-translate-y-1 hover:border-pink-300 dark:hover:border-pink-700 hover:shadow-lg"
           >
             <UIcon
               name="i-heroicons-envelope"
-              class="h-6 w-6 text-primary-600 dark:text-primary-400"
+              class="h-6 w-6 text-pink-600 dark:text-pink-400"
             />
             <span>Have Questions? Contact Us</span>
             <UIcon
@@ -234,7 +234,7 @@ const momStages = [
     </section>
 
     <!-- Mom Development Stages Preview -->
-    <section class="bg-white dark:bg-neutral-900 py-20 sm:py-28">
+    <section class="bg-white dark:bg-deep-purple-900 py-20 sm:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
@@ -243,17 +243,17 @@ const momStages = [
         >
           <div class="text-center">
             <div
-              class="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-100 dark:bg-teal-900/50 px-4 py-2 text-sm font-semibold text-teal-700 dark:text-teal-300"
+              class="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 dark:bg-purple-900/50 px-4 py-2 text-sm font-semibold text-purple-700 dark:text-purple-300"
             >
               <UIcon name="i-heroicons-academic-cap" class="h-4 w-4" />
               Mom Development
             </div>
             <h2
-              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-4xl"
+              class="font-display text-3xl font-bold tracking-tight text-neutral-900 dark:text-pink-50 sm:text-4xl"
             >
               Guidance for Every Stage
             </h2>
-            <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400">
+            <p class="mx-auto mt-4 max-w-2xl text-lg text-neutral-600 dark:text-pink-300">
               From pregnancy to grown children, we're here for every step of your journey
             </p>
           </div>
@@ -269,18 +269,18 @@ const momStages = [
           >
             <NuxtLink
               to="/development"
-              class="group flex items-center gap-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 px-5 py-3 transition-all duration-300 hover:bg-primary-100 dark:hover:bg-primary-900/50 hover:shadow-md"
+              class="group flex items-center gap-3 rounded-xl bg-neutral-100 dark:bg-deep-purple-800 px-5 py-3 transition-all duration-300 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:shadow-md"
             >
               <div
-                class="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-neutral-700 shadow-sm transition-colors group-hover:bg-primary-500"
+                class="flex h-10 w-10 items-center justify-center rounded-lg bg-white dark:bg-deep-purple-700 shadow-sm transition-colors group-hover:bg-pink-500"
               >
                 <UIcon
                   :name="stage.icon"
-                  class="h-5 w-5 text-primary-600 dark:text-primary-400 group-hover:text-white"
+                  class="h-5 w-5 text-pink-600 dark:text-pink-400 group-hover:text-white"
                 />
               </div>
               <span
-                class="text-sm font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-primary-700 dark:group-hover:text-primary-300"
+                class="text-sm font-medium text-neutral-700 dark:text-pink-200 group-hover:text-pink-700 dark:group-hover:text-pink-300"
                 >{{ stage.name }}</span
               >
             </NuxtLink>
