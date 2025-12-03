@@ -1,11 +1,9 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
-    <UContainer class="sm:border-x border-default pt-10">
-      <AppHeader :links="navLinks" />
+  <div class="flex min-h-screen flex-col font-sans text-slate-900">
+    <AppHeader />
+    <main class="flex-1">
       <slot />
-      <AppFooter />
-    </UContainer>
+    </main>
+    <AppFooter />
   </div>
 </template>
