@@ -29,7 +29,7 @@ const randomImage = computed(
 </script>
 
 <template>
-  <section class="relative min-h-[90vh] overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+  <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950">
     <!-- Animated Background Mesh -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- Gradient orbs -->
@@ -55,7 +55,7 @@ const randomImage = computed(
     </div>
 
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex min-h-[90vh] items-center py-20 lg:py-28">
+      <div class="flex items-center py-20 lg:py-28">
         <div class="lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center w-full">
           <!-- Content -->
           <Motion

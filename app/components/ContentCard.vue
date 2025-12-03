@@ -54,10 +54,11 @@ const colorClasses = computed(() => {
 
 <template>
   <Motion
-    :initial="{ opacity: 0, y: 20 }"
+    :initial="{ opacity: 1, y: 0 }"
     :animate="{ opacity: 1, y: 0 }"
-    :transition="{ duration: 0.5, ease: 'easeOut', delay: 0 }"
-    :once="true"
+    :transition="{ duration: 0.3, ease: 'easeOut' }"
+    class="motion-content"
+    style="opacity: 1; transform: translateY(0)"
   >
     <component
       :is="to ? 'NuxtLink' : 'div'"

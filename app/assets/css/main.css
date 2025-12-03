@@ -178,6 +178,42 @@ input[type='button'] {
   transform: translateY(-20px);
 }
 
+/* CRITICAL: Ensure ALL content is always visible */
+/* Force visibility for Motion components and their children */
+[data-motion],
+.motion-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+[data-motion] > *,
+.motion-content > * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure sections are visible */
+section {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Prevent empty sections from taking space */
+section:empty:not([class*='absolute']):not([class*='fixed']) {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Ensure all page content is visible */
+main > div > section {
+  min-height: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /* Layout transitions */
 .layout-enter-active,
 .layout-leave-active {

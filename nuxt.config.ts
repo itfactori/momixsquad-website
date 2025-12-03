@@ -36,8 +36,8 @@ export default defineNuxtConfig({
         }
       ]
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
-    layoutTransition: { name: 'layout', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'default' },
+    layoutTransition: { name: 'layout', mode: 'default' }
   },
 
   nitro: {
