@@ -1,6 +1,6 @@
 // Force Motion components to always show content
 export default defineNuxtPlugin(() => {
-  if (process.client) {
+  if (import.meta.client) {
     const forceVisibility = () => {
       // Force all Motion components and their content to be visible
       const selectors = ['[data-motion]', '.motion-content', 'section'];
@@ -16,7 +16,7 @@ export default defineNuxtPlugin(() => {
 
     // Run immediately and on route changes
     nextTick(forceVisibility);
-    
+
     // Watch for route changes
     const router = useRouter();
     router.afterEach(() => {
@@ -27,4 +27,3 @@ export default defineNuxtPlugin(() => {
     setInterval(forceVisibility, 500);
   }
 });
-
