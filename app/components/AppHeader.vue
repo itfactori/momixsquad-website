@@ -37,8 +37,8 @@ const links = [
       <!-- Mobile Menu Button -->
       <button
         class="flex h-10 w-10 items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 md:hidden"
-        @click="isOpen = !isOpen"
         aria-label="Toggle menu"
+        @click="isOpen = !isOpen"
       >
         <UIcon :name="isOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'" class="h-6 w-6" />
       </button>
