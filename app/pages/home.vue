@@ -175,7 +175,7 @@ const momStages = [
                     category.color === 'secondary',
                   'from-pink-400 to-purple-500 shadow-pink-500/30 group-hover:shadow-pink-500/50':
                     category.color === 'accent',
-                  'from-pink-500 to-pink-600 shadow-pink-500/30 group-hover:shadow-pink-500/50':
+                  'from-pink-400 to-pink-500 shadow-pink-400/30 group-hover:shadow-pink-400/50':
                     category.color === 'success'
                 }"
               >
@@ -219,10 +219,7 @@ const momStages = [
             to="/contact"
             class="group inline-flex items-center gap-3 rounded-2xl border-2 border-neutral-200 dark:border-purple-700 bg-white dark:bg-deep-purple-900 px-8 py-4 font-semibold text-neutral-900 dark:text-pink-50 shadow-sm transition-all hover:-translate-y-1 hover:border-pink-300 dark:hover:border-pink-700 hover:shadow-lg"
           >
-            <UIcon
-              name="i-heroicons-envelope"
-              class="h-6 w-6 text-pink-600 dark:text-pink-400"
-            />
+            <UIcon name="i-heroicons-envelope" class="h-6 w-6 text-pink-600 dark:text-pink-400" />
             <span>Have Questions? Contact Us</span>
             <UIcon
               name="i-heroicons-arrow-right"

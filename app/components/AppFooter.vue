@@ -180,9 +180,7 @@ const socialLinks = [
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-heroicons-phone" class="h-4 w-4 text-pink-500" />
-                  <a
-                    href="tel:+923100207414"
-                    class="hover:text-pink-600 dark:hover:text-pink-400"
+                  <a href="tel:+923100207414" class="hover:text-pink-600 dark:hover:text-pink-400"
                     >+92 310 0207414</a
                   >
                 </li>
