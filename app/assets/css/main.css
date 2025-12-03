@@ -3,81 +3,160 @@
 
 @source "../../../content/**/*";
 
-@theme static {
-  --font-sans: 'Inter Variable', 'Inter', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
-  --font-display: 'Outfit Variable', 'Outfit', 'Inter Variable', 'Inter', sans-serif;
+/* Define custom fonts and extended theme */
+@theme {
+  /* Fonts */
+  --font-sans: 'DM Sans', 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-:root {
-  --ui-container: var(--container-4xl);
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(249, 109, 77, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(249, 109, 77, 0.6);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* CSS Custom Properties for themes */
+:root {
+  --ui-container: var(--container-7xl);
+  
   ::selection {
     color: #ffffff;
-    background-color: #0ea5e9;
+    background-color: #f97316;
   }
 }
 
 .dark {
   ::selection {
-    color: #ffffff;
-    background-color: #38bdf8;
+    color: #0c0a09;
+    background-color: #fb923c;
   }
 }
 
-/* Smooth scroll behavior */
+/* Base styles */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Global smooth transitions */
-* {
-  @apply transition-colors duration-200;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: bold;
+  letter-spacing: -0.025em;
 }
 
-/* Remove transitions for animations and transforms to avoid conflicts */
-*:is([class*="animate-"], [class*="motion-"]) {
-  transition: none;
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Focus styles for accessibility */
-*:focus-visible {
-  @apply outline-2 outline-offset-2 outline-primary-500 ring-0;
+/* Interactive elements */
+button, a, [role="button"] {
+  transition: all 0.3s ease-out;
 }
 
-/* Improved link hover states */
-a:not([class]) {
-  @apply text-primary-600 hover:text-primary-700 underline-offset-4 hover:underline;
+/* Mesh background utility */
+.mesh-bg {
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(249, 115, 22, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%);
 }
 
-/* Better image loading */
-img {
-  @apply max-w-full h-auto;
+.dark .mesh-bg {
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(249, 115, 22, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 50%);
 }
 
-/* Smooth hover effects for interactive elements */
-button, a {
-  @apply transition-all duration-300 ease-out;
+/* Float animation utility */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Custom scrollbar for webkit browsers */
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100;
+  @apply bg-neutral-100 dark:bg-neutral-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-300 rounded-full hover:bg-slate-400;
+  @apply bg-neutral-300 dark:bg-neutral-700 rounded-full;
 }
 
-.dark ::-webkit-scrollbar-track {
-  @apply bg-slate-800;
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400 dark:bg-neutral-600;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  @apply bg-slate-600 hover:bg-slate-500;
+/* Page transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Layout transitions */
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
 }

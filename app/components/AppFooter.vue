@@ -2,12 +2,6 @@
 const currentYear = new Date().getFullYear();
 
 const footerLinks = {
-  company: [
-    { label: 'About Us', to: '/about' },
-    { label: 'Our Story', to: '/story' },
-    { label: 'Coaches', to: '/coaches' },
-    { label: 'Blog', to: '/blog' }
-  ],
   resources: [
     { label: 'Mom Development', to: '/development' },
     { label: 'Mom Care', to: '/care' },
@@ -16,9 +10,9 @@ const footerLinks = {
   ],
   support: [
     { label: 'Contact Us', to: '/contact' },
-    { label: 'FAQs', to: '/faq' },
-    { label: 'Privacy Policy', to: '/privacy' },
-    { label: 'Terms of Service', to: '/terms' }
+    { label: 'FAQs', to: '/contact' },
+    { label: 'Privacy Policy', to: '/contact' },
+    { label: 'Terms of Service', to: '/contact' }
   ]
 };
 
@@ -31,18 +25,18 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="relative overflow-hidden border-t border-slate-200 bg-gradient-to-br from-slate-50 to-primary-50/30">
+  <footer class="relative overflow-hidden border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950">
     <!-- Decorative background -->
-    <div class="absolute inset-0 overflow-hidden opacity-30">
-      <div class="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-primary-100 blur-3xl" />
-      <div class="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-success-100 blur-3xl" />
+    <div class="absolute inset-0 overflow-hidden opacity-30 dark:opacity-20">
+      <div class="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-primary-200 dark:bg-primary-900/50 blur-3xl" />
+      <div class="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-teal-200 dark:bg-teal-900/50 blur-3xl" />
     </div>
 
     <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <!-- Main footer content -->
       <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
         <!-- Brand section -->
-        <div class="lg:col-span-4">
+        <div class="lg:col-span-5">
           <Motion
             :initial="{ opacity: 0, y: 20 }"
             :visible-once="true"
@@ -51,47 +45,45 @@ const socialLinks = [
           >
             <div class="space-y-6">
               <!-- Logo -->
-              <NuxtLink to="/" class="group inline-flex items-center gap-2.5">
+              <NuxtLink to="/" class="group inline-flex items-center gap-3">
                 <div
                   class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg shadow-primary-500/30 transition-all group-hover:shadow-xl group-hover:shadow-primary-500/40"
                 >
                   <UIcon name="i-heroicons-heart" class="h-7 w-7 text-white" />
                 </div>
                 <span class="font-display text-2xl font-bold">
-                  <span class="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent"
-                    >Momix</span
-                  >
-                  <span class="text-success-600">Squad</span>
+                  <span class="bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-400 dark:to-primary-300 bg-clip-text text-transparent">Momix</span>
+                  <span class="text-teal-600 dark:text-teal-400">Squad</span>
                 </span>
               </NuxtLink>
 
               <!-- Description -->
-              <p class="text-base leading-relaxed text-slate-600">
+              <p class="max-w-md text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
                 Nurturing mothers to give children the best start in life. Supporting every mom with
-                guidance, community, and care.
+                guidance, community, and care. Your journey, lighter and more joyful.
               </p>
 
               <!-- Newsletter -->
               <div class="space-y-3">
-                <p class="text-sm font-semibold text-slate-900">Stay connected</p>
-                <div class="flex gap-2">
+                <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Stay connected with us</p>
+                <form class="flex gap-2" @submit.prevent>
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    class="flex-1 rounded-lg border-slate-200 bg-white px-4 py-2.5 text-sm shadow-sm transition-all focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    class="flex-1 rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-2.5 text-sm text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm transition-all focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                   />
-                  <UButton color="primary" size="md" variant="solid">
+                  <UButton color="primary" size="md" variant="solid" type="submit">
                     Subscribe
                   </UButton>
-                </div>
+                </form>
               </div>
             </div>
           </Motion>
         </div>
 
         <!-- Links sections -->
-        <div class="grid gap-8 sm:grid-cols-3 lg:col-span-8">
-          <!-- Company -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
+          <!-- Resources -->
           <Motion
             :initial="{ opacity: 0, y: 20 }"
             :visible-once="true"
@@ -99,39 +91,16 @@ const socialLinks = [
             :transition="{ duration: 0.5, delay: 0.1 }"
           >
             <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-slate-900">
-                Company
-              </h3>
-              <ul class="space-y-3">
-                <li v-for="link in footerLinks.company" :key="link.to">
-                  <NuxtLink
-                    :to="link.to"
-                    class="inline-block text-sm text-slate-600 transition-all hover:translate-x-1 hover:text-primary-600"
-                  >
-                    {{ link.label }}
-                  </NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </Motion>
-
-          <!-- Resources -->
-          <Motion
-            :initial="{ opacity: 0, y: 20 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: 0.2 }"
-          >
-            <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-slate-900">
+              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
                 Resources
               </h3>
               <ul class="space-y-3">
                 <li v-for="link in footerLinks.resources" :key="link.to">
                   <NuxtLink
                     :to="link.to"
-                    class="inline-block text-sm text-slate-600 transition-all hover:translate-x-1 hover:text-primary-600"
+                    class="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 transition-all hover:translate-x-1 hover:text-primary-600 dark:hover:text-primary-400"
                   >
+                    <span class="h-1 w-1 rounded-full bg-primary-500 opacity-0 transition-opacity group-hover:opacity-100" />
                     {{ link.label }}
                   </NuxtLink>
                 </li>
@@ -144,20 +113,44 @@ const socialLinks = [
             :initial="{ opacity: 0, y: 20 }"
             :visible-once="true"
             :visible="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
+            :transition="{ duration: 0.5, delay: 0.2 }"
           >
             <div>
-              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-slate-900">
+              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
                 Support
               </h3>
               <ul class="space-y-3">
-                <li v-for="link in footerLinks.support" :key="link.to">
+                <li v-for="link in footerLinks.support" :key="link.to + link.label">
                   <NuxtLink
                     :to="link.to"
-                    class="inline-block text-sm text-slate-600 transition-all hover:translate-x-1 hover:text-primary-600"
+                    class="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 transition-all hover:translate-x-1 hover:text-primary-600 dark:hover:text-primary-400"
                   >
                     {{ link.label }}
                   </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </Motion>
+
+          <!-- Contact -->
+          <Motion
+            :initial="{ opacity: 0, y: 20 }"
+            :visible-once="true"
+            :visible="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.5, delay: 0.3 }"
+          >
+            <div>
+              <h3 class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
+                Get in Touch
+              </h3>
+              <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
+                <li class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-envelope" class="h-4 w-4 text-primary-500" />
+                  hello@momixsquad.com
+                </li>
+                <li class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-map-pin" class="h-4 w-4 text-primary-500" />
+                  Worldwide Community
                 </li>
               </ul>
             </div>
@@ -172,11 +165,13 @@ const socialLinks = [
         :visible="{ opacity: 1 }"
         :transition="{ duration: 0.5, delay: 0.4 }"
       >
-        <div class="mt-12 border-t border-slate-200 pt-8">
+        <div class="mt-12 border-t border-neutral-200 dark:border-neutral-800 pt-8">
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->
-            <p class="text-sm text-slate-500">
-              © {{ currentYear }} Momix Squad. All rights reserved. Nurturing mothers everywhere.
+            <p class="text-sm text-neutral-500 dark:text-neutral-400">
+              © {{ currentYear }} Momix Squad. All rights reserved. Made with 
+              <UIcon name="i-heroicons-heart" class="inline h-4 w-4 text-primary-500" />
+              for moms everywhere.
             </p>
 
             <!-- Social links -->
@@ -188,7 +183,7 @@ const socialLinks = [
                 target="_blank"
                 rel="noopener noreferrer"
                 :aria-label="social.label"
-                class="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-400 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-1 hover:bg-primary-50 hover:text-primary-600 hover:shadow-md hover:ring-primary-300"
+                class="flex h-10 w-10 items-center justify-center rounded-xl bg-white dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 shadow-sm ring-1 ring-neutral-200 dark:ring-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-600 dark:hover:text-primary-400 hover:shadow-md hover:ring-primary-300 dark:hover:ring-primary-700"
               >
                 <UIcon :name="social.icon" class="h-5 w-5" />
               </a>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
-const color = computed(() => (colorMode.value === 'dark' ? '#020618' : 'white'));
+const color = computed(() => (colorMode.value === 'dark' ? '#0c0a09' : '#fafaf9'));
 
 useHead({
   meta: [
@@ -17,7 +17,8 @@ useHead({
 
 useSeoMeta({
   titleTemplate: '%s - Momix Squad',
-  ogImage: '/og-image.png'
+  ogImage: '/og-image.png',
+  description: 'Nurturing Mothers to give children the best start in life. Expert guidance, supportive community, and practical resources for every mom.'
 });
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
@@ -56,7 +57,6 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
         :files="files"
         :navigation="navigation"
         shortcut="meta_k"
-        :links="navLinks"
         :fuse="{ resultLimit: 42 }"
       />
     </ClientOnly>
