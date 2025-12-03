@@ -5,13 +5,70 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
+        // Primary - Soft Maternal Blue (inspired by UNICEF)
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#b9e6fe',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49'
+        },
+        // Secondary - Warm Coral/Rose (nurturing & supportive)
+        secondary: {
+          50: '#fff1f2',
+          100: '#ffe4e6',
+          200: '#fecdd3',
+          300: '#fda4af',
+          400: '#fb7185',
+          500: '#f43f5e',
+          600: '#e11d48',
+          700: '#be123c',
+          800: '#9f1239',
+          900: '#881337',
+          950: '#4c0519'
+        },
+        // Accent - Warm Golden Yellow (energy & joy)
+        accent: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+          950: '#451a03'
+        },
+        // Success - Calm Green (wellness & growth)
+        success: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          950: '#052e16'
+        },
+        // Keep existing momix/sage as aliases for compatibility
         momix: {
           50: '#f0f9ff',
           100: '#e0f2fe',
-          200: '#bae6fd',
+          200: '#b9e6fe',
           300: '#7dd3fc',
           400: '#38bdf8',
-          500: '#0ea5e9', // Primary Brand Color (Calm Blue)
+          500: '#0ea5e9',
           600: '#0284c7',
           700: '#0369a1',
           800: '#075985',
@@ -19,22 +76,61 @@ export default <Partial<Config>>{
           950: '#082f49'
         },
         sage: {
-          50: '#f6fcf8',
-          100: '#ecf9f2',
-          200: '#d3f0df',
-          300: '#aee0c5',
-          400: '#7ec6a4',
-          500: '#55a883', // Secondary Brand Color (Nature Green)
-          600: '#3f8868',
-          700: '#346d55',
-          800: '#2b5745',
-          900: '#24483a',
-          950: '#132821'
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          950: '#052e16'
         }
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Outfit', ...defaultTheme.fontFamily.sans]
+        sans: ['Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans],
+        display: ['Outfit Variable', 'Outfit', 'Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans]
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'fade-in-down': 'fadeInDown 0.6s ease-out',
+        'slide-in-left': 'slideInLeft 0.6s ease-out',
+        'slide-in-right': 'slideInRight 0.6s ease-out',
+        'scale-in': 'scaleIn 0.4s ease-out',
+        'bounce-subtle': 'bounceSubtle 1s ease-in-out infinite'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        fadeInDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' }
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' }
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' }
+        },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        }
       }
     }
   }

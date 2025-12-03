@@ -12,14 +12,27 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: 'blue',
-      neutral: 'neutral'
+      primary: 'sky',
+      neutral: 'slate',
+      success: 'emerald',
+      warning: 'amber',
+      error: 'rose'
+    },
+    button: {
+      defaultVariants: {
+        color: 'primary'
+      }
+    },
+    card: {
+      defaultVariants: {
+        variant: 'soft'
+      }
     },
     pageHero: {
       slots: {
-        container: 'py-18 sm:py-24 lg:py-32',
-        title: 'mx-auto max-w-xl text-pretty text-3xl sm:text-4xl lg:text-5xl',
-        description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted'
+        container: 'py-20 sm:py-28 lg:py-36',
+        title: 'mx-auto max-w-4xl text-pretty text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight',
+        description: 'mt-6 text-lg sm:text-xl mx-auto max-w-3xl text-pretty leading-relaxed'
       }
     }
   },
@@ -28,16 +41,22 @@ export default defineAppConfig({
     colorMode: false,
     links: [
       {
-        icon: 'i-simple-icons-linkedin',
-        to: 'https://linkedin.com/company/momixsquad',
+        icon: 'i-simple-icons-instagram',
+        to: 'https://instagram.com/momixsquad',
         target: '_blank',
-        'aria-label': 'Momix Squad on LinkedIn'
+        'aria-label': 'Momix Squad on Instagram'
       },
       {
-        icon: 'i-simple-icons-github',
-        to: 'https://github.com/momixsquad',
+        icon: 'i-simple-icons-facebook',
+        to: 'https://facebook.com/momixsquad',
         target: '_blank',
-        'aria-label': 'Momix Squad on GitHub'
+        'aria-label': 'Momix Squad on Facebook'
+      },
+      {
+        icon: 'i-simple-icons-twitter',
+        to: 'https://twitter.com/momixsquad',
+        target: '_blank',
+        'aria-label': 'Momix Squad on Twitter'
       }
     ]
   }

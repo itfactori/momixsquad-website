@@ -4,22 +4,80 @@
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', sans-serif;
   --font-serif: 'Instrument Serif', serif;
+  --font-display: 'Outfit Variable', 'Outfit', 'Inter Variable', 'Inter', sans-serif;
 }
 
 :root {
   --ui-container: var(--container-4xl);
 
   ::selection {
-    color: #282a30;
-    background-color: #c8c8c8;
+    color: #ffffff;
+    background-color: #0ea5e9;
   }
 }
 
 .dark {
   ::selection {
     color: #ffffff;
-    background-color: #474747;
+    background-color: #38bdf8;
   }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Remove transitions for animations and transforms to avoid conflicts */
+*:is([class*="animate-"], [class*="motion-"]) {
+  transition: none;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-500 ring-0;
+}
+
+/* Improved link hover states */
+a:not([class]) {
+  @apply text-primary-600 hover:text-primary-700 underline-offset-4 hover:underline;
+}
+
+/* Better image loading */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Smooth hover effects for interactive elements */
+button, a {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400;
+}
+
+.dark ::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 hover:bg-slate-500;
 }
