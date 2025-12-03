@@ -29,19 +29,19 @@ const randomImage = computed(
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950">
+  <section class="relative overflow-hidden bg-neutral-50 dark:bg-deep-purple-950">
     <!-- Animated Background Mesh -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- Gradient orbs -->
       <div
-        class="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-primary-200/40 dark:bg-primary-900/30 blur-3xl animate-float"
+        class="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-pink-200/40 dark:bg-pink-900/30 blur-3xl animate-float"
       />
       <div
-        class="absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-amber-200/30 dark:bg-amber-900/20 blur-3xl animate-float"
+        class="absolute -right-40 top-1/4 h-96 w-96 rounded-full bg-purple-200/30 dark:bg-purple-900/20 blur-3xl animate-float"
         style="animation-delay: -2s"
       />
       <div
-        class="absolute -bottom-40 left-1/3 h-80 w-80 rounded-full bg-teal-200/30 dark:bg-teal-900/20 blur-3xl animate-float"
+        class="absolute -bottom-40 left-1/3 h-80 w-80 rounded-full bg-pink-300/30 dark:bg-pink-800/20 blur-3xl animate-float"
         style="animation-delay: -4s"
       />
 
@@ -50,7 +50,7 @@ const randomImage = computed(
 
       <!-- Gradient overlay -->
       <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-50/50 dark:via-neutral-950/50 to-neutral-50 dark:to-neutral-950"
+        class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-50/50 dark:via-deep-purple-950/50 to-neutral-50 dark:to-deep-purple-950"
       />
     </div>
 
@@ -91,7 +91,7 @@ const randomImage = computed(
                 :transition="{ duration: 0.6, delay: 0.3 }"
               >
                 <h1
-                  class="font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
+                  class="font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-pink-50 sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
                 >
                   <span class="block">{{ title }}</span>
                 </h1>
@@ -104,7 +104,7 @@ const randomImage = computed(
                 :transition="{ duration: 0.6, delay: 0.4 }"
               >
                 <p
-                  class="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 sm:text-xl lg:mx-0 lg:max-w-none"
+                  class="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-pink-200 sm:text-xl lg:mx-0 lg:max-w-none"
                 >
                   {{ subtitle }}
                 </p>
@@ -160,28 +160,28 @@ const randomImage = computed(
                 :transition="{ duration: 0.6, delay: 0.6 }"
               >
                 <div
-                  class="flex flex-wrap items-center gap-6 pt-4 text-sm text-neutral-600 dark:text-neutral-400 sm:justify-center lg:justify-start"
+                  class="flex flex-wrap items-center gap-6 pt-4 text-sm text-neutral-600 dark:text-pink-300 sm:justify-center lg:justify-start"
                 >
                   <div class="flex items-center gap-2">
                     <div class="flex -space-x-2">
                       <div
-                        class="h-8 w-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 ring-2 ring-white dark:ring-neutral-900"
+                        class="h-8 w-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 ring-2 ring-white dark:ring-deep-purple-950"
                       />
                       <div
-                        class="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 ring-2 ring-white dark:ring-neutral-900"
+                        class="h-8 w-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 ring-2 ring-white dark:ring-deep-purple-950"
                       />
                       <div
-                        class="h-8 w-8 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 ring-2 ring-white dark:ring-neutral-900"
+                        class="h-8 w-8 rounded-full bg-gradient-to-br from-pink-300 to-pink-500 ring-2 ring-white dark:ring-deep-purple-950"
                       />
                     </div>
                     <span class="font-medium">Join 1000+ moms</span>
                   </div>
                   <div class="flex items-center gap-1">
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
                     <span class="ml-1 font-medium">4.9/5 rating</span>
                   </div>
                 </div>
@@ -199,15 +199,15 @@ const randomImage = computed(
             <div class="relative mx-auto max-w-lg lg:max-w-none">
               <!-- Decorative elements -->
               <div
-                class="absolute -left-4 -top-4 -z-10 h-72 w-72 rounded-3xl bg-gradient-to-br from-primary-300/40 to-primary-400/30 dark:from-primary-700/30 dark:to-primary-600/20 blur-2xl"
+                class="absolute -left-4 -top-4 -z-10 h-72 w-72 rounded-3xl bg-gradient-to-br from-pink-300/40 to-pink-400/30 dark:from-pink-700/30 dark:to-pink-600/20 blur-2xl"
               />
               <div
-                class="absolute -bottom-4 -right-4 -z-10 h-72 w-72 rounded-3xl bg-gradient-to-br from-teal-300/40 to-teal-400/30 dark:from-teal-700/30 dark:to-teal-600/20 blur-2xl"
+                class="absolute -bottom-4 -right-4 -z-10 h-72 w-72 rounded-3xl bg-gradient-to-br from-purple-300/40 to-purple-400/30 dark:from-purple-700/30 dark:to-purple-600/20 blur-2xl"
               />
 
               <!-- Main image container -->
               <div
-                class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-100 to-teal-100 dark:from-primary-900/50 dark:to-teal-900/50 shadow-2xl ring-1 ring-neutral-200/50 dark:ring-neutral-700/50 transition-all duration-500 hover:shadow-warm-xl"
+                class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900/50 dark:to-purple-900/50 shadow-2xl ring-1 ring-neutral-200/50 dark:ring-purple-700/50 transition-all duration-500 hover:shadow-warm-xl"
               >
                 <div class="aspect-[4/3] w-full overflow-hidden">
                   <img
@@ -226,20 +226,20 @@ const randomImage = computed(
                   :initial="{ opacity: 0, y: 20 }"
                   :animate="{ opacity: 1, y: 0 }"
                   :transition="{ duration: 0.5, delay: 0.8 }"
-                  class="absolute bottom-4 left-4 rounded-2xl border border-white/30 dark:border-neutral-700/50 bg-white/90 dark:bg-neutral-900/90 p-4 shadow-xl backdrop-blur-sm"
+                  class="absolute bottom-4 left-4 rounded-2xl border border-white/30 dark:border-purple-700/50 bg-white/90 dark:bg-deep-purple-900/90 p-4 shadow-xl backdrop-blur-sm"
                 >
                   <div class="flex items-center gap-3">
                     <div
-                      class="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-100 dark:bg-teal-900/50"
+                      class="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-100 dark:bg-pink-900/50"
                     >
                       <UIcon
                         name="i-heroicons-users"
-                        class="h-6 w-6 text-teal-600 dark:text-teal-400"
+                        class="h-6 w-6 text-pink-600 dark:text-pink-400"
                       />
                     </div>
                     <div>
-                      <p class="text-2xl font-bold text-neutral-900 dark:text-neutral-50">1000+</p>
-                      <p class="text-xs text-neutral-600 dark:text-neutral-400">Active Moms</p>
+                      <p class="text-2xl font-bold text-neutral-900 dark:text-pink-50">1000+</p>
+                      <p class="text-xs text-neutral-600 dark:text-pink-300">Active Moms</p>
                     </div>
                   </div>
                 </Motion>
@@ -248,13 +248,13 @@ const randomImage = computed(
                   :initial="{ opacity: 0, y: -20 }"
                   :animate="{ opacity: 1, y: 0 }"
                   :transition="{ duration: 0.5, delay: 0.9 }"
-                  class="absolute right-4 top-4 rounded-2xl border border-white/30 dark:border-neutral-700/50 bg-white/90 dark:bg-neutral-900/90 p-4 shadow-xl backdrop-blur-sm"
+                  class="absolute right-4 top-4 rounded-2xl border border-white/30 dark:border-purple-700/50 bg-white/90 dark:bg-deep-purple-900/90 p-4 shadow-xl backdrop-blur-sm"
                 >
                   <div class="flex items-center gap-2">
-                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-amber-500" />
-                    <p class="text-lg font-bold text-neutral-900 dark:text-neutral-50">4.9</p>
+                    <UIcon name="i-heroicons-star-solid" class="h-5 w-5 text-pink-500" />
+                    <p class="text-lg font-bold text-neutral-900 dark:text-pink-50">4.9</p>
                   </div>
-                  <p class="text-xs text-neutral-600 dark:text-neutral-400">Rating</p>
+                  <p class="text-xs text-neutral-600 dark:text-pink-300">Rating</p>
                 </Motion>
               </div>
             </div>
@@ -270,10 +270,10 @@ const randomImage = computed(
       :transition="{ duration: 1, delay: 1.2 }"
       class="absolute bottom-8 left-1/2 -translate-x-1/2"
     >
-      <div class="flex flex-col items-center gap-2 text-neutral-400 dark:text-neutral-500">
+      <div class="flex flex-col items-center gap-2 text-neutral-400 dark:text-pink-400">
         <span class="text-xs uppercase tracking-wider">Scroll</span>
-        <div class="h-10 w-6 rounded-full border-2 border-neutral-300 dark:border-neutral-700 p-1">
-          <div class="h-2 w-full rounded-full bg-primary-500 animate-bounce" />
+        <div class="h-10 w-6 rounded-full border-2 border-neutral-300 dark:border-purple-700 p-1">
+          <div class="h-2 w-full rounded-full bg-pink-500 animate-bounce" />
         </div>
       </div>
     </Motion>

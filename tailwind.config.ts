@@ -5,6 +5,49 @@ export default <Partial<Config>>{
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        // Custom purple/pink palette matching logo
+        purple: {
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+          700: '#7e22ce',
+          800: '#6b21a8',
+          900: '#581c87',
+          950: '#3b0764'
+        },
+        pink: {
+          50: '#fdf2f8',
+          100: '#fce7f3',
+          200: '#fbcfe8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
+          800: '#9f1239',
+          900: '#831843',
+          950: '#500724'
+        },
+        // Deep purple for dark backgrounds (logo background color)
+        'deep-purple': {
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#1a0d2e' // Deep purple like logo background
+        }
+      },
       fontFamily: {
         sans: ['DM Sans', 'Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans],
         display: ['Playfair Display', 'Georgia', ...defaultTheme.fontFamily.serif],
@@ -57,8 +100,8 @@ export default <Partial<Config>>{
           '50%': { transform: 'translateY(-20px) rotate(2deg)' }
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(249, 115, 22, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(249, 115, 22, 0.6)' }
+          '0%': { boxShadow: '0 0 20px rgba(236, 72, 153, 0.3)' },
+          '100%': { boxShadow: '0 0 40px rgba(236, 72, 153, 0.6)' }
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },

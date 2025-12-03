@@ -10,6 +10,19 @@
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Custom deep-purple color palette for logo theme */
+  --color-deep-purple-50: #f5f3ff;
+  --color-deep-purple-100: #ede9fe;
+  --color-deep-purple-200: #ddd6fe;
+  --color-deep-purple-300: #c4b5fd;
+  --color-deep-purple-400: #a78bfa;
+  --color-deep-purple-500: #8b5cf6;
+  --color-deep-purple-600: #7c3aed;
+  --color-deep-purple-700: #6d28d9;
+  --color-deep-purple-800: #5b21b6;
+  --color-deep-purple-900: #4c1d95;
+  --color-deep-purple-950: #1a0d2e;
 }
 
 /* Keyframe animations */
@@ -45,10 +58,10 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 20px rgba(249, 109, 77, 0.3);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
   }
   100% {
-    box-shadow: 0 0 40px rgba(249, 109, 77, 0.6);
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
   }
 }
 
@@ -68,14 +81,14 @@
 
   ::selection {
     color: #ffffff;
-    background-color: #f97316;
+    background-color: #ec4899;
   }
 }
 
 .dark {
   ::selection {
-    color: #0c0a09;
-    background-color: #fb923c;
+    color: #fce7f3;
+    background-color: #db2777;
   }
 }
 
@@ -123,20 +136,20 @@ input[type='button'] {
 /* Mesh background utility */
 .mesh-bg {
   background-image:
-    radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.1) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
-    radial-gradient(at 80% 50%, rgba(249, 115, 22, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%);
+    radial-gradient(at 40% 20%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(217, 70, 239, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
 }
 
 .dark .mesh-bg {
   background-image:
-    radial-gradient(at 40% 20%, rgba(249, 115, 22, 0.15) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.1) 0px, transparent 50%),
-    radial-gradient(at 80% 50%, rgba(249, 115, 22, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 50%);
+    radial-gradient(at 40% 20%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(217, 70, 239, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(236, 72, 153, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(217, 70, 239, 0.12) 0px, transparent 50%);
 }
 
 /* Float animation utility */
@@ -151,15 +164,15 @@ input[type='button'] {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-100 dark:bg-neutral-900;
+  @apply bg-neutral-100 dark:bg-deep-purple-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-300 dark:bg-neutral-700 rounded-full;
+  @apply bg-neutral-300 dark:bg-purple-700 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-400 dark:bg-neutral-600;
+  @apply bg-neutral-400 dark:bg-pink-600;
 }
 
 /* Page transitions */
