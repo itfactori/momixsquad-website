@@ -72,12 +72,12 @@ const contactInfo = [
     icon: 'i-heroicons-envelope',
     title: 'Email Us',
     description: "We'll respond within 24 hours",
-    value: 'aliya.asim@aispk.org',
+    value: 'info@momixsquad.com',
     href: 'mailto:aliya.asim@aispk.org'
   },
   {
     icon: 'i-heroicons-phone',
-    title: 'Call Us',
+    title: 'WhatsApp Us',
     description: 'Available for urgent inquiries',
     value: '+92 310 0207414',
     href: 'tel:+923100207414'

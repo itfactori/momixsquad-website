@@ -113,7 +113,7 @@ const momStages = [
               <p
                 class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-pink-50 sm:text-3xl lg:text-4xl"
               >
-                "Our journey, lessons & sessions are here to make yours a little easier, a little
+                "Our journey, lessons & sessions are here to make your Mom-ship a little easier, a little
                 lighter and a lot more joyful."
               </p>
               <p
