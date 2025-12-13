@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import MomsToBeIcon from '~/components/icons/MomsToBeIcon.vue'
+import NewMomsIcon from '~/components/icons/NewMomsIcon.vue'
+import ToddlerMomsIcon from '~/components/icons/ToddlerMomsIcon.vue'
+import SchoolAgedMomsIcon from '~/components/icons/SchoolAgedMomsIcon.vue'
+import TeenMomsIcon from '~/components/icons/TeenMomsIcon.vue'
+import SuperMomsIcon from '~/components/icons/SuperMomsIcon.vue'
+
 useHead({
   title: 'Mom Development - Momix Squad',
   meta: [
@@ -10,12 +17,21 @@ useHead({
   ]
 });
 
+const componentMap = {
+  MomsToBeIcon,
+  NewMomsIcon,
+  ToddlerMomsIcon,
+  SchoolAgedMomsIcon,
+  TeenMomsIcon,
+  SuperMomsIcon
+};
+
 const developmentStages = [
   {
     title: 'Moms to be',
     description:
       'Preparing for the arrival of your little one. Prenatal care, nesting tips, and what to expect during pregnancy.',
-    icon: 'i-heroicons-sparkles',
+    component: 'MomsToBeIcon',
     color: 'primary' as const,
     topics: ['Prenatal health', 'Birth preparation', 'Nursery setup', 'Mental preparation']
   },
@@ -23,7 +39,7 @@ const developmentStages = [
     title: 'New Moms (0-2 yrs)',
     description:
       'Navigating the newborn phase with confidence. Sleep schedules, feeding, and celebrating early milestones.',
-    icon: 'i-heroicons-face-smile',
+    component: 'NewMomsIcon',
     color: 'secondary' as const,
     topics: ['Newborn care', 'Sleep training', 'Breastfeeding support', 'Developmental milestones']
   },
@@ -31,7 +47,7 @@ const developmentStages = [
     title: 'Toddler Moms (3-5 yrs)',
     description:
       'Managing the energetic toddler years. Tantrums, potty training, and fostering independence.',
-    icon: 'i-heroicons-puzzle-piece',
+    component: 'ToddlerMomsIcon',
     color: 'accent' as const,
     topics: ['Potty training', 'Managing tantrums', 'Early education', 'Building independence']
   },
@@ -39,7 +55,7 @@ const developmentStages = [
     title: 'School Aged Moms (6-12 yrs)',
     description:
       'Supporting education and social development. Homework help, friendships, and growing personalities.',
-    icon: 'i-heroicons-academic-cap',
+    component: 'SchoolAgedMomsIcon',
     color: 'success' as const,
     topics: ['School support', 'Social skills', 'Extracurriculars', 'Building confidence']
   },
@@ -47,7 +63,7 @@ const developmentStages = [
     title: 'Teen Moms (13-19 yrs)',
     description:
       'Guiding your teen through adolescence. Emotional changes, independence, and maintaining connection.',
-    icon: 'i-heroicons-user-group',
+    component: 'TeenMomsIcon',
     color: 'primary' as const,
     topics: ['Communication', 'Emotional support', 'Setting boundaries', 'Building trust']
   },
@@ -55,7 +71,7 @@ const developmentStages = [
     title: 'Super Moms (20+ yrs)',
     description:
       'Transitioning to new chapters. Empty nest, adult children relationships, and rediscovering yourself.',
-    icon: 'i-heroicons-star',
+    component: 'SuperMomsIcon',
     color: 'secondary' as const,
     topics: ['Empty nest transition', 'Adult relationships', 'Self-rediscovery', 'Grandparenting']
   }
@@ -162,10 +178,9 @@ const colorClasses = {
             >
               <!-- Icon -->
               <div
-                class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br shadow-lg transition-all duration-300 group-hover:scale-110"
-                :class="colorClasses[stage.color].gradient"
+                class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-700 shadow-lg transition-all duration-300 group-hover:scale-110 overflow-hidden"
               >
-                <UIcon :name="stage.icon" class="h-8 w-8 text-white" />
+                <component :is="componentMap[stage.component as keyof typeof componentMap]" class="w-full h-full" />
               </div>
 
               <!-- Title & Description -->

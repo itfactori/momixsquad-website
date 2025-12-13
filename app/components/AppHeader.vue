@@ -26,14 +26,6 @@ const hobbiesItems = [
   { label: 'Social & Community', to: '/hobbies/social-community' }
 ];
 
-const foodNutritionItems = [
-  { label: 'Food & Nutrition', to: '/nutrition' }
-];
-
-const links = [
-  { label: 'Home', to: '/home', icon: 'i-heroicons-home' }
-];
-
 // Close mobile menu when clicking outside
 const headerRef = ref<HTMLElement>();
 onClickOutside(headerRef, () => {
