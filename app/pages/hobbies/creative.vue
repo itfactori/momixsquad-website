@@ -21,6 +21,13 @@ definePageMeta({
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
               Unleash your creativity and explore artistic pursuits.
             </p>
+              <div class="mt-8">
+                <img
+                  src="/hero/Hobbies%20-Painting.jpeg"
+                  alt="Creative painting"
+                  class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
+                />
+              </div>
           </div>
         </Motion>
       </div>

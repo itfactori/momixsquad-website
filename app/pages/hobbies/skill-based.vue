@@ -21,6 +21,13 @@ definePageMeta({
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
               Develop new skills and broaden your expertise.
             </p>
+              <div class="mt-8">
+                <img
+                  src="/hero/Hobbies-Writing.jpeg"
+                  alt="Skill-based hobbies"
+                  class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
+                />
+              </div>
           </div>
         </Motion>
       </div>

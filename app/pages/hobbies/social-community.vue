@@ -21,6 +21,13 @@ definePageMeta({
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
               Connect with other moms and build your community.
             </p>
+              <div class="mt-8">
+                <img
+                  src="/hero/random-6.avif"
+                  alt="Community connection"
+                  class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
+                />
+              </div>
           </div>
         </Motion>
       </div>

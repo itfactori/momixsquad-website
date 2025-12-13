@@ -14,7 +14,7 @@ const props = defineProps<{
 const heroImages = [
   '/hero/random-1.avif',
   '/hero/random-2.avif',
-  '/hero/random-3.avif',
+  '/hero/Food-and-nutrition.jpeg',
   '/hero/random-4.avif',
   '/hero/random-5.avif',
   '/hero/random-6.avif',
