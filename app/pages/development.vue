@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import MomsToBeIcon from '~/components/icons/MomsToBeIcon.vue'
-import NewMomsIcon from '~/components/icons/NewMomsIcon.vue'
-import ToddlerMomsIcon from '~/components/icons/ToddlerMomsIcon.vue'
-import SchoolAgedMomsIcon from '~/components/icons/SchoolAgedMomsIcon.vue'
-import TeenMomsIcon from '~/components/icons/TeenMomsIcon.vue'
-import SuperMomsIcon from '~/components/icons/SuperMomsIcon.vue'
+import MomsToBeIcon from '~/components/icons/MomsToBeIcon.vue';
+import NewMomsIcon from '~/components/icons/NewMomsIcon.vue';
+import ToddlerMomsIcon from '~/components/icons/ToddlerMomsIcon.vue';
+import SchoolAgedMomsIcon from '~/components/icons/SchoolAgedMomsIcon.vue';
+import TeenMomsIcon from '~/components/icons/TeenMomsIcon.vue';
+import SuperMomsIcon from '~/components/icons/SuperMomsIcon.vue';
 
 useHead({
   title: 'Mom Development - Momix Squad',
@@ -180,7 +180,10 @@ const colorClasses = {
               <div
                 class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-700 shadow-lg transition-all duration-300 group-hover:scale-110 overflow-hidden"
               >
-                <component :is="componentMap[stage.component as keyof typeof componentMap]" class="w-full h-full" />
+                <component
+                  :is="componentMap[stage.component as keyof typeof componentMap]"
+                  class="w-full h-full"
+                />
               </div>
 
               <!-- Title & Description -->
