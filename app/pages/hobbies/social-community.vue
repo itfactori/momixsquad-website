@@ -15,19 +15,21 @@ definePageMeta({
           :transition="{ duration: 0.5 }"
         >
           <div class="text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+            >
               Social & Community
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
               Connect with other moms and build your community.
             </p>
-              <div class="mt-8">
-                <img
-                  src="/hero/random-6.avif"
-                  alt="Community connection"
-                  class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
-                />
-              </div>
+            <div class="mt-8">
+              <img
+                src="/hero/home-6.jpg"
+                alt="Community connection"
+                class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
+              />
+            </div>
           </div>
         </Motion>
       </div>

@@ -232,8 +232,8 @@ const isDark = computed(() => colorMode.value === 'dark');
           <!-- Mom Development Menu -->
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
-              @click="isOpen = !isOpen"
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
+              @click="isOpen = !isOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -264,8 +264,8 @@ const isDark = computed(() => colorMode.value === 'dark');
           <!-- Mom Care Menu -->
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
-              @click="isOpen = !isOpen"
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
+              @click="isOpen = !isOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -296,8 +296,8 @@ const isDark = computed(() => colorMode.value === 'dark');
           <!-- Hobbies & Tips Menu -->
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
-              @click="isOpen = !isOpen"
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
+              @click="isOpen = !isOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"

@@ -12,15 +12,15 @@ const props = defineProps<{
 
 // Random image for hero
 const heroImages = [
-  '/hero/random-1.avif',
-  '/hero/random-2.avif',
-  '/hero/Food-and-nutrition.jpeg',
-  '/hero/random-4.avif',
-  '/hero/random-5.avif',
-  '/hero/random-6.avif',
-  '/hero/random-7.avif',
-  '/hero/random-8.avif',
-  '/hero/random-9.avif'
+  '/hero/home-1.jpg',
+  '/hero/home-2.jpg',
+  '/hero/home-3.jpg',
+  '/hero/home-4.jpg',
+  '/hero/home-5.jpg',
+  '/hero/home-6.jpg',
+  '/hero/home-7.jpg',
+  '/hero/home-8.jpg',
+  '/hero/home-9.jpg'
 ];
 
 const randomImage = computed(
