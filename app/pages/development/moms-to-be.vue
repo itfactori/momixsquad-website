@@ -380,7 +380,9 @@ definePageMeta({
               </p>
             </div>
             <div class="grid gap-4">
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   WHO Antenatal Care Guidelines (2016)
                 </h4>
@@ -397,13 +399,15 @@ definePageMeta({
                   View guidance
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   UNICEF Maternal & Newborn Health
                 </h4>
                 <p class="text-sm text-neutral-700 dark:text-pink-100">
-                  Highlights the role of prenatal counseling, balanced diet, iron-folate, and skilled
-                  birth attendance to reduce maternal/newborn risk.
+                  Highlights the role of prenatal counseling, balanced diet, iron-folate, and
+                  skilled birth attendance to reduce maternal/newborn risk.
                 </p>
                 <a
                   class="text-pink-600 hover:underline text-sm font-semibold"
@@ -414,7 +418,9 @@ definePageMeta({
                   Explore UNICEF guidance
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   CDC Pregnancy Recommendations
                 </h4>
@@ -431,13 +437,15 @@ definePageMeta({
                   CDC pregnancy hub
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   ACOG Prenatal Care & Nutrition
                 </h4>
                 <p class="text-sm text-neutral-700 dark:text-pink-100">
-                  Recommends folic acid, balanced macronutrients, physical activity, and third-trimester
-                  birth planning to improve outcomes.
+                  Recommends folic acid, balanced macronutrients, physical activity, and
+                  third-trimester birth planning to improve outcomes.
                 </p>
                 <a
                   class="text-pink-600 hover:underline text-sm font-semibold"

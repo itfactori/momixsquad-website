@@ -32,7 +32,8 @@ definePageMeta({
               Super Moms (20+ Years)
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
-              Celebrate your journey and continue supporting your adult children. Redefine motherhood and pursue your own dreams and goals.
+              Celebrate your journey and continue supporting your adult children. Redefine
+              motherhood and pursue your own dreams and goals.
             </p>
             <div class="mt-8">
               <img
@@ -58,36 +59,66 @@ definePageMeta({
           :transition="{ duration: 0.4 }"
         >
           <div class="space-y-4">
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Redefining Motherhood & Relationships with Adult Children</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Redefining Motherhood & Relationships with Adult Children
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  As children become adults, the parenting relationship fundamentally shifts. This transition is both an ending and a beginning.
+                  As children become adults, the parenting relationship fundamentally shifts. This
+                  transition is both an ending and a beginning.
                 </p>
                 <p><strong>Key Transitions:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>From Caregiver to Advisor:</strong> Your role becomes supportive rather than directive. Adult children make their own choices</li>
-                  <li><strong>Respecting Autonomy:</strong> Step back from decision-making. Offer perspective when asked, but respect their choices even if you disagree</li>
-                  <li><strong>New Type of Intimacy:</strong> Relationships often deepen as adult children see you as a person with your own challenges and dreams</li>
-                  <li><strong>Establishing Boundaries:</strong> Healthy boundaries protect relationships. Be clear about what you can/cannot do financially, emotionally, or practically</li>
-                  <li><strong>Finding Balance:</strong> Be available without being intrusive. Maintain frequent contact while respecting their independence</li>
+                  <li>
+                    <strong>From Caregiver to Advisor:</strong> Your role becomes supportive rather
+                    than directive. Adult children make their own choices
+                  </li>
+                  <li>
+                    <strong>Respecting Autonomy:</strong> Step back from decision-making. Offer
+                    perspective when asked, but respect their choices even if you disagree
+                  </li>
+                  <li>
+                    <strong>New Type of Intimacy:</strong> Relationships often deepen as adult
+                    children see you as a person with your own challenges and dreams
+                  </li>
+                  <li>
+                    <strong>Establishing Boundaries:</strong> Healthy boundaries protect
+                    relationships. Be clear about what you can/cannot do financially, emotionally,
+                    or practically
+                  </li>
+                  <li>
+                    <strong>Finding Balance:</strong> Be available without being intrusive. Maintain
+                    frequent contact while respecting their independence
+                  </li>
                 </ul>
                 <p className="mt-2"><strong>Communication Tips:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
                   <li>Ask before offering advice - they may just need to vent</li>
                   <li>Share your experience without implying it should guide their choices</li>
                   <li>Respect their partner/spouse and extended family relationships</li>
-                  <li>Avoid criticizing their life choices, partners, or children (if you're a grandparent)</li>
+                  <li>
+                    Avoid criticizing their life choices, partners, or children (if you're a
+                    grandparent)
+                  </li>
                   <li>Celebrate their successes genuinely</li>
                 </ul>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Supporting Adult Children (Without Over-Functioning)</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Supporting Adult Children (Without Over-Functioning)
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  There's a delicate balance between supporting adult children and enabling dependence. Research on adult development shows that facing challenges builds resilience.
+                  There's a delicate balance between supporting adult children and enabling
+                  dependence. Research on adult development shows that facing challenges builds
+                  resilience.
                 </p>
                 <p><strong>Healthy Support Includes:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -105,15 +136,21 @@ definePageMeta({
                   <li>Sacrificing your own life for their comfort</li>
                   <li>Using guilt to maintain connection or influence</li>
                 </ul>
-                <p className="mt-2">Letting adult children experience consequences (job loss, failed relationship, financial difficulty) is often the greatest gift you can give them.</p>
+                <p className="mt-2">
+                  Letting adult children experience consequences (job loss, failed relationship,
+                  financial difficulty) is often the greatest gift you can give them.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Grandparenting (If Applicable)</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Grandparenting offers unique joys and challenges. Your role is to support your adult children's parenting while being present for grandchildren.
+                  Grandparenting offers unique joys and challenges. Your role is to support your
+                  adult children's parenting while being present for grandchildren.
                 </p>
                 <p><strong>Healthy Grandparenting Looks Like:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -124,28 +161,43 @@ definePageMeta({
                   <li>Sharing family history and values in age-appropriate ways</li>
                   <li>Respecting boundaries around childcare and decision-making</li>
                 </ul>
-                <p className="mt-2">Avoid being a default childcare provider unless it's a genuine arrangement - this can strain adult child relationships.</p>
+                <p className="mt-2">
+                  Avoid being a default childcare provider unless it's a genuine arrangement - this
+                  can strain adult child relationships.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Your Own Life & Personal Fulfillment</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Your Own Life & Personal Fulfillment
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Many mothers dedicate decades to raising children. This life stage offers the opportunity to reclaim time, energy, and dreams.
+                  Many mothers dedicate decades to raising children. This life stage offers the
+                  opportunity to reclaim time, energy, and dreams.
                 </p>
                 <p><strong>Rediscovering Yourself:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li>Reconnect with interests and hobbies you put aside during intensive parenting</li>
+                  <li>
+                    Reconnect with interests and hobbies you put aside during intensive parenting
+                  </li>
                   <li>Explore career opportunities or changes you've considered</li>
-                  <li>Return to or continue education (many universities now have programs for adult learners)</li>
+                  <li>
+                    Return to or continue education (many universities now have programs for adult
+                    learners)
+                  </li>
                   <li>Travel and adventure that wasn't possible with young children</li>
                   <li>Strengthen your partnership/marriage with renewed focus</li>
                   <li>Deepen friendships and community connections</li>
                 </ul>
                 <p className="mt-2"><strong>Health & Wellness in Midlife:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li>Regular exercise - supports cardiovascular health, bone density, mental health</li>
+                  <li>
+                    Regular exercise - supports cardiovascular health, bone density, mental health
+                  </li>
                   <li>Preventive health screenings appropriate for your age</li>
                   <li>Mental health support if needed - this is a major life transition</li>
                   <li>Strong social connections - protective against depression and isolation</li>
@@ -154,35 +206,70 @@ definePageMeta({
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Managing Changing Parent-Adult Child Dynamics</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Managing Changing Parent-Adult Child Dynamics
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  As adult children navigate careers, relationships, and parenthood, and as you navigate aging, dynamics will shift and sometimes strain.
+                  As adult children navigate careers, relationships, and parenthood, and as you
+                  navigate aging, dynamics will shift and sometimes strain.
                 </p>
                 <p><strong>Common Challenges & How to Handle Them:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Different Values/Parenting:</strong> Accept that your adult children will parent differently. Unless children are in danger, defer to their judgment</li>
-                  <li><strong>Lack of Gratitude:</strong> Adult children may not acknowledge your sacrifices. Do things because you want to, not for recognition</li>
-                  <li><strong>Feeling Left Out:</strong> As kids build their own families, you have less central role. Cultivate your own life and identity</li>
-                  <li><strong>Health Issues & Aging:</strong> Discuss plans early. Avoid being a burden by maintaining your own health and independence as long as possible</li>
-                  <li><strong>Financial Entanglement:</strong> Be clear about money boundaries. Written agreements prevent misunderstandings</li>
+                  <li>
+                    <strong>Different Values/Parenting:</strong> Accept that your adult children
+                    will parent differently. Unless children are in danger, defer to their judgment
+                  </li>
+                  <li>
+                    <strong>Lack of Gratitude:</strong> Adult children may not acknowledge your
+                    sacrifices. Do things because you want to, not for recognition
+                  </li>
+                  <li>
+                    <strong>Feeling Left Out:</strong> As kids build their own families, you have
+                    less central role. Cultivate your own life and identity
+                  </li>
+                  <li>
+                    <strong>Health Issues & Aging:</strong> Discuss plans early. Avoid being a
+                    burden by maintaining your own health and independence as long as possible
+                  </li>
+                  <li>
+                    <strong>Financial Entanglement:</strong> Be clear about money boundaries.
+                    Written agreements prevent misunderstandings
+                  </li>
                 </ul>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Mental Health & Wellbeing</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  "Empty nest" and midlife transitions can trigger depression, anxiety, or identity confusion. This is normal and treatable.
+                  "Empty nest" and midlife transitions can trigger depression, anxiety, or identity
+                  confusion. This is normal and treatable.
                 </p>
                 <p><strong>Common Psychological Challenges:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Empty Nest Syndrome:</strong> Loss of identity and purpose when kids leave. Often temporary but can be significant</li>
-                  <li><strong>Midlife Transition:</strong> Reassessing life direction, achievements, and remaining time</li>
-                  <li><strong>Relationship Strain:</strong> Couples sometimes realize they've drifted during child-rearing years</li>
-                  <li><strong>Role Confusion:</strong> "Who am I beyond being a mom?" requires rebuilding identity</li>
+                  <li>
+                    <strong>Empty Nest Syndrome:</strong> Loss of identity and purpose when kids
+                    leave. Often temporary but can be significant
+                  </li>
+                  <li>
+                    <strong>Midlife Transition:</strong> Reassessing life direction, achievements,
+                    and remaining time
+                  </li>
+                  <li>
+                    <strong>Relationship Strain:</strong> Couples sometimes realize they've drifted
+                    during child-rearing years
+                  </li>
+                  <li>
+                    <strong>Role Confusion:</strong> "Who am I beyond being a mom?" requires
+                    rebuilding identity
+                  </li>
                 </ul>
                 <p className="mt-2"><strong>Resources & Support:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -194,8 +281,12 @@ definePageMeta({
               </div>
             </details>
 
-            <div class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800">
-              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">📚 Key Resources</p>
+            <div
+              class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800"
+            >
+              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">
+                📚 Key Resources
+              </p>
               <ul class="text-sm space-y-1">
                 <li>
                   <a
@@ -334,7 +425,9 @@ definePageMeta({
               </p>
             </div>
             <div class="grid gap-4">
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   WHO Mental Health & Wellbeing
                 </h4>
@@ -351,7 +444,9 @@ definePageMeta({
                   WHO guidance
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   NIH Healthy Aging
                 </h4>
@@ -368,13 +463,15 @@ definePageMeta({
                   NIH resources
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   APA on Life Transitions
                 </h4>
                 <p class="text-sm text-neutral-700 dark:text-pink-100">
-                  Suggests reframing empty-nest transitions, nurturing identity beyond parenting, and
-                  maintaining supportive relationships.
+                  Suggests reframing empty-nest transitions, nurturing identity beyond parenting,
+                  and maintaining supportive relationships.
                 </p>
                 <a
                   class="text-pink-600 hover:underline text-sm font-semibold"
@@ -385,7 +482,9 @@ definePageMeta({
                   Read APA brief
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   CDC Grandparent & Caregiver Support
                 </h4>

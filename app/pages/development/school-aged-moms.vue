@@ -32,7 +32,8 @@ definePageMeta({
               School-Aged Moms (6-12 Years)
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
-              Support your child's growth during their school years. Navigate academics, friendships, activities, and building healthy habits.
+              Support your child's growth during their school years. Navigate academics,
+              friendships, activities, and building healthy habits.
             </p>
             <div class="mt-8">
               <img
@@ -58,11 +59,14 @@ definePageMeta({
           :transition="{ duration: 0.4 }"
         >
           <div class="space-y-4">
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Supporting Academic Success</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  School-aged children develop academic skills, critical thinking, and self-regulation. UNESCO emphasizes quality education and parental involvement.
+                  School-aged children develop academic skills, critical thinking, and
+                  self-regulation. UNESCO emphasizes quality education and parental involvement.
                 </p>
                 <p><strong>Support Strategies:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -74,15 +78,22 @@ definePageMeta({
                   <li>Ensure adequate sleep (9-11 hours nightly) - critical for learning</li>
                   <li>Limit screen time during school nights (max 1-2 hours)</li>
                 </ul>
-                <p className="mt-2"><strong>Addressing Learning Difficulties:</strong> If your child struggles with reading, math, or attention, discuss screening with teachers. Early intervention for dyslexia, dyscalculia, or ADHD is effective.</p>
+                <p className="mt-2">
+                  <strong>Addressing Learning Difficulties:</strong> If your child struggles with
+                  reading, math, or attention, discuss screening with teachers. Early intervention
+                  for dyslexia, dyscalculia, or ADHD is effective.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Social Development & Friendships</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Friendships become increasingly important during middle childhood. Peer relationships impact self-esteem and social skills development.
+                  Friendships become increasingly important during middle childhood. Peer
+                  relationships impact self-esteem and social skills development.
                 </p>
                 <p><strong>Supporting Social Growth:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -93,40 +104,61 @@ definePageMeta({
                   <li>Monitor peer relationships for signs of bullying (giving/receiving)</li>
                   <li>Teach problem-solving skills for managing disagreements</li>
                 </ul>
-                <p className="mt-2"><strong>Bullying Awareness:</strong> Research shows bullying impacts academic performance and mental health. Create safe space for discussion, involve school if bullying occurs.</p>
+                <p className="mt-2">
+                  <strong>Bullying Awareness:</strong> Research shows bullying impacts academic
+                  performance and mental health. Create safe space for discussion, involve school if
+                  bullying occurs.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Physical Activity & Sports</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  WHO recommends 60 minutes of daily physical activity for children 5-17 years. Physical activity supports growth, cardiovascular health, and mental wellbeing.
+                  WHO recommends 60 minutes of daily physical activity for children 5-17 years.
+                  Physical activity supports growth, cardiovascular health, and mental wellbeing.
                 </p>
                 <p><strong>Activity Guidelines:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
                   <li>Aim for 60+ minutes of moderate-to-vigorous activity daily</li>
                   <li>Include aerobic activities (running, cycling, swimming, sports)</li>
-                  <li>Incorporate muscle and bone-strengthening activities (sports, gymnastics, climbing)</li>
+                  <li>
+                    Incorporate muscle and bone-strengthening activities (sports, gymnastics,
+                    climbing)
+                  </li>
                   <li>Make activity fun - vary activities to maintain interest</li>
                   <li>Limit sedentary time (screen time, sitting) to 2 hours daily</li>
                   <li>Model active lifestyle by exercising together</li>
                 </ul>
-                <p className="mt-2"><strong>Sports Benefits:</strong> Team sports teach teamwork, discipline, and confidence. Individual sports develop self-motivation and perseverance.</p>
+                <p className="mt-2">
+                  <strong>Sports Benefits:</strong> Team sports teach teamwork, discipline, and
+                  confidence. Individual sports develop self-motivation and perseverance.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Nutrition & Healthy Eating Habits</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Nutrition & Healthy Eating Habits
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  School-aged children need adequate nutrition for growth and cognitive development. Poor nutrition affects academic performance and health.
+                  School-aged children need adequate nutrition for growth and cognitive development.
+                  Poor nutrition affects academic performance and health.
                 </p>
                 <p><strong>Daily Nutritional Needs (ages 6-12):</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
                   <li>1400-2000+ calories depending on age, size, and activity level</li>
                   <li>Protein for growth (meat, fish, eggs, beans, nuts)</li>
-                  <li>Calcium and vitamin D for bone development (dairy, fortified alternatives, fatty fish)</li>
+                  <li>
+                    Calcium and vitamin D for bone development (dairy, fortified alternatives, fatty
+                    fish)
+                  </li>
                   <li>Iron for cognitive function (lean meat, fortified cereals, leafy greens)</li>
                   <li>Whole grains, fruits, and vegetables for fiber and micronutrients</li>
                   <li>Limit added sugars, salt, and ultra-processed foods</li>
@@ -142,11 +174,14 @@ definePageMeta({
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Screen Time & Digital Literacy</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Screen use has become ubiquitous. WHO and AAP recommend quality content limits and open communication about digital life.
+                  Screen use has become ubiquitous. WHO and AAP recommend quality content limits and
+                  open communication about digital life.
                 </p>
                 <p><strong>Screen Time Recommendations:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -167,11 +202,16 @@ definePageMeta({
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Mental Health & Emotional Development</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Mental Health & Emotional Development
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  School-aged children experience growing independence and social awareness. Mental health support prevents later difficulties.
+                  School-aged children experience growing independence and social awareness. Mental
+                  health support prevents later difficulties.
                 </p>
                 <p><strong>Supporting Emotional Health:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -182,15 +222,22 @@ definePageMeta({
                   <li>Celebrate achievements and efforts to build confidence</li>
                   <li>Maintain consistent routines for security</li>
                 </ul>
-                <p className="mt-2"><strong>When to Seek Help:</strong> Persistent sadness, anxiety, withdrawal, behavioral changes, or poor school performance may indicate need for counseling or professional assessment.</p>
+                <p className="mt-2">
+                  <strong>When to Seek Help:</strong> Persistent sadness, anxiety, withdrawal,
+                  behavioral changes, or poor school performance may indicate need for counseling or
+                  professional assessment.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Sleep & Rest</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Sleep is essential for growth, learning, and emotional regulation. School-aged children need 9-12 hours nightly.
+                  Sleep is essential for growth, learning, and emotional regulation. School-aged
+                  children need 9-12 hours nightly.
                 </p>
                 <p><strong>Sleep Hygiene Tips:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -204,8 +251,12 @@ definePageMeta({
               </div>
             </details>
 
-            <div class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800">
-              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">📚 Key Resources</p>
+            <div
+              class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800"
+            >
+              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">
+                📚 Key Resources
+              </p>
               <ul class="text-sm space-y-1">
                 <li>
                   <a
@@ -363,7 +414,9 @@ definePageMeta({
               </p>
             </div>
             <div class="grid gap-4">
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   WHO Physical Activity (5-17 yrs)
                 </h4>
@@ -380,7 +433,9 @@ definePageMeta({
                   View WHO guidance
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   UNESCO Family Engagement in Learning
                 </h4>
@@ -397,7 +452,9 @@ definePageMeta({
                   Read UNESCO brief
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   AAP Bullying Prevention
                 </h4>
@@ -414,7 +471,9 @@ definePageMeta({
                   AAP guidance
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   CDC School Health & Mental Wellbeing
                 </h4>
