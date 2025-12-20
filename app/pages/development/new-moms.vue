@@ -417,7 +417,9 @@ definePageMeta({
               </p>
             </div>
             <div class="grid gap-4">
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   WHO Breastfeeding Guidelines
                 </h4>
@@ -434,7 +436,9 @@ definePageMeta({
                   WHO breastfeeding hub
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   AAP Safe Sleep (2022 Policy)
                 </h4>
@@ -451,13 +455,15 @@ definePageMeta({
                   Read AAP policy
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   CDC Developmental Milestones (0-2 yrs)
                 </h4>
                 <p class="text-sm text-neutral-700 dark:text-pink-100">
-                  Provides age-specific social, motor, and language milestones with red-flag guidance
-                  for early intervention.
+                  Provides age-specific social, motor, and language milestones with red-flag
+                  guidance for early intervention.
                 </p>
                 <a
                   class="text-pink-600 hover:underline text-sm font-semibold"
@@ -468,7 +474,9 @@ definePageMeta({
                   Check milestones
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   UNICEF Early Moments Matter
                 </h4>

@@ -16,7 +16,7 @@ const momDevelopmentItems = [
 
 const momCareItems = [
   { label: 'Self Care & Well being', to: '/care/self-care' },
-  { label: 'Mental & Physical Health', to: '/care/mental-physical-health' },
+  { label: 'Mental & Physical Health', to: '/care/mental-health' },
   { label: 'Spiritual Wellness', to: '/care/spiritual-wellness' }
 ];
 
