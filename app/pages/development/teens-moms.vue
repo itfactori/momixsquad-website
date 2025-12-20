@@ -32,13 +32,15 @@ definePageMeta({
               Teen Moms (13-19 Years)
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
-              Guide your teenager through adolescence with understanding, support, and open communication. Navigate changes, challenges, and growth.
+              Guide your teenager through adolescence with understanding, support, and open
+              communication. Navigate changes, challenges, and growth.
             </p>
             <div class="mt-8">
               <img
                 src="/hero/home-5.jpg"
                 alt="Teenagers with supportive adults"
-                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
+                class="mx-auto rounded-3xl w-full max-w-3xl object-cover shadow-lg"
+                loading="lazy"
               />
             </div>
           </div>
@@ -58,19 +60,40 @@ definePageMeta({
           :transition="{ duration: 0.4 }"
         >
           <div class="space-y-4">
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Understanding Adolescent Development</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Understanding Adolescent Development
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Adolescence is a period of rapid physical, cognitive, and emotional development. Understanding these changes helps parents respond effectively.
+                  Adolescence is a period of rapid physical, cognitive, and emotional development.
+                  Understanding these changes helps parents respond effectively.
                 </p>
                 <p><strong>Key Developmental Changes:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Physical Changes:</strong> Puberty triggers growth spurt, voice changes, reproductive development. Onset and pace vary widely</li>
-                  <li><strong>Brain Development:</strong> Prefrontal cortex (judgment, impulse control) develops until early 20s. Risk-taking increases as reward-seeking brain areas mature first</li>
-                  <li><strong>Emotional Development:</strong> Increased moodiness, identity exploration, peer influence intensifies</li>
-                  <li><strong>Cognitive Development:</strong> Abstract thinking emerges, questioning authority, developing own opinions</li>
-                  <li><strong>Social Development:</strong> Peers become primary influence, romantic interests develop, independence seeking increases</li>
+                  <li>
+                    <strong>Physical Changes:</strong> Puberty triggers growth spurt, voice changes,
+                    reproductive development. Onset and pace vary widely
+                  </li>
+                  <li>
+                    <strong>Brain Development:</strong> Prefrontal cortex (judgment, impulse
+                    control) develops until early 20s. Risk-taking increases as reward-seeking brain
+                    areas mature first
+                  </li>
+                  <li>
+                    <strong>Emotional Development:</strong> Increased moodiness, identity
+                    exploration, peer influence intensifies
+                  </li>
+                  <li>
+                    <strong>Cognitive Development:</strong> Abstract thinking emerges, questioning
+                    authority, developing own opinions
+                  </li>
+                  <li>
+                    <strong>Social Development:</strong> Peers become primary influence, romantic
+                    interests develop, independence seeking increases
+                  </li>
                 </ul>
                 <p class="text-sm text-neutral-600 dark:text-pink-200 mt-2">
                   Learn more:
@@ -85,38 +108,74 @@ definePageMeta({
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Communication & Relationship Building</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Communication & Relationship Building
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Open, respectful communication is the foundation for navigating adolescence. Teens need to feel heard and understood.
+                  Open, respectful communication is the foundation for navigating adolescence. Teens
+                  need to feel heard and understood.
                 </p>
                 <p><strong>Effective Communication Strategies:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li>Listen more than you talk - ask questions and show genuine interest in their perspective</li>
+                  <li>
+                    Listen more than you talk - ask questions and show genuine interest in their
+                    perspective
+                  </li>
                   <li>Avoid judgment and criticism when they share concerns</li>
                   <li>Respect their privacy while maintaining safety boundaries</li>
-                  <li>Acknowledge their feelings ("That sounds frustrating") even if you don't agree with actions</li>
+                  <li>
+                    Acknowledge their feelings ("That sounds frustrating") even if you don't agree
+                    with actions
+                  </li>
                   <li>Share your own experiences and values without preaching</li>
-                  <li>Use "I" statements instead of accusations ("I'm concerned about..." vs. "You always...")</li>
-                  <li>Find activities to do together - conversation often flows naturally during activity</li>
+                  <li>
+                    Use "I" statements instead of accusations ("I'm concerned about..." vs. "You
+                    always...")
+                  </li>
+                  <li>
+                    Find activities to do together - conversation often flows naturally during
+                    activity
+                  </li>
                 </ul>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Mental Health & Emotional Wellbeing</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Mental Health & Emotional Wellbeing
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Mental health challenges are common in adolescence. Early intervention prevents serious problems. According to WHO, 1 in 5 adolescents experiences mental health issues.
+                  Mental health challenges are common in adolescence. Early intervention prevents
+                  serious problems. According to WHO, 1 in 5 adolescents experiences mental health
+                  issues.
                 </p>
                 <p><strong>Common Adolescent Mental Health Concerns:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Depression:</strong> Persistent sadness, loss of interest in activities, sleep changes, fatigue</li>
-                  <li><strong>Anxiety:</strong> Excessive worry, panic attacks, avoidance behaviors</li>
-                  <li><strong>Eating Disorders:</strong> Disordered eating patterns, obsession with weight/body image</li>
-                  <li><strong>Self-Harm:</strong> Cutting, scratching, or other self-injury as coping mechanism</li>
-                  <li><strong>Substance Use:</strong> Experimenting with alcohol, tobacco, or drugs</li>
+                  <li>
+                    <strong>Depression:</strong> Persistent sadness, loss of interest in activities,
+                    sleep changes, fatigue
+                  </li>
+                  <li>
+                    <strong>Anxiety:</strong> Excessive worry, panic attacks, avoidance behaviors
+                  </li>
+                  <li>
+                    <strong>Eating Disorders:</strong> Disordered eating patterns, obsession with
+                    weight/body image
+                  </li>
+                  <li>
+                    <strong>Self-Harm:</strong> Cutting, scratching, or other self-injury as coping
+                    mechanism
+                  </li>
+                  <li>
+                    <strong>Substance Use:</strong> Experimenting with alcohol, tobacco, or drugs
+                  </li>
                 </ul>
                 <p className="mt-2"><strong>Supporting Mental Health:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -129,28 +188,52 @@ definePageMeta({
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Peer Pressure & Risk Behavior</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Adolescents seek independence and peer acceptance. Understanding risk factors helps parents guide without controlling.
+                  Adolescents seek independence and peer acceptance. Understanding risk factors
+                  helps parents guide without controlling.
                 </p>
                 <p><strong>Common Risk Behaviors & Prevention:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Substance Use:</strong> Provide factual information (not scare tactics), discuss consequences, model responsible behavior</li>
-                  <li><strong>Risky Sexual Behavior:</strong> Open, non-judgmental conversations about relationships, consent, contraception, and STI prevention</li>
-                  <li><strong>Dangerous Driving:</strong> Model safe driving, discuss distraction and speeding, set clear rules about seatbelts and passengers</li>
-                  <li><strong>Cyberbullying/Social Media:</strong> Discuss online safety, privacy, respectful communication, and reporting harassment</li>
+                  <li>
+                    <strong>Substance Use:</strong> Provide factual information (not scare tactics),
+                    discuss consequences, model responsible behavior
+                  </li>
+                  <li>
+                    <strong>Risky Sexual Behavior:</strong> Open, non-judgmental conversations about
+                    relationships, consent, contraception, and STI prevention
+                  </li>
+                  <li>
+                    <strong>Dangerous Driving:</strong> Model safe driving, discuss distraction and
+                    speeding, set clear rules about seatbelts and passengers
+                  </li>
+                  <li>
+                    <strong>Cyberbullying/Social Media:</strong> Discuss online safety, privacy,
+                    respectful communication, and reporting harassment
+                  </li>
                 </ul>
-                <p className="mt-2"><strong>Protective Factors:</strong> Strong family relationships, clear boundaries, involvement in activities, positive peer groups, and connections to mentors all reduce risky behavior.</p>
+                <p className="mt-2">
+                  <strong>Protective Factors:</strong> Strong family relationships, clear
+                  boundaries, involvement in activities, positive peer groups, and connections to
+                  mentors all reduce risky behavior.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-              <summary class="font-medium cursor-pointer">Academic Success & Future Planning</summary>
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Academic Success & Future Planning
+              </summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Adolescence is critical for academic achievement and thinking about the future. Parents can be supportive without pushing.
+                  Adolescence is critical for academic achievement and thinking about the future.
+                  Parents can be supportive without pushing.
                 </p>
                 <p><strong>Supporting Academic Success:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -159,40 +242,70 @@ definePageMeta({
                   <li>Discuss interests and potential career paths</li>
                   <li>Support extracurricular activities aligned with interests</li>
                   <li>Help navigate college/vocational planning conversations</li>
-                  <li>Recognize that different teens have different academic paths (college, trade school, workforce)</li>
+                  <li>
+                    Recognize that different teens have different academic paths (college, trade
+                    school, workforce)
+                  </li>
                 </ul>
-                <p className="mt-2">Research shows parental involvement in education predicts better academic outcomes, even when giving teens autonomy in how they study.</p>
+                <p className="mt-2">
+                  Research shows parental involvement in education predicts better academic
+                  outcomes, even when giving teens autonomy in how they study.
+                </p>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Physical Health & Healthy Habits</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Habits formed in adolescence often persist into adulthood. Support healthy choices without micromanaging.
+                  Habits formed in adolescence often persist into adulthood. Support healthy choices
+                  without micromanaging.
                 </p>
                 <p><strong>Health Priorities:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li><strong>Physical Activity:</strong> 60+ minutes daily. Support sports, dance, or other activities they enjoy</li>
-                  <li><strong>Nutrition:</strong> 1800-2600 calories daily (varies by age/size). Involve them in meal planning and cooking</li>
-                  <li><strong>Sleep:</strong> 8-10 hours nightly. Adolescent circadian rhythm shifts later; respect their need to sleep in on weekends</li>
-                  <li><strong>Sexual Health:</strong> Ensure access to factual information and contraception. Discuss consent and healthy relationships</li>
-                  <li><strong>Preventive Care:</strong> Regular check-ups, immunizations (HPV vaccine, flu, COVID), screening for mental health</li>
+                  <li>
+                    <strong>Physical Activity:</strong> 60+ minutes daily. Support sports, dance, or
+                    other activities they enjoy
+                  </li>
+                  <li>
+                    <strong>Nutrition:</strong> 1800-2600 calories daily (varies by age/size).
+                    Involve them in meal planning and cooking
+                  </li>
+                  <li>
+                    <strong>Sleep:</strong> 8-10 hours nightly. Adolescent circadian rhythm shifts
+                    later; respect their need to sleep in on weekends
+                  </li>
+                  <li>
+                    <strong>Sexual Health:</strong> Ensure access to factual information and
+                    contraception. Discuss consent and healthy relationships
+                  </li>
+                  <li>
+                    <strong>Preventive Care:</strong> Regular check-ups, immunizations (HPV vaccine,
+                    flu, COVID), screening for mental health
+                  </li>
                 </ul>
               </div>
             </details>
 
-            <details class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
               <summary class="font-medium cursor-pointer">Setting Boundaries & Discipline</summary>
               <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
                 <p>
-                  Teens need clear boundaries even as they push for independence. Effective discipline teaches responsibility and consequences.
+                  Teens need clear boundaries even as they push for independence. Effective
+                  discipline teaches responsibility and consequences.
                 </p>
                 <p><strong>Approaches That Work:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
                   <li>Involve teens in setting rules and discussing consequences</li>
                   <li>Explain the "why" behind rules - helps them develop judgment</li>
-                  <li>Apply natural consequences (lose phone privileges if misused, miss event if late)</li>
+                  <li>
+                    Apply natural consequences (lose phone privileges if misused, miss event if
+                    late)
+                  </li>
                   <li>Use problems as teaching opportunities, not punishment</li>
                   <li>Stay consistent while allowing flexibility for changing circumstances</li>
                   <li>Pick your battles - focus on safety and health priorities</li>
@@ -200,8 +313,12 @@ definePageMeta({
               </div>
             </details>
 
-            <div class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800">
-              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">📚 Key Resources</p>
+            <div
+              class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800"
+            >
+              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">
+                📚 Key Resources
+              </p>
               <ul class="text-sm space-y-1">
                 <li>
                   <a
@@ -340,7 +457,9 @@ definePageMeta({
               </p>
             </div>
             <div class="grid gap-4">
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   WHO Adolescent Mental Health
                 </h4>
@@ -357,7 +476,9 @@ definePageMeta({
                   WHO fact sheet
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   UNICEF Adolescent Wellbeing
                 </h4>
@@ -374,7 +495,9 @@ definePageMeta({
                   UNICEF resources
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   CDC Youth Risk Behavior Data
                 </h4>
@@ -391,7 +514,9 @@ definePageMeta({
                   Explore YRBS
                 </a>
               </div>
-              <div class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
                 <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
                   AAP Media Use & Communication
                 </h4>

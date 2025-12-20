@@ -60,7 +60,7 @@ const handleSubmit = async () => {
     console.error('Error submitting form:', error);
     // You could add error handling/toast notification here
     alert(
-      'There was an error sending your message. Please try again or email us directly at aliya.asim@aispk.org'
+      'There was an error sending your message. Please try again or email us directly at info@momixsquad.com'
     );
   } finally {
     isSubmitting.value = false;
@@ -73,7 +73,7 @@ const contactInfo = [
     title: 'Email Us',
     description: "We'll respond within 24 hours",
     value: 'info@momixsquad.com',
-    href: 'mailto:aliya.asim@aispk.org'
+    href: 'mailto:info@momixsquad.com'
   },
   {
     icon: 'i-heroicons-phone',
