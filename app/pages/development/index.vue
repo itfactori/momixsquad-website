@@ -17,6 +17,10 @@ useHead({
   ]
 });
 
+definePageMeta({
+  layout: 'default'
+});
+
 const componentMap = {
   MomsToBeIcon,
   NewMomsIcon,
@@ -32,6 +36,7 @@ const developmentStages = [
     description:
       'Preparing for the arrival of your little one. Prenatal care, nesting tips, and what to expect during pregnancy.',
     component: 'MomsToBeIcon',
+    path: 'moms-to-be',
     color: 'primary' as const,
     topics: ['Prenatal health', 'Birth preparation', 'Nursery setup', 'Mental preparation']
   },
@@ -40,6 +45,7 @@ const developmentStages = [
     description:
       'Navigating the newborn phase with confidence. Sleep schedules, feeding, and celebrating early milestones.',
     component: 'NewMomsIcon',
+    path: 'new-moms',
     color: 'secondary' as const,
     topics: ['Newborn care', 'Sleep training', 'Breastfeeding support', 'Developmental milestones']
   },
@@ -48,6 +54,7 @@ const developmentStages = [
     description:
       'Managing the energetic toddler years. Tantrums, potty training, and fostering independence.',
     component: 'ToddlerMomsIcon',
+    path: 'toddler-moms',
     color: 'accent' as const,
     topics: ['Potty training', 'Managing tantrums', 'Early education', 'Building independence']
   },
@@ -56,6 +63,7 @@ const developmentStages = [
     description:
       'Supporting education and social development. Homework help, friendships, and growing personalities.',
     component: 'SchoolAgedMomsIcon',
+    path: 'school-aged-moms',
     color: 'success' as const,
     topics: ['School support', 'Social skills', 'Extracurriculars', 'Building confidence']
   },
@@ -64,6 +72,7 @@ const developmentStages = [
     description:
       'Guiding your teen through adolescence. Emotional changes, independence, and maintaining connection.',
     component: 'TeenMomsIcon',
+    path: 'teens-moms',
     color: 'primary' as const,
     topics: ['Communication', 'Emotional support', 'Setting boundaries', 'Building trust']
   },
@@ -72,6 +81,7 @@ const developmentStages = [
     description:
       'Transitioning to new chapters. Empty nest, adult children relationships, and rediscovering yourself.',
     component: 'SuperMomsIcon',
+    path: 'super-moms',
     color: 'secondary' as const,
     topics: ['Empty nest transition', 'Adult relationships', 'Self-rediscovery', 'Grandparenting']
   }
@@ -166,47 +176,53 @@ const colorClasses = {
     <section class="bg-white dark:bg-neutral-900 py-20 sm:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Motion
+          <NuxtLink
             v-for="(stage, index) in developmentStages"
             :key="stage.title"
-            :initial="{ opacity: 0, y: 30 }"
-            :animate="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: index * 0.1 }"
+            :to="`/development/${stage.path}`"
+            class="block"
           >
-            <div
-              class="group h-full overflow-hidden rounded-3xl bg-neutral-50 dark:bg-neutral-800 p-8 ring-1 ring-neutral-200 dark:ring-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary-300 dark:hover:ring-primary-700"
+            <Motion
+              :initial="{ opacity: 0, y: 30 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: index * 0.1 }"
+              class="block"
             >
-              <!-- Icon -->
               <div
-                class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-700 shadow-lg transition-all duration-300 group-hover:scale-110 overflow-hidden"
+                class="group h-full overflow-hidden rounded-3xl bg-neutral-50 dark:bg-neutral-800 p-8 ring-1 ring-neutral-200 dark:ring-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary-300 dark:hover:ring-primary-700"
               >
-                <component
-                  :is="componentMap[stage.component as keyof typeof componentMap]"
-                  class="w-full h-full"
-                />
-              </div>
-
-              <!-- Title & Description -->
-              <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
-                {{ stage.title }}
-              </h3>
-              <p class="mt-3 text-neutral-600 dark:text-neutral-400">
-                {{ stage.description }}
-              </p>
-
-              <!-- Topics -->
-              <div class="mt-6 flex flex-wrap gap-2">
-                <span
-                  v-for="topic in stage.topics"
-                  :key="topic"
-                  class="rounded-full px-3 py-1 text-xs font-medium transition-colors"
-                  :class="[colorClasses[stage.color].bg, colorClasses[stage.color].text]"
+                <!-- Icon -->
+                <div
+                  class="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-700 shadow-lg transition-all duration-300 group-hover:scale-110 overflow-hidden"
                 >
-                  {{ topic }}
-                </span>
+                  <component
+                    :is="componentMap[stage.component as keyof typeof componentMap]"
+                    class="w-full h-full"
+                  />
+                </div>
+
+                <!-- Title & Description -->
+                <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
+                  {{ stage.title }}
+                </h3>
+                <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+                  {{ stage.description }}
+                </p>
+
+                <!-- Topics -->
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span
+                    v-for="topic in stage.topics"
+                    :key="topic"
+                    class="rounded-full px-3 py-1 text-xs font-medium transition-colors"
+                    :class="[colorClasses[stage.color].bg, colorClasses[stage.color].text]"
+                  >
+                    {{ topic }}
+                  </span>
+                </div>
               </div>
-            </div>
-          </Motion>
+            </Motion>
+          </NuxtLink>
         </div>
       </div>
     </section>

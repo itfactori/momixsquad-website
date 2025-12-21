@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useHead({
+  title: 'Super Moms (20+ Years) - Adult Parenting & Life Goals | Momix Squad',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Navigate parenting adult children while pursuing your own life goals. Find balance, support your independence, and celebrate your journey as a mother.'
+    }
+  ]
+});
+
 definePageMeta({
   layout: 'default'
 });
@@ -18,33 +29,481 @@ definePageMeta({
             <h1
               class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
             >
-              Super Moms (20 yrs and above Moms)
+              Super Moms (20+ Years)
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
-              Celebrate your journey and continue supporting your adult children.
+              Celebrate your journey and continue supporting your adult children. Redefine
+              motherhood and pursue your own dreams and goals.
             </p>
+            <div class="mt-8">
+              <img
+                src="/hero/home-6.jpg"
+                alt="Mothers celebrating together"
+                class="mx-auto rounded-3xl w-full max-w-3xl object-cover shadow-lg"
+              />
+            </div>
           </div>
         </Motion>
       </div>
     </section>
 
-    <!-- Content Section -->
+    <!-- Evidence-based Guidance -->
+    <section class="px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50 dark:bg-deep-purple-975">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
+          Navigating This Life Stage
+        </h2>
+        <Motion
+          :initial="{ opacity: 0, y: 8 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.4 }"
+        >
+          <div class="space-y-4">
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Redefining Motherhood & Relationships with Adult Children
+              </summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  As children become adults, the parenting relationship fundamentally shifts. This
+                  transition is both an ending and a beginning.
+                </p>
+                <p><strong>Key Transitions:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    <strong>From Caregiver to Advisor:</strong> Your role becomes supportive rather
+                    than directive. Adult children make their own choices
+                  </li>
+                  <li>
+                    <strong>Respecting Autonomy:</strong> Step back from decision-making. Offer
+                    perspective when asked, but respect their choices even if you disagree
+                  </li>
+                  <li>
+                    <strong>New Type of Intimacy:</strong> Relationships often deepen as adult
+                    children see you as a person with your own challenges and dreams
+                  </li>
+                  <li>
+                    <strong>Establishing Boundaries:</strong> Healthy boundaries protect
+                    relationships. Be clear about what you can/cannot do financially, emotionally,
+                    or practically
+                  </li>
+                  <li>
+                    <strong>Finding Balance:</strong> Be available without being intrusive. Maintain
+                    frequent contact while respecting their independence
+                  </li>
+                </ul>
+                <p className="mt-2"><strong>Communication Tips:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Ask before offering advice - they may just need to vent</li>
+                  <li>Share your experience without implying it should guide their choices</li>
+                  <li>Respect their partner/spouse and extended family relationships</li>
+                  <li>
+                    Avoid criticizing their life choices, partners, or children (if you're a
+                    grandparent)
+                  </li>
+                  <li>Celebrate their successes genuinely</li>
+                </ul>
+              </div>
+            </details>
+
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Supporting Adult Children (Without Over-Functioning)
+              </summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  There's a delicate balance between supporting adult children and enabling
+                  dependence. Research on adult development shows that facing challenges builds
+                  resilience.
+                </p>
+                <p><strong>Healthy Support Includes:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Emotional support - being a listening ear and validating their feelings</li>
+                  <li>Advice when asked - sharing wisdom without insisting it be followed</li>
+                  <li>Financial help for true emergencies, with clear boundaries</li>
+                  <li>Practical help occasionally (childcare, moving help, etc.)</li>
+                  <li>Believing in their capability to solve most problems</li>
+                </ul>
+                <p className="mt-2"><strong>Unhealthy Over-Functioning Includes:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Frequent financial bailouts that prevent learning</li>
+                  <li>Unsolicited advice or criticism of their choices</li>
+                  <li>Solving problems they could solve themselves</li>
+                  <li>Sacrificing your own life for their comfort</li>
+                  <li>Using guilt to maintain connection or influence</li>
+                </ul>
+                <p className="mt-2">
+                  Letting adult children experience consequences (job loss, failed relationship,
+                  financial difficulty) is often the greatest gift you can give them.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">Grandparenting (If Applicable)</summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  Grandparenting offers unique joys and challenges. Your role is to support your
+                  adult children's parenting while being present for grandchildren.
+                </p>
+                <p><strong>Healthy Grandparenting Looks Like:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Following your adult child's parenting rules and guidelines in your home</li>
+                  <li>Supporting (not undermining) their discipline and decisions</li>
+                  <li>Offering help when needed and appreciated, not when demanded</li>
+                  <li>Being a fun, loving presence in grandchildren's lives</li>
+                  <li>Sharing family history and values in age-appropriate ways</li>
+                  <li>Respecting boundaries around childcare and decision-making</li>
+                </ul>
+                <p className="mt-2">
+                  Avoid being a default childcare provider unless it's a genuine arrangement - this
+                  can strain adult child relationships.
+                </p>
+              </div>
+            </details>
+
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Your Own Life & Personal Fulfillment
+              </summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  Many mothers dedicate decades to raising children. This life stage offers the
+                  opportunity to reclaim time, energy, and dreams.
+                </p>
+                <p><strong>Rediscovering Yourself:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    Reconnect with interests and hobbies you put aside during intensive parenting
+                  </li>
+                  <li>Explore career opportunities or changes you've considered</li>
+                  <li>
+                    Return to or continue education (many universities now have programs for adult
+                    learners)
+                  </li>
+                  <li>Travel and adventure that wasn't possible with young children</li>
+                  <li>Strengthen your partnership/marriage with renewed focus</li>
+                  <li>Deepen friendships and community connections</li>
+                </ul>
+                <p className="mt-2"><strong>Health & Wellness in Midlife:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    Regular exercise - supports cardiovascular health, bone density, mental health
+                  </li>
+                  <li>Preventive health screenings appropriate for your age</li>
+                  <li>Mental health support if needed - this is a major life transition</li>
+                  <li>Strong social connections - protective against depression and isolation</li>
+                  <li>Continued learning - keeps mind sharp and engaged</li>
+                </ul>
+              </div>
+            </details>
+
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">
+                Managing Changing Parent-Adult Child Dynamics
+              </summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  As adult children navigate careers, relationships, and parenthood, and as you
+                  navigate aging, dynamics will shift and sometimes strain.
+                </p>
+                <p><strong>Common Challenges & How to Handle Them:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    <strong>Different Values/Parenting:</strong> Accept that your adult children
+                    will parent differently. Unless children are in danger, defer to their judgment
+                  </li>
+                  <li>
+                    <strong>Lack of Gratitude:</strong> Adult children may not acknowledge your
+                    sacrifices. Do things because you want to, not for recognition
+                  </li>
+                  <li>
+                    <strong>Feeling Left Out:</strong> As kids build their own families, you have
+                    less central role. Cultivate your own life and identity
+                  </li>
+                  <li>
+                    <strong>Health Issues & Aging:</strong> Discuss plans early. Avoid being a
+                    burden by maintaining your own health and independence as long as possible
+                  </li>
+                  <li>
+                    <strong>Financial Entanglement:</strong> Be clear about money boundaries.
+                    Written agreements prevent misunderstandings
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details
+              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+            >
+              <summary class="font-medium cursor-pointer">Mental Health & Wellbeing</summary>
+              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+                <p>
+                  "Empty nest" and midlife transitions can trigger depression, anxiety, or identity
+                  confusion. This is normal and treatable.
+                </p>
+                <p><strong>Common Psychological Challenges:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>
+                    <strong>Empty Nest Syndrome:</strong> Loss of identity and purpose when kids
+                    leave. Often temporary but can be significant
+                  </li>
+                  <li>
+                    <strong>Midlife Transition:</strong> Reassessing life direction, achievements,
+                    and remaining time
+                  </li>
+                  <li>
+                    <strong>Relationship Strain:</strong> Couples sometimes realize they've drifted
+                    during child-rearing years
+                  </li>
+                  <li>
+                    <strong>Role Confusion:</strong> "Who am I beyond being a mom?" requires
+                    rebuilding identity
+                  </li>
+                </ul>
+                <p className="mt-2"><strong>Resources & Support:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Therapy or counseling - helps navigate transitions and build identity</li>
+                  <li>Support groups for empty nesters or women in midlife</li>
+                  <li>Couples counseling if relationship needs attention</li>
+                  <li>Mentorship or coaching for career or life direction exploration</li>
+                </ul>
+              </div>
+            </details>
+
+            <div
+              class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800"
+            >
+              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">
+                📚 Key Resources
+              </p>
+              <ul class="text-sm space-y-1">
+                <li>
+                  <a
+                    class="text-pink-600 hover:underline"
+                    href="https://www.who.int/health-topics/mental-health"
+                    target="_blank"
+                    rel="noopener"
+                    >WHO Mental Health</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-pink-600 hover:underline"
+                    href="https://www.unicef.org/parenting"
+                    target="_blank"
+                    rel="noopener"
+                    >UNICEF Parenting Resources</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-pink-600 hover:underline"
+                    href="https://www.who.int/publications/i/item/9789240015265"
+                    target="_blank"
+                    rel="noopener"
+                    >WHO Healthy Aging Guidelines</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Motion>
+      </div>
+    </section>
+
+    <!-- Life Milestones Section -->
     <section class="px-4 sm:px-6 lg:px-8 py-20">
       <div class="mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-12 text-center">
+          Your New Chapter
+        </h2>
         <Motion
           :initial="{ opacity: 0, y: 20 }"
           :animate="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.5, delay: 0.2 }"
         >
-          <div class="grid grid-cols-1 gap-8">
-            <ContentCard>
-              <template #title>Parenting Adult Children</template>
-              <template #description>
-                Navigate the changing role of motherhood as your children become adults.
-              </template>
-            </ContentCard>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <ContentCard
+              title="Early Empty Nest"
+              description="Adjustment period as kids leave home. Rediscover your partnership and rebuild identity beyond parenting. Explore new interests."
+              icon="i-heroicons-sparkles"
+              color="primary"
+            />
+            <ContentCard
+              title="Active Empty Nest"
+              description="Children are established in their own lives. You have freedom and energy to pursue personal goals, travel, and new experiences."
+              icon="i-heroicons-star"
+              color="secondary"
+            />
+            <ContentCard
+              title="Grandparent Years"
+              description="Enjoy the unique joys of grandparenting without daily parenting responsibility. Share wisdom, create memories, and be a stabilizing presence."
+              icon="i-heroicons-user-group"
+              color="accent"
+            />
           </div>
         </Motion>
+      </div>
+    </section>
+
+    <!-- Practical Tips Section -->
+    <section class="px-4 sm:px-6 lg:px-8 py-20 bg-neutral-50 dark:bg-deep-purple-975">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-12 text-center">
+          Embracing This Chapter
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Motion
+            :initial="{ opacity: 0, x: -20 }"
+            :animate="{ opacity: 1, x: 0 }"
+            :transition="{ duration: 0.5 }"
+          >
+            <div class="bg-white dark:bg-deep-purple-900 rounded-xl p-6 shadow-md">
+              <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
+                💫 Prioritize Yourself
+              </h3>
+              <ul class="space-y-2 text-neutral-700 dark:text-pink-100">
+                <li>• Invest in your health and fitness</li>
+                <li>• Pursue hobbies and passions</li>
+                <li>• Travel or explore new experiences</li>
+                <li>• Continue learning and growing</li>
+                <li>• Maintain strong friendships</li>
+              </ul>
+            </div>
+          </Motion>
+
+          <Motion
+            :initial="{ opacity: 0, x: 20 }"
+            :animate="{ opacity: 1, x: 0 }"
+            :transition="{ duration: 0.5, delay: 0.1 }"
+          >
+            <div class="bg-white dark:bg-deep-purple-900 rounded-xl p-6 shadow-md">
+              <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
+                🌟 Celebrate Your Journey
+              </h3>
+              <ul class="space-y-2 text-neutral-700 dark:text-pink-100">
+                <li>• Reflect on what you've accomplished</li>
+                <li>• Acknowledge your growth and resilience</li>
+                <li>• Release guilt and "should haves"</li>
+                <li>• Embrace new roles and relationships</li>
+                <li>• Look forward with excitement to what's next</li>
+              </ul>
+            </div>
+          </Motion>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evidence-Based Sources -->
+    <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">
+      <div class="mx-auto max-w-6xl">
+        <div
+          class="rounded-3xl border border-neutral-200 dark:border-purple-800 bg-neutral-50 dark:bg-deep-purple-900/60 p-8 shadow-xl"
+        >
+          <div class="grid gap-8 md:grid-cols-2 md:items-start">
+            <div class="space-y-3">
+              <p class="text-sm font-semibold uppercase tracking-wide text-pink-600">
+                Evidence-based guidance
+              </p>
+              <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">
+                Informed by healthy-aging research
+              </h3>
+              <p class="text-neutral-700 dark:text-pink-100">
+                Suggestions on purpose, health maintenance, and grandparenting draw from leading
+                guidance on wellbeing in later adulthood.
+              </p>
+            </div>
+            <div class="grid gap-4">
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
+                <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
+                  WHO Mental Health & Wellbeing
+                </h4>
+                <p class="text-sm text-neutral-700 dark:text-pink-100">
+                  Emphasizes social connection, physical activity, and purpose to protect cognition
+                  and mood in midlife and beyond.
+                </p>
+                <a
+                  class="text-pink-600 hover:underline text-sm font-semibold"
+                  href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  WHO guidance
+                </a>
+              </div>
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
+                <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
+                  NIH Healthy Aging
+                </h4>
+                <p class="text-sm text-neutral-700 dark:text-pink-100">
+                  Advises balanced nutrition, strength training, sleep, and preventive screenings to
+                  preserve independence.
+                </p>
+                <a
+                  class="text-pink-600 hover:underline text-sm font-semibold"
+                  href="https://www.nia.nih.gov/health"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  NIH resources
+                </a>
+              </div>
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
+                <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
+                  APA on Life Transitions
+                </h4>
+                <p class="text-sm text-neutral-700 dark:text-pink-100">
+                  Suggests reframing empty-nest transitions, nurturing identity beyond parenting,
+                  and maintaining supportive relationships.
+                </p>
+                <a
+                  class="text-pink-600 hover:underline text-sm font-semibold"
+                  href="https://www.apa.org/topics/families-relationships/empty-nest"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Read APA brief
+                </a>
+              </div>
+              <div
+                class="rounded-2xl bg-white dark:bg-deep-purple-950/60 p-5 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-800"
+              >
+                <h4 class="text-lg font-semibold text-neutral-900 dark:text-white">
+                  CDC Grandparent & Caregiver Support
+                </h4>
+                <p class="text-sm text-neutral-700 dark:text-pink-100">
+                  Provides wellbeing tips, community resources, and parenting refreshers for
+                  grandparents involved in caregiving.
+                </p>
+                <a
+                  class="text-pink-600 hover:underline text-sm font-semibold"
+                  href="https://www.cdc.gov/healthyweight/children/index.html"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  CDC caregiver info
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
