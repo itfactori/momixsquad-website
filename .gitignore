@@ -19,8 +19,6 @@ logs
 .idea
 
 # Local env files
-.env
-.env.*
 !.env.example
 
 # VSC
@@ -29,3 +27,4 @@ logs
 #misc
 REDESIGN_PLAN.md
 context.txt
+config.bat

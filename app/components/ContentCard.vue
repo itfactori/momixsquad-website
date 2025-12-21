@@ -1,12 +1,22 @@
 <script setup lang="ts">
-const props = defineProps<{
-  title: string;
-  description: string;
-  icon?: string;
-  to?: string;
-  color?: 'primary' | 'secondary' | 'success' | 'accent';
-  variant?: 'default' | 'featured' | 'minimal';
-}>();
+const props = withDefaults(
+  defineProps<{
+    title?: string;
+    description?: string;
+    icon?: string;
+    to?: string;
+    color?: 'primary' | 'secondary' | 'success' | 'accent';
+    variant?: 'default' | 'featured' | 'minimal';
+  }>(),
+  {
+    title: undefined,
+    description: undefined,
+    icon: undefined,
+    to: undefined,
+    color: 'primary',
+    variant: 'default'
+  }
+);
 
 const colorClasses = computed(() => {
   const colors = {
@@ -87,12 +97,12 @@ const colorClasses = computed(() => {
           class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50 transition-colors"
           :class="colorClasses.hoverText"
         >
-          {{ title }}
+          <slot name="title">{{ title }}</slot>
         </h3>
 
         <!-- Description -->
         <p class="mt-3 flex-1 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-          {{ description }}
+          <slot name="description">{{ description }}</slot>
         </p>
 
         <!-- Learn More Link -->
