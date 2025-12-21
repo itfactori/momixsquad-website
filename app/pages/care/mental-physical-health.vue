@@ -15,7 +15,9 @@ definePageMeta({
           :transition="{ duration: 0.5 }"
         >
           <div class="text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+            >
               Mental & Physical Health
             </h1>
             <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">

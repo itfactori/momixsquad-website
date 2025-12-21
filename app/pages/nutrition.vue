@@ -102,6 +102,13 @@ const nutritionByAge = [
             Healthy eating doesn't have to be complicated. Discover simple, nutritious recipes and
             guidance for you and your little ones.
           </p>
+          <div class="mt-8">
+            <img
+              src="/hero/Food-and-nutrition.jpeg"
+              alt="Healthy family meal"
+              class="mx-auto rounded-3xl max-w-3xl object-cover shadow-lg"
+            />
+          </div>
         </Motion>
       </div>
     </section>

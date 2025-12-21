@@ -29,9 +29,9 @@ const closeDropdown = () => {
   <div ref="dropdownRef" class="relative group">
     <!-- Dropdown Toggle Button -->
     <button
-      @click="isOpen = !isOpen"
       class="relative group rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all hover:text-neutral-900 dark:hover:text-pink-50 flex items-center gap-1.5"
       :class="isOpen && 'text-pink-600 dark:text-pink-400 !font-semibold'"
+      @click="isOpen = !isOpen"
     >
       <span>{{ title }}</span>
       <UIcon
@@ -71,8 +71,8 @@ const closeDropdown = () => {
             :to="item.to"
             class="group flex items-center justify-between px-4 py-3 text-sm font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-700 dark:hover:text-pink-400"
             active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-300"
-            @click="closeDropdown"
             :style="{ animationDelay: `${index * 30}ms` }"
+            @click="closeDropdown"
           >
             <span>{{ item.label }}</span>
             <UIcon

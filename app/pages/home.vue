@@ -65,12 +65,16 @@ const features = [
 ];
 
 const momStages = [
-  { name: 'Moms to be', icon: 'i-heroicons-sparkles' },
-  { name: 'New Moms (0-2 yrs)', icon: 'i-heroicons-face-smile' },
-  { name: 'Toddler Moms (3-5 yrs)', icon: 'i-heroicons-puzzle-piece' },
-  { name: 'School Aged (6-12 yrs)', icon: 'i-heroicons-academic-cap' },
-  { name: 'Teen Moms (13-19 yrs)', icon: 'i-heroicons-user-group' },
-  { name: 'Super Moms (20+ yrs)', icon: 'i-heroicons-star' }
+  { name: 'Moms to be', path: 'moms-to-be', icon: 'i-heroicons-sparkles' },
+  { name: 'New Moms (0-2 yrs)', path: 'new-moms', icon: 'i-heroicons-face-smile' },
+  { name: 'Toddler Moms (3-5 yrs)', path: 'toddler-moms', icon: 'i-heroicons-puzzle-piece' },
+  {
+    name: 'School Aged (6-12 yrs)',
+    path: 'school-aged-moms',
+    icon: 'i-heroicons-academic-cap'
+  },
+  { name: 'Teen Moms (13-19 yrs)', path: 'teens-moms', icon: 'i-heroicons-user-group' },
+  { name: 'Super Moms (20+ yrs)', path: 'super-moms', icon: 'i-heroicons-star' }
 ];
 </script>
 
@@ -113,8 +117,8 @@ const momStages = [
               <p
                 class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-pink-50 sm:text-3xl lg:text-4xl"
               >
-                "Our journey, lessons & sessions are here to make your Mom-ship a little easier, a little
-                lighter and a lot more joyful."
+                "Our journey, lessons & sessions are here to make your Mom-ship a little easier, a
+                little lighter and a lot more joyful."
               </p>
               <p
                 class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-pink-300 sm:text-xl"
@@ -265,7 +269,7 @@ const momStages = [
             :transition="{ duration: 0.4, delay: index * 0.1 }"
           >
             <NuxtLink
-              to="/development"
+              :to="`/development/${stage.path}`"
               class="group flex items-center gap-3 rounded-xl bg-neutral-100 dark:bg-deep-purple-800 px-5 py-3 transition-all duration-300 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:shadow-md"
             >
               <div

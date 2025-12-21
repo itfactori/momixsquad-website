@@ -1,7 +1,7 @@
 <script setup lang="ts">
 navigateTo('/home');
-
 </script>
 
-
-
+<template>
+  <div></div>
+</template>

@@ -173,9 +173,9 @@ const socialLinks = [
                 <li class="flex items-center gap-2">
                   <UIcon name="i-heroicons-envelope" class="h-4 w-4 text-pink-500" />
                   <a
-                    href="mailto:aliya.asim@aispk.org"
+                    href="mailto:info@momixsquad.com"
                     class="hover:text-pink-600 dark:hover:text-pink-400"
-                    >aliya.asim@aispk.org</a
+                    >info@momixsquad.com</a
                   >
                 </li>
                 <li class="flex items-center gap-2">
