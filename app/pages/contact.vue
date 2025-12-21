@@ -91,32 +91,33 @@ const contactInfo = [
   }
 ];
 
-const socialLinks = [
-  {
-    icon: 'i-simple-icons-instagram',
-    href: 'https://instagram.com/momixsquad',
-    label: 'Instagram',
-    color: 'hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-600'
-  },
-  {
-    icon: 'i-simple-icons-facebook',
-    href: 'https://facebook.com/momixsquad',
-    label: 'Facebook',
-    color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600'
-  },
-  {
-    icon: 'i-simple-icons-twitter',
-    href: 'https://twitter.com/momixsquad',
-    label: 'Twitter',
-    color: 'hover:bg-sky-100 dark:hover:bg-sky-900/50 hover:text-sky-500'
-  },
-  {
-    icon: 'i-simple-icons-linkedin',
-    href: 'https://linkedin.com/company/momixsquad',
-    label: 'LinkedIn',
-    color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-700'
-  }
-];
+// Social links temporarily disabled
+// const socialLinks = [
+//   {
+//     icon: 'i-simple-icons-instagram',
+//     href: 'https://instagram.com/momixsquad',
+//     label: 'Instagram',
+//     color: 'hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-600'
+//   },
+//   {
+//     icon: 'i-simple-icons-facebook',
+//     href: 'https://facebook.com/momixsquad',
+//     label: 'Facebook',
+//     color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600'
+//   },
+//   {
+//     icon: 'i-simple-icons-twitter',
+//     href: 'https://twitter.com/momixsquad',
+//     label: 'Twitter',
+//     color: 'hover:bg-sky-100 dark:hover:bg-sky-900/50 hover:text-sky-500'
+//   },
+//   {
+//     icon: 'i-simple-icons-linkedin',
+//     href: 'https://linkedin.com/company/momixsquad',
+//     label: 'LinkedIn',
+//     color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-700'
+//   }
+// ];
 </script>
 
 <template>
@@ -391,6 +392,8 @@ const socialLinks = [
                 <p class="mt-2 text-neutral-600 dark:text-neutral-400">
                   Follow us on social media for tips, updates, and mom community moments.
                 </p>
+                <!-- Social Media - Temporarily Disabled -->
+                <!--
                 <div class="mt-6 flex gap-3">
                   <a
                     v-for="social in socialLinks"
@@ -405,6 +408,7 @@ const socialLinks = [
                     <UIcon :name="social.icon" class="h-6 w-6" />
                   </a>
                 </div>
+                -->
               </div>
 
               <!-- FAQ Teaser -->

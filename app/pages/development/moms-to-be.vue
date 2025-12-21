@@ -39,7 +39,7 @@ definePageMeta({
               <img
                 src="/hero/home-1.jpg"
                 alt="Pregnancy and motherhood preparation"
-                class="mx-auto rounded-3xl w-full max-w-3xl object-cover shadow-lg"
+                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
               />
             </div>
           </div>

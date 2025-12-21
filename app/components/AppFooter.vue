@@ -16,20 +16,21 @@ const footerLinks = {
   ]
 };
 
-const socialLinks = [
-  {
-    icon: 'i-simple-icons-instagram',
-    href: 'https://instagram.com/momixsquad',
-    label: 'Instagram'
-  },
-  { icon: 'i-simple-icons-facebook', href: 'https://facebook.com/momixsquad', label: 'Facebook' },
-  { icon: 'i-simple-icons-twitter', href: 'https://twitter.com/momixsquad', label: 'Twitter' },
-  {
-    icon: 'i-simple-icons-linkedin',
-    href: 'https://linkedin.com/company/momixsquad',
-    label: 'LinkedIn'
-  }
-];
+// Social links temporarily disabled
+// const socialLinks = [
+//   {
+//     icon: 'i-simple-icons-instagram',
+//     href: 'https://instagram.com/momixsquad',
+//     label: 'Instagram'
+//   },
+//   { icon: 'i-simple-icons-facebook', href: 'https://facebook.com/momixsquad', label: 'Facebook' },
+//   { icon: 'i-simple-icons-twitter', href: 'https://twitter.com/momixsquad', label: 'Twitter' },
+//   {
+//     icon: 'i-simple-icons-linkedin',
+//     href: 'https://linkedin.com/company/momixsquad',
+//     label: 'LinkedIn'
+//   }
+// ];
 </script>
 
 <template>
@@ -200,13 +201,14 @@ const socialLinks = [
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->
             <p class="text-sm text-neutral-500 dark:text-pink-300">
-              © {{ currentYear }} Momix Squad. All rights reserved. Made
+              {{ currentYear }} Momix Squad. All rights reserved. Made
               <UIcon name="i-heroicons-heart" class="inline h-4 w-4 text-pink-500" />
               for moms everywhere.
             </p>
 
             <!-- Social links -->
-            <div class="flex items-center gap-3">
+            <!--
+            <div class="flex items-center gap-4">
               <a
                 v-for="social in socialLinks"
                 :key="social.href"
@@ -214,11 +216,12 @@ const socialLinks = [
                 target="_blank"
                 rel="noopener noreferrer"
                 :aria-label="social.label"
-                class="flex h-10 w-10 items-center justify-center rounded-xl bg-white dark:bg-deep-purple-800 text-neutral-500 dark:text-pink-300 shadow-sm ring-1 ring-neutral-200 dark:ring-purple-700 transition-all duration-300 hover:-translate-y-1 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-600 dark:hover:text-pink-400 hover:shadow-md hover:ring-pink-300 dark:hover:ring-pink-700"
+                class="text-neutral-500 hover:text-pink-600 dark:text-pink-300 dark:hover:text-pink-400 transition-colors"
               >
                 <UIcon :name="social.icon" class="h-5 w-5" />
               </a>
             </div>
+            -->
           </div>
         </div>
       </Motion>

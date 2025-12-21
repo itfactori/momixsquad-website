@@ -39,8 +39,7 @@ definePageMeta({
               <img
                 src="/hero/home-5.jpg"
                 alt="Teenagers with supportive adults"
-                class="mx-auto rounded-3xl w-full max-w-3xl object-cover shadow-lg"
-                loading="lazy"
+                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
               />
             </div>
           </div>

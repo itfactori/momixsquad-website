@@ -39,7 +39,7 @@ definePageMeta({
               <img
                 src="/hero/home-2.jpg"
                 alt="New moms supporting each other"
-                class="mx-auto rounded-3xl w-full max-w-3xl object-cover shadow-lg"
+                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
               />
             </div>
           </div>
