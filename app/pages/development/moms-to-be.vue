@@ -16,9 +16,13 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="min-h-screen bg-white dark:bg-deep-purple-950">
+  <div
+    class="min-h-screen bg-gradient-to-br from-rose-900 via-pink-900 to-purple-950 dark:from-rose-950 dark:via-pink-950 dark:to-purple-950"
+  >
     <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section
+      class="relative overflow-hidden pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8"
+    >
       <div class="mx-auto max-w-7xl">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
@@ -27,7 +31,7 @@ definePageMeta({
         >
           <div class="text-center">
             <h1
-              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+              class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
             >
               Moms to Be
             </h1>
@@ -39,7 +43,7 @@ definePageMeta({
               <img
                 src="/hero/home-1.jpg"
                 alt="Pregnancy and motherhood preparation"
-                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
               />
             </div>
           </div>

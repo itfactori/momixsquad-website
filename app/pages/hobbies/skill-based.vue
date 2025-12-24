@@ -64,7 +64,7 @@ const skillActivities = [
     difficulty: 'Beginner',
     timeNeeded: '1-2 hours weekly',
     research: 'Journal of Creative Behavior: Digital arts improve spatial reasoning',
-    icon: 'i-heroicons-palette',
+    icon: 'i-heroicons-photo',
     platforms: ['Canva', 'Figma', 'Adobe Creative Express', 'Procreate']
   },
   {
@@ -100,7 +100,7 @@ const learningBenefits = [
     title: 'Cognitive Enhancement',
     description: 'Learning new skills creates new neural pathways and improves brain plasticity.',
     source: 'Nature Reviews Neuroscience',
-    icon: 'i-heroicons-brain'
+    icon: 'i-heroicons-light-bulb'
   },
   {
     title: 'Career Advancement',
@@ -178,7 +178,7 @@ const getDifficultyColor = (difficulty: string) => {
               <img
                 src="/hero/Hobbies-Writing.jpeg"
                 alt="Skill-based hobbies"
-                class="mx-auto rounded-3xl max-w-3xl object-cover shadow-2xl ring-4 ring-blue-200/50 dark:ring-blue-700/50"
+                class="mx-auto rounded-2xl sm:rounded-3xl w-full max-w-3xl object-cover shadow-2xl ring-4 ring-blue-200/50 dark:ring-blue-700/50 h-64 sm:h-80 lg:h-96"
               />
             </div>
           </div>

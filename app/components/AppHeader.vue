@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const isOpen = ref(false);
+const momDevelopmentOpen = ref(false);
+const momCareOpen = ref(false);
+const hobbiesOpen = ref(false);
 const { y: scrollY } = useWindowScroll();
 const colorMode = useColorMode();
 
@@ -30,6 +33,9 @@ const hobbiesItems = [
 const headerRef = ref<HTMLElement>();
 onClickOutside(headerRef, () => {
   isOpen.value = false;
+  momDevelopmentOpen.value = false;
+  momCareOpen.value = false;
+  hobbiesOpen.value = false;
 });
 
 // Elevate header on scroll
@@ -41,6 +47,14 @@ const toggleColorMode = () => {
 };
 
 const isDark = computed(() => colorMode.value === 'dark');
+
+// Close all menus when navigating
+const closeAllMenus = () => {
+  isOpen.value = false;
+  momDevelopmentOpen.value = false;
+  momCareOpen.value = false;
+  hobbiesOpen.value = false;
+};
 </script>
 
 <template>
@@ -53,7 +67,9 @@ const isDark = computed(() => colorMode.value === 'dark');
         : 'bg-transparent'
     ]"
   >
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div
+      class="mx-auto flex h-14 sm:h-16 lg:h-20 max-w-7xl items-center justify-between px-3 sm:px-4 lg:px-8"
+    >
       <!-- Logo with animation -->
       <Motion
         :initial="{ opacity: 0, x: -20 }"
@@ -64,7 +80,7 @@ const isDark = computed(() => colorMode.value === 'dark');
           <img
             src="/logo.png"
             alt="Momix Squad"
-            class="h-12 w-auto transition-all duration-300 group-hover:opacity-90"
+            class="h-8 sm:h-10 lg:h-12 w-auto transition-all duration-300 group-hover:opacity-90"
           />
         </NuxtLink>
       </Motion>
@@ -209,13 +225,13 @@ const isDark = computed(() => colorMode.value === 'dark');
         v-if="isOpen"
         class="absolute left-0 right-0 top-full border-b border-neutral-200 dark:border-purple-800 bg-white/95 dark:bg-deep-purple-950/95 backdrop-blur-xl shadow-xl lg:hidden"
       >
-        <nav class="mx-auto max-w-7xl space-y-1 px-4 py-6">
+        <nav class="mx-auto max-w-7xl space-y-1 px-4 py-6 max-h-[70vh] overflow-y-auto">
           <!-- Home Link -->
           <NuxtLink
             to="/home"
             class="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-700 dark:hover:text-pink-400"
             active-class="!bg-pink-50 dark:!bg-pink-950/50 !text-pink-700 dark:!text-pink-400 !font-semibold"
-            @click="isOpen = false"
+            @click="closeAllMenus"
           >
             <div
               class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -233,7 +249,7 @@ const isDark = computed(() => colorMode.value === 'dark');
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
-              @click="isOpen = !isOpen"
+              @click="momDevelopmentOpen = !momDevelopmentOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -243,29 +259,39 @@ const isDark = computed(() => colorMode.value === 'dark');
               Mom Development
               <UIcon
                 name="i-heroicons-chevron-right"
-                class="ml-auto h-5 w-5 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100"
+                class="ml-auto h-5 w-5 transition-transform duration-300"
+                :class="{ 'transform rotate-90': momDevelopmentOpen }"
               />
             </button>
-            <div class="pl-4 space-y-1">
-              <NuxtLink
-                v-for="item in momDevelopmentItems"
-                :key="item.to"
-                :to="item.to"
-                class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
-                active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
-                @click="isOpen = false"
-              >
-                <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
-                {{ item.label }}
-              </NuxtLink>
-            </div>
+            <Transition
+              enter-active-class="transition duration-200 ease-out"
+              enter-from-class="transform -translate-y-2 opacity-0"
+              enter-to-class="transform translate-y-0 opacity-100"
+              leave-active-class="transition duration-150 ease-in"
+              leave-from-class="transform translate-y-0 opacity-100"
+              leave-to-class="transform -translate-y-2 opacity-0"
+            >
+              <div v-show="momDevelopmentOpen" class="pl-4 space-y-1">
+                <NuxtLink
+                  v-for="item in momDevelopmentItems"
+                  :key="item.to"
+                  :to="item.to"
+                  class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
+                  active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
+                  @click="closeAllMenus"
+                >
+                  <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
+                  {{ item.label }}
+                </NuxtLink>
+              </div>
+            </Transition>
           </div>
 
           <!-- Mom Care Menu -->
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
-              @click="isOpen = !isOpen"
+              @click="momCareOpen = !momCareOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -275,29 +301,39 @@ const isDark = computed(() => colorMode.value === 'dark');
               Mom Care
               <UIcon
                 name="i-heroicons-chevron-right"
-                class="ml-auto h-5 w-5 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100"
+                class="ml-auto h-5 w-5 transition-transform duration-300"
+                :class="{ 'transform rotate-90': momCareOpen }"
               />
             </button>
-            <div class="pl-4 space-y-1">
-              <NuxtLink
-                v-for="item in momCareItems"
-                :key="item.to"
-                :to="item.to"
-                class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
-                active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
-                @click="isOpen = false"
-              >
-                <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
-                {{ item.label }}
-              </NuxtLink>
-            </div>
+            <Transition
+              enter-active-class="transition duration-200 ease-out"
+              enter-from-class="transform -translate-y-2 opacity-0"
+              enter-to-class="transform translate-y-0 opacity-100"
+              leave-active-class="transition duration-150 ease-in"
+              leave-from-class="transform translate-y-0 opacity-100"
+              leave-to-class="transform -translate-y-2 opacity-0"
+            >
+              <div v-show="momCareOpen" class="pl-4 space-y-1">
+                <NuxtLink
+                  v-for="item in momCareItems"
+                  :key="item.to"
+                  :to="item.to"
+                  class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
+                  active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
+                  @click="closeAllMenus"
+                >
+                  <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
+                  {{ item.label }}
+                </NuxtLink>
+              </div>
+            </Transition>
           </div>
 
           <!-- Hobbies & Tips Menu -->
           <div class="rounded-xl hover:bg-pink-50 dark:hover:bg-pink-950/50">
             <button
               class="w-full group flex items-center gap-3 px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200"
-              @click="isOpen = !isOpen"
+              @click="hobbiesOpen = !hobbiesOpen"
             >
               <div
                 class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -307,22 +343,32 @@ const isDark = computed(() => colorMode.value === 'dark');
               Hobbies & Tips
               <UIcon
                 name="i-heroicons-chevron-right"
-                class="ml-auto h-5 w-5 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100"
+                class="ml-auto h-5 w-5 transition-transform duration-300"
+                :class="{ 'transform rotate-90': hobbiesOpen }"
               />
             </button>
-            <div class="pl-4 space-y-1">
-              <NuxtLink
-                v-for="item in hobbiesItems"
-                :key="item.to"
-                :to="item.to"
-                class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
-                active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
-                @click="isOpen = false"
-              >
-                <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
-                {{ item.label }}
-              </NuxtLink>
-            </div>
+            <Transition
+              enter-active-class="transition duration-200 ease-out"
+              enter-from-class="transform -translate-y-2 opacity-0"
+              enter-to-class="transform translate-y-0 opacity-100"
+              leave-active-class="transition duration-150 ease-in"
+              leave-from-class="transform translate-y-0 opacity-100"
+              leave-to-class="transform -translate-y-2 opacity-0"
+            >
+              <div v-show="hobbiesOpen" class="pl-4 space-y-1">
+                <NuxtLink
+                  v-for="item in hobbiesItems"
+                  :key="item.to"
+                  :to="item.to"
+                  class="group flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium text-neutral-600 dark:text-pink-200 transition-all duration-200 hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-700 dark:hover:text-pink-400"
+                  active-class="!bg-pink-100 dark:!bg-pink-900/50 !text-pink-700 dark:!text-pink-400"
+                  @click="closeAllMenus"
+                >
+                  <span class="h-1 w-1 rounded-full bg-current opacity-50"></span>
+                  {{ item.label }}
+                </NuxtLink>
+              </div>
+            </Transition>
           </div>
 
           <!-- Food & Nutrition Link -->
@@ -330,7 +376,7 @@ const isDark = computed(() => colorMode.value === 'dark');
             to="/nutrition"
             class="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-700 dark:hover:text-pink-400"
             active-class="!bg-pink-50 dark:!bg-pink-950/50 !text-pink-700 dark:!text-pink-400 !font-semibold"
-            @click="isOpen = false"
+            @click="closeAllMenus"
           >
             <div
               class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -349,7 +395,7 @@ const isDark = computed(() => colorMode.value === 'dark');
             to="/contact"
             class="group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-neutral-700 dark:text-pink-200 transition-all duration-200 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-700 dark:hover:text-pink-400"
             active-class="!bg-pink-50 dark:!bg-pink-950/50 !text-pink-700 dark:!text-pink-400 !font-semibold"
-            @click="isOpen = false"
+            @click="closeAllMenus"
           >
             <div
               class="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-100 dark:bg-deep-purple-800 transition-colors group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50"
@@ -372,7 +418,7 @@ const isDark = computed(() => colorMode.value === 'dark');
               variant="solid"
               block
               class="shadow-lg shadow-primary-500/20"
-              @click="isOpen = false"
+              @click="closeAllMenus"
             >
               Join the Squad
               <template #trailing>

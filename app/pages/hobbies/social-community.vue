@@ -194,7 +194,7 @@ const getDifficultyColor = (difficulty: string) => {
               <img
                 src="/hero/home-6.jpg"
                 alt="Community connection"
-                class="mx-auto rounded-3xl max-w-3xl object-cover shadow-2xl ring-4 ring-teal-200/50 dark:ring-teal-700/50"
+                class="mx-auto rounded-2xl sm:rounded-3xl w-full max-w-3xl object-cover shadow-2xl ring-4 ring-teal-200/50 dark:ring-teal-700/50 h-64 sm:h-80 lg:h-96"
               />
             </div>
           </div>

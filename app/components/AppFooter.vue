@@ -47,9 +47,9 @@ const footerLinks = {
       />
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div class="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-16">
       <!-- Main footer content -->
-      <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
+      <div class="grid gap-8 lg:grid-cols-12 lg:gap-8">
         <!-- Brand section -->
         <div class="lg:col-span-5">
           <Motion
@@ -60,11 +60,11 @@ const footerLinks = {
             <div class="space-y-6">
               <!-- Logo -->
               <NuxtLink to="/" class="group inline-flex items-center gap-3">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 shadow-lg shadow-pink-500/30 transition-all group-hover:shadow-xl group-hover:shadow-pink-500/40"
-                >
-                  <UIcon name="i-heroicons-heart" class="h-7 w-7 text-white" />
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Momix Squad"
+                  class="h-12 w-12 rounded-xl transition-all group-hover:opacity-90"
+                />
                 <span class="font-display text-2xl font-bold">
                   <span
                     class="bg-gradient-to-r from-pink-600 to-pink-500 dark:from-pink-400 dark:to-pink-300 bg-clip-text text-transparent"
@@ -101,7 +101,7 @@ const footerLinks = {
         </div>
 
         <!-- Links sections -->
-        <div class="grid gap-8 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3">
+        <div class="grid gap-6 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3 lg:gap-8">
           <!-- Resources -->
           <Motion
             :initial="{ opacity: 0, y: 20 }"
@@ -197,7 +197,7 @@ const footerLinks = {
         :animate="{ opacity: 1 }"
         :transition="{ duration: 0.5, delay: 0.4 }"
       >
-        <div class="mt-12 border-t border-neutral-200 dark:border-purple-800 pt-8">
+        <div class="mt-8 border-t border-neutral-200 dark:border-purple-800 pt-6">
           <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <!-- Copyright -->
             <p class="text-sm text-neutral-500 dark:text-pink-300">
