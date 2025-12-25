@@ -103,7 +103,7 @@ const communityActivities = [
     difficulty: 'Intermediate',
     timeNeeded: '2-3 hours weekly',
     research: 'American Community Gardening Association: Community gardens improve mental health',
-    icon: 'i-heroicons-leaf',
+    icon: 'i-heroicons-sparkles',
     platforms: ['Local parks', 'School gardens', 'Neighborhood associations', 'Urban farms']
   }
 ];

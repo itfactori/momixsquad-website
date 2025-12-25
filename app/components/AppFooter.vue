@@ -8,12 +8,7 @@ const footerLinks = {
     { label: 'Hobbies & Tips', to: '/hobbies' },
     { label: 'Food & Nutrition', to: '/nutrition' }
   ],
-  support: [
-    { label: 'Contact Us', to: '/contact' },
-    { label: 'FAQs', to: '/contact' },
-    { label: 'Privacy Policy', to: '/contact' },
-    { label: 'Terms of Service', to: '/contact' }
-  ]
+  support: []
 };
 
 // Social links temporarily disabled
@@ -28,203 +23,193 @@ const footerLinks = {
 //   {
 //     icon: 'i-simple-icons-linkedin',
 //     href: 'https://linkedin.com/company/momixsquad',
-//     label: 'LinkedIn'
-//   }
-// ];
 </script>
 
 <template>
-  <footer
-    class="relative overflow-hidden border-t border-neutral-200 dark:border-purple-800 bg-neutral-50 dark:bg-deep-purple-950"
-  >
-    <!-- Decorative background -->
-    <div class="absolute inset-0 overflow-hidden opacity-30 dark:opacity-20">
-      <div
-        class="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-pink-200 dark:bg-pink-900/50 blur-3xl"
-      />
-      <div
-        class="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-purple-200 dark:bg-purple-900/50 blur-3xl"
-      />
+  <footer class="relative bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-purple-950 dark:to-purple-900 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 overflow-hidden opacity-20 dark:opacity-10">
+      <div class="absolute -left-48 -top-48 h-96 w-96 rounded-full bg-gradient-to-br from-pink-300 to-pink-500 dark:from-pink-900/50 dark:to-pink-700/50 blur-3xl" />
+      <div class="absolute -right-48 bottom-0 h-96 w-96 rounded-full bg-gradient-to-br from-purple-300 to-purple-500 dark:from-purple-900/50 dark:to-purple-700/50 blur-3xl" />
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-3 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-16">
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       <!-- Main footer content -->
-      <div class="grid gap-8 lg:grid-cols-12 lg:gap-8">
-        <!-- Brand section -->
-        <div class="lg:col-span-5">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+        
+        <!-- Brand and Newsletter Section -->
+        <div class="lg:col-span-1 space-y-6">
           <Motion
             :initial="{ opacity: 0, y: 20 }"
             :animate="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5 }"
+            :transition="{ duration: 0.6 }"
           >
-            <div class="space-y-6">
-              <!-- Logo -->
-              <NuxtLink to="/" class="group inline-flex items-center gap-3">
+            <!-- Logo -->
+            <NuxtLink to="/" class="group inline-flex items-center gap-3">
+              <div class="relative">
                 <img
                   src="/logo.png"
                   alt="Momix Squad"
-                  class="h-12 w-12 rounded-xl transition-all group-hover:opacity-90"
+                  class="h-14 w-14 rounded-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
                 />
-                <span class="font-display text-2xl font-bold">
-                  <span
-                    class="bg-gradient-to-r from-pink-600 to-pink-500 dark:from-pink-400 dark:to-pink-300 bg-clip-text text-transparent"
-                    >Momix</span
-                  >
-                  <span class="text-purple-600 dark:text-purple-400">Squad</span>
-                </span>
-              </NuxtLink>
-
-              <!-- Description -->
-              <p class="max-w-md text-base leading-relaxed text-neutral-600 dark:text-pink-300">
-                Nurturing mothers to give children the best start in life. Supporting every mom with
-                guidance, community, and care. Your journey, lighter and more joyful.
-              </p>
-
-              <!-- Newsletter -->
-              <div class="space-y-3">
-                <p class="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                  Stay connected with us
-                </p>
-                <form class="flex gap-2" @submit.prevent>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    class="flex-1 rounded-xl border-neutral-300 dark:border-purple-700 bg-white dark:bg-deep-purple-800 px-4 py-2.5 text-sm text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-pink-400 shadow-sm transition-all focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20"
-                  />
-                  <UButton color="primary" size="md" variant="solid" type="submit">
-                    Subscribe
-                  </UButton>
-                </form>
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </div>
+              <span class="font-display text-3xl lg:text-4xl font-bold">
+                <span class="bg-gradient-to-r from-pink-600 via-pink-500 to-purple-600 dark:from-pink-400 dark:via-pink-300 dark:to-purple-400 bg-clip-text text-transparent">
+                  Momix
+                </span>
+                <span class="text-purple-600 dark:text-purple-400">Squad</span>
+              </span>
+            </NuxtLink>
+
+            <!-- Description -->
+            <p class="text-base lg:text-lg leading-relaxed text-neutral-700 dark:text-pink-200 max-w-sm">
+              Empowering mothers with expert guidance, supportive community, and personalized care. 
+              Your motherhood journey, made lighter and more joyful.
+            </p>
+
+            <!-- Newsletter Signup -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-2">
+                <UIcon name="i-heroicons-sparkles" class="h-5 w-5 text-pink-500" />
+                <h3 class="text-lg font-bold text-neutral-900 dark:text-white">
+                  Stay Connected
+                </h3>
+              </div>
+              <p class="text-sm text-neutral-600 dark:text-pink-300">
+                Get weekly tips and exclusive resources delivered to your inbox
+              </p>
+              <form class="flex flex-col sm:flex-row gap-3" @submit.prevent>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="flex-1 rounded-xl border border-neutral-300 dark:border-purple-700 bg-white dark:bg-purple-900/50 px-4 py-3 text-sm text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-purple-400 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-400 focus:border-transparent transition-all duration-200"
+                  required
+                />
+                <UButton 
+                  color="primary" 
+                  size="lg" 
+                  variant="solid" 
+                  type="submit"
+                  class="px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                >
+                  Subscribe
+                </UButton>
+              </form>
             </div>
           </Motion>
         </div>
 
-        <!-- Links sections -->
-        <div class="grid gap-6 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-3 lg:gap-8">
-          <!-- Resources -->
+        <!-- Quick Links Section -->
+        <div class="lg:col-span-2">
           <Motion
             :initial="{ opacity: 0, y: 20 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: 0.1 }"
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 0.6, delay: 0.1 }"
           >
-            <div>
-              <h3
-                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-pink-100"
-              >
-                Resources
-              </h3>
-              <ul class="space-y-3">
-                <li v-for="link in footerLinks.resources" :key="link.to">
-                  <NuxtLink
-                    :to="link.to"
-                    class="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-pink-300 transition-all hover:translate-x-1 hover:text-pink-600 dark:hover:text-pink-400"
-                  >
-                    <span
-                      class="h-1 w-1 rounded-full bg-pink-500 opacity-0 transition-opacity group-hover:opacity-100"
-                    />
-                    {{ link.label }}
-                  </NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </Motion>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <!-- Resources -->
+              <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-pink-100 mb-6 flex items-center gap-3">
+                  <div class="p-2 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 shadow-lg">
+                    <UIcon name="i-heroicons-book-open" class="h-5 w-5 text-white" />
+                  </div>
+                  Explore Resources
+                </h4>
+                <ul class="space-y-4">
+                  <li v-for="link in footerLinks.resources" :key="link.to">
+                    <NuxtLink
+                      :to="link.to"
+                      class="group flex items-center gap-3 text-sm text-neutral-600 dark:text-pink-300 hover:text-pink-600 dark:hover:text-pink-400 transition-all duration-300 transform hover:translate-x-2"
+                    >
+                      <div class="relative">
+                        <div class="h-2 w-2 rounded-full bg-pink-500 scale-0 group-hover:scale-100 transition-transform duration-300" />
+                        <div class="absolute inset-0 h-2 w-2 rounded-full bg-pink-500 scale-150 opacity-0 group-hover:opacity-30 animate-ping" />
+                      </div>
+                      <span class="font-medium">{{ link.label }}</span>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
 
-          <!-- Support -->
-          <Motion
-            :initial="{ opacity: 0, y: 20 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: 0.2 }"
-          >
-            <div>
-              <h3
-                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-pink-100"
-              >
-                Support
-              </h3>
-              <ul class="space-y-3">
-                <li v-for="link in footerLinks.support" :key="link.to + link.label">
-                  <NuxtLink
-                    :to="link.to"
-                    class="inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-pink-300 transition-all hover:translate-x-1 hover:text-pink-600 dark:hover:text-pink-400"
-                  >
-                    {{ link.label }}
-                  </NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </Motion>
+              <!-- Contact -->
+              <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-pink-100 mb-6 flex items-center gap-3">
+                  <div class="p-2 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 shadow-lg">
+                    <UIcon name="i-heroicons-phone" class="h-5 w-5 text-white" />
+                  </div>
+                  Get in Touch
+                </h4>
+                <div class="space-y-4">
+                  <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur" />
+                    <div class="relative flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-purple-900/50 border border-neutral-200 dark:border-purple-700 group-hover:border-pink-300 dark:group-hover:border-pink-600 transition-all duration-300">
+                      <div class="p-3 rounded-xl bg-gradient-to-br from-pink-100 to-pink-200 dark:from-pink-900/30 dark:to-pink-800/30 group-hover:scale-110 transition-transform duration-300">
+                        <UIcon name="i-heroicons-envelope" class="h-6 w-6 text-pink-600 dark:text-pink-400" />
+                      </div>
+                      <div>
+                        <div class="text-xs font-semibold text-neutral-500 dark:text-pink-400 mb-1">Email Us</div>
+                        <a
+                          href="mailto:info@momixsquad.com"
+                          class="text-sm font-medium text-neutral-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-200"
+                        >
+                          info@momixsquad.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
 
-          <!-- Contact -->
-          <Motion
-            :initial="{ opacity: 0, y: 20 }"
-            :visible-once="true"
-            :visible="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
-          >
-            <div>
-              <h3
-                class="mb-4 font-display text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-pink-100"
-              >
-                Get in Touch
-              </h3>
-              <ul class="space-y-3 text-sm text-neutral-600 dark:text-pink-300">
-                <li class="flex items-center gap-2">
-                  <UIcon name="i-heroicons-envelope" class="h-4 w-4 text-pink-500" />
-                  <a
-                    href="mailto:info@momixsquad.com"
-                    class="hover:text-pink-600 dark:hover:text-pink-400"
-                    >info@momixsquad.com</a
-                  >
-                </li>
-                <li class="flex items-center gap-2">
-                  <UIcon name="i-heroicons-phone" class="h-4 w-4 text-pink-500" />
-                  <a href="tel:+923100207414" class="hover:text-pink-600 dark:hover:text-pink-400"
-                    >+92 310 0207414</a
-                  >
-                </li>
-              </ul>
+                  <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur" />
+                    <div class="relative flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-purple-900/50 border border-neutral-200 dark:border-purple-700 group-hover:border-purple-300 dark:group-hover:border-purple-600 transition-all duration-300">
+                      <div class="p-3 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 group-hover:scale-110 transition-transform duration-300">
+                        <UIcon name="i-heroicons-chat-bubble-left-right" class="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <div>
+                        <div class="text-xs font-semibold text-neutral-500 dark:text-purple-400 mb-1">WhatsApp Us</div>
+                        <a 
+                          href="https://wa.me/923100207414" 
+                          class="text-sm font-medium text-neutral-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
+                        >
+                          +92 310 0207414
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Motion>
         </div>
       </div>
 
-      <!-- Bottom section -->
-      <Motion
-        :initial="{ opacity: 0 }"
-        :animate="{ opacity: 1 }"
-        :transition="{ duration: 0.5, delay: 0.4 }"
-      >
-        <div class="mt-8 border-t border-neutral-200 dark:border-purple-800 pt-6">
-          <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <!-- Bottom Section -->
+      <div class="mt-12 pt-8 border-t border-neutral-200 dark:border-purple-800">
+        <Motion
+          :initial="{ opacity: 0 }"
+          :animate="{ opacity: 1 }"
+          :transition="{ duration: 0.6, delay: 0.2 }"
+        >
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
             <!-- Copyright -->
-            <p class="text-sm text-neutral-500 dark:text-pink-300">
-              {{ currentYear }} Momix Squad. All rights reserved. Made
-              <UIcon name="i-heroicons-heart" class="inline h-4 w-4 text-pink-500" />
-              for moms everywhere.
-            </p>
-
-            <!-- Social links -->
-            <!--
-            <div class="flex items-center gap-4">
-              <a
-                v-for="social in socialLinks"
-                :key="social.href"
-                :href="social.href"
-                target="_blank"
-                rel="noopener noreferrer"
-                :aria-label="social.label"
-                class="text-neutral-500 hover:text-pink-600 dark:text-pink-300 dark:hover:text-pink-400 transition-colors"
-              >
-                <UIcon :name="social.icon" class="h-5 w-5" />
-              </a>
+            <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-pink-300">
+              <span>© {{ currentYear }} Momix Squad. All rights reserved.</span>
+              <span class="hidden sm:inline">•</span>
+              <span class="flex items-center gap-1">
+                Made with 
+                <UIcon name="i-heroicons-heart" class="h-4 w-4 text-pink-500 animate-pulse" />
+                for moms everywhere
+              </span>
             </div>
-            -->
+
+            <!-- Social Links (placeholder for future) -->
+            <div class="flex items-center gap-4">
+              <span class="text-xs text-neutral-500 dark:text-pink-400">Follow our journey</span>
+              <!-- Social icons can be added here when ready -->
+            </div>
           </div>
-        </div>
-      </Motion>
+        </Motion>
+      </div>
     </div>
   </footer>
 </template>

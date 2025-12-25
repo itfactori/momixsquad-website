@@ -161,7 +161,7 @@ const togglePractice = (index: number) => {
                   class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center mb-4"
                 >
                   <UIcon
-                    name="i-heroicons-leaf"
+                    name="i-heroicons-sparkles"
                     class="w-6 h-6 text-emerald-600 dark:text-emerald-400"
                   />
                 </div>
@@ -348,8 +348,8 @@ const togglePractice = (index: number) => {
                 <div
                   class="px-5 pb-5 pt-0 overflow-hidden transition-all duration-300"
                   :class="{
-                    'max-h-0': activePractice !== index,
-                    'max-h-96': activePractice === index
+                    'max-h-0 opacity-0': activePractice !== index,
+                    'max-h-96 opacity-100': activePractice === index
                   }"
                 >
                   <div class="pl-14 space-y-3">
@@ -459,7 +459,7 @@ const togglePractice = (index: number) => {
               <div
                 class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4"
               >
-                <UIcon name="i-heroicons-leaf" class="w-6 h-6 text-amber-600 dark:text-amber-400" />
+                <UIcon name="i-heroicons-sparkles" class="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 Nature & Mental Health
