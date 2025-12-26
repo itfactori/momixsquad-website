@@ -459,7 +459,10 @@ const togglePractice = (index: number) => {
               <div
                 class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4"
               >
-                <UIcon name="i-heroicons-sparkles" class="w-6 h-6 text-amber-600 dark:text-amber-400" />
+                <UIcon
+                  name="i-heroicons-sparkles"
+                  class="w-6 h-6 text-amber-600 dark:text-amber-400"
+                />
               </div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 Nature & Mental Health
