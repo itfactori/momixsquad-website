@@ -16,9 +16,13 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="min-h-screen bg-white dark:bg-deep-purple-950">
+  <div
+    class="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-950 dark:from-violet-950 dark:via-purple-950 dark:to-indigo-950"
+  >
     <!-- Hero Section -->
-    <section class="relative overflow-hidden pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section
+      class="relative overflow-hidden pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8"
+    >
       <div class="mx-auto max-w-7xl">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
@@ -27,11 +31,11 @@ definePageMeta({
         >
           <div class="text-center">
             <h1
-              class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
+              class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-neutral-900 dark:text-white mb-6"
             >
               Toddler Moms (3-5 Years)
             </h1>
-            <p class="text-xl text-neutral-600 dark:text-pink-200 max-w-2xl mx-auto">
+            <p class="text-xl text-neutral-600 dark:text-purple-200 max-w-2xl mx-auto">
               Guide your toddler through this exciting and challenging phase. Learn strategies for
               behavior, learning, and supporting independence.
             </p>
@@ -39,7 +43,7 @@ definePageMeta({
               <img
                 src="/hero/home-3.jpg"
                 alt="Toddlers playing and learning"
-                class="mx-auto rounded-3xl max-w-4xl object-cover shadow-lg"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
               />
             </div>
           </div>
@@ -48,7 +52,7 @@ definePageMeta({
     </section>
 
     <!-- Evidence-based Guidance -->
-    <section class="px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50 dark:bg-deep-purple-975">
+    <section class="px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50 dark:bg-purple-900/30">
       <div class="mx-auto max-w-4xl">
         <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
           Evidence-Based Toddler Parenting Strategies
@@ -60,12 +64,12 @@ definePageMeta({
         >
           <div class="space-y-4">
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">
                 Play-Based Learning & Development
               </summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   Play is a toddler's primary way of learning. UNICEF's Nurturing Care Framework
                   emphasizes play for cognitive, social, and emotional development.
@@ -93,7 +97,7 @@ definePageMeta({
                   <strong>Tips:</strong> Allow unstructured play daily, rotate toys, limit screen
                   time to 1 hour of quality content, play alongside your toddler
                 </p>
-                <p class="text-sm text-neutral-600 dark:text-pink-200 mt-2">
+                <p class="text-sm text-neutral-600 dark:text-purple-200 mt-2">
                   Learn more:
                   <a
                     class="text-pink-600 font-semibold hover:underline"
@@ -107,10 +111,10 @@ definePageMeta({
             </details>
 
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">Behavior Management & Discipline</summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   Toddlers test boundaries as they develop autonomy. Positive discipline teaches
                   rather than punishes.
@@ -151,12 +155,12 @@ definePageMeta({
             </details>
 
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">
                 Nutrition & Healthy Eating Habits
               </summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   Toddlers' growth slows after age 2, so appetite may decrease. Focus on nutrition,
                   not quantity.
@@ -189,12 +193,12 @@ definePageMeta({
             </details>
 
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">
                 Language & Early Literacy Development
               </summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   The early years are critical for language development. By age 5, toddlers should
                   understand most of what's said to them and speak in sentences.
@@ -224,12 +228,12 @@ definePageMeta({
             </details>
 
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">
                 Toilet Training Readiness & Support
               </summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   Most children show readiness for toilet training between 2-3 years, though
                   readiness varies widely. Forcing too early can backfire.
@@ -255,12 +259,12 @@ definePageMeta({
             </details>
 
             <details
-              class="bg-white dark:bg-deep-purple-900 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
+              class="bg-white dark:bg-purple-800/50 rounded-xl p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow"
             >
               <summary class="font-medium cursor-pointer">
                 Safety, Immunizations & Health Monitoring
               </summary>
-              <div class="mt-3 text-neutral-700 dark:text-pink-100 space-y-2">
+              <div class="mt-3 text-neutral-700 dark:text-purple-100 space-y-2">
                 <p>
                   Toddlers are curious and mobile, requiring increased safety measures. Regular
                   health checks ensure development is on track.
@@ -286,9 +290,9 @@ definePageMeta({
             </details>
 
             <div
-              class="mt-6 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-4 border border-pink-200 dark:border-pink-800"
+              class="mt-6 bg-purple-50 dark:bg-purple-900/50 rounded-xl p-4 border border-purple-200 dark:border-purple-700"
             >
-              <p class="text-sm font-semibold text-pink-900 dark:text-pink-200 mb-2">
+              <p class="text-sm font-semibold text-purple-900 dark:text-purple-200 mb-2">
                 📚 Key Resources
               </p>
               <ul class="text-sm space-y-1">
@@ -362,7 +366,7 @@ definePageMeta({
     </section>
 
     <!-- Practical Tips Section -->
-    <section class="px-4 sm:px-6 lg:px-8 py-20 bg-neutral-50 dark:bg-deep-purple-975">
+    <section class="px-4 sm:px-6 lg:px-8 py-20 bg-neutral-50 dark:bg-purple-900/30">
       <div class="mx-auto max-w-7xl">
         <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-12 text-center">
           Practical Parenting Tips
@@ -373,11 +377,11 @@ definePageMeta({
             :animate="{ opacity: 1, x: 0 }"
             :transition="{ duration: 0.5 }"
           >
-            <div class="bg-white dark:bg-deep-purple-900 rounded-xl p-6 shadow-md">
+            <div class="bg-white dark:bg-purple-800/50 rounded-xl p-6 shadow-md">
               <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
                 🎯 Setting Routines
               </h3>
-              <ul class="space-y-2 text-neutral-700 dark:text-pink-100">
+              <ul class="space-y-2 text-neutral-700 dark:text-purple-100">
                 <li>• Create predictable daily schedules</li>
                 <li>• Consistent bedtime routine supports sleep</li>
                 <li>• Regular mealtimes establish healthy habits</li>
@@ -392,11 +396,11 @@ definePageMeta({
             :animate="{ opacity: 1, x: 0 }"
             :transition="{ duration: 0.5, delay: 0.1 }"
           >
-            <div class="bg-white dark:bg-deep-purple-900 rounded-xl p-6 shadow-md">
+            <div class="bg-white dark:bg-purple-800/50 rounded-xl p-6 shadow-md">
               <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
                 💡 Encouraging Independence
               </h3>
-              <ul class="space-y-2 text-neutral-700 dark:text-pink-100">
+              <ul class="space-y-2 text-neutral-700 dark:text-purple-100">
                 <li>• Let them help with simple tasks (sorting, setting table)</li>
                 <li>• Offer choices ("apple or banana?")</li>
                 <li>• Praise effort, not just results</li>
@@ -410,7 +414,7 @@ definePageMeta({
     </section>
 
     <!-- Evidence-Based Sources -->
-    <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">
+    <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-purple-900/50">
       <div class="mx-auto max-w-6xl">
         <div
           class="rounded-3xl border border-neutral-200 dark:border-purple-800 bg-neutral-50 dark:bg-deep-purple-900/60 p-8 shadow-xl"
