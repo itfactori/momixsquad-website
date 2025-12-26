@@ -66,7 +66,7 @@ const creativeActivities = [
     difficulty: 'Beginner',
     timeNeeded: '2-3 hours weekly',
     research: 'CDC: Gardening improves mental health and physical activity',
-    icon: 'i-heroicons-leaf'
+    icon: 'i-heroicons-sparkles'
   },
   {
     title: 'Baking & Cooking',

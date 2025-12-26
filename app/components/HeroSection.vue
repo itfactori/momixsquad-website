@@ -262,20 +262,5 @@ const randomImage = computed(
         </div>
       </div>
     </div>
-
-    <!-- Scroll indicator -->
-    <Motion
-      :initial="{ opacity: 0 }"
-      :animate="{ opacity: 1 }"
-      :transition="{ duration: 1, delay: 1.2 }"
-      class="absolute bottom-8 left-1/2 -translate-x-1/2"
-    >
-      <div class="flex flex-col items-center gap-2 text-neutral-400 dark:text-pink-400">
-        <span class="text-xs uppercase tracking-wider">Scroll</span>
-        <div class="h-10 w-6 rounded-full border-2 border-neutral-300 dark:border-purple-700 p-1">
-          <div class="h-2 w-full rounded-full bg-pink-500 animate-bounce" />
-        </div>
-      </div>
-    </Motion>
   </section>
 </template>

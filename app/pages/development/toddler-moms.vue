@@ -17,7 +17,7 @@ definePageMeta({
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-950 dark:from-violet-950 dark:via-purple-950 dark:to-indigo-950"
+    class="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20"
   >
     <!-- Hero Section -->
     <section

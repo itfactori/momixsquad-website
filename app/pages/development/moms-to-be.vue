@@ -17,7 +17,7 @@ definePageMeta({
 
 <template>
   <div
-    class="min-h-screen bg-gradient-to-br from-rose-900 via-pink-900 to-purple-950 dark:from-rose-950 dark:via-pink-950 dark:to-purple-950"
+    class="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 dark:from-rose-950/20 dark:via-pink-950/20 dark:to-purple-950/20"
   >
     <!-- Hero Section -->
     <section
@@ -54,7 +54,7 @@ definePageMeta({
     <!-- Evidence-based Guidance -->
     <section class="px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50 dark:bg-deep-purple-975">
       <div class="mx-auto max-w-4xl">
-        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-6">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-pink-400 mb-6">
           Evidence-based Prenatal Guidance
         </h2>
         <Motion
@@ -319,7 +319,7 @@ definePageMeta({
     <!-- Interactive Tips Section -->
     <section class="px-4 sm:px-6 lg:px-8 py-20 bg-neutral-50 dark:bg-deep-purple-975">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-12 text-center">
+        <h2 class="text-3xl font-bold text-neutral-900 dark:text-pink-400 mb-12 text-center">
           Practical Tips for Expectant Mothers
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
