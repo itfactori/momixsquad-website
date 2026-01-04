@@ -117,7 +117,10 @@ const momStages = [
               <p
                 class="font-display text-2xl font-bold italic leading-relaxed text-neutral-900 dark:text-pink-50 sm:text-3xl lg:text-4xl"
               >
-                "We aim to support Mothers through authentic guidance, evidence-based parenting tools and a compassionate sisterhood. Our mission is to strengthen families by helping mothers navigate modern challenges with wisdom, resilience and faith while honoring the important role as a MOM."
+                "We aim to support Mothers through authentic guidance, evidence-based parenting
+                tools and a compassionate sisterhood. Our mission is to strengthen families by
+                helping mothers navigate modern challenges with wisdom, resilience and faith while
+                honoring the important role as a MOM."
               </p>
               <p
                 class="mx-auto max-w-3xl text-lg leading-relaxed text-neutral-600 dark:text-pink-300 sm:text-xl"
