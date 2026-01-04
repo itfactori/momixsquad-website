@@ -11,18 +11,26 @@ const footerLinks = {
   support: []
 };
 
-// Social links temporarily disabled
-// const socialLinks = [
-//   {
-//     icon: 'i-simple-icons-instagram',
-//     href: 'https://instagram.com/momixsquad',
-//     label: 'Instagram'
-//   },
-//   { icon: 'i-simple-icons-facebook', href: 'https://facebook.com/momixsquad', label: 'Facebook' },
-//   { icon: 'i-simple-icons-twitter', href: 'https://twitter.com/momixsquad', label: 'Twitter' },
-//   {
-//     icon: 'i-simple-icons-linkedin',
-//     href: 'https://linkedin.com/company/momixsquad',
+const socialLinks = [
+  {
+    icon: 'i-simple-icons-instagram',
+    href: 'https://www.instagram.com/momix_squad/',
+    label: 'Instagram',
+    color: 'hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-600'
+  },
+  {
+    icon: 'i-simple-icons-facebook',
+    href: 'https://www.facebook.com/profile.php?id=61584283265491',
+    label: 'Facebook',
+    color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600'
+  },
+  {
+    icon: 'i-simple-icons-youtube',
+    href: 'https://www.youtube.com/@momixsquad',
+    label: 'YouTube',
+    color: 'hover:bg-red-100 dark:hover:bg-red-900/50 hover:text-red-600'
+  }
+];
 </script>
 
 <template>
@@ -190,37 +198,6 @@ const footerLinks = {
                       </div>
                     </div>
                   </div>
-
-                  <div class="group relative">
-                    <div
-                      class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"
-                    />
-                    <div
-                      class="relative flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-purple-900/50 border border-neutral-200 dark:border-purple-700 group-hover:border-purple-300 dark:group-hover:border-purple-600 transition-all duration-300"
-                    >
-                      <div
-                        class="p-3 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30 group-hover:scale-110 transition-transform duration-300"
-                      >
-                        <UIcon
-                          name="i-heroicons-chat-bubble-left-right"
-                          class="h-6 w-6 text-purple-600 dark:text-purple-400"
-                        />
-                      </div>
-                      <div>
-                        <div
-                          class="text-xs font-semibold text-neutral-500 dark:text-purple-400 mb-1"
-                        >
-                          WhatsApp Us
-                        </div>
-                        <a
-                          href="https://wa.me/923100207414"
-                          class="text-sm font-medium text-neutral-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200"
-                        >
-                          +92 310 0207414
-                        </a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -247,10 +224,22 @@ const footerLinks = {
               </span>
             </div>
 
-            <!-- Social Links (placeholder for future) -->
+            <!-- Social Links -->
             <div class="flex items-center gap-4">
               <span class="text-xs text-neutral-500 dark:text-pink-400">Follow our journey</span>
-              <!-- Social icons can be added here when ready -->
+              <div class="flex items-center gap-3">
+                <a
+                  v-for="social in socialLinks"
+                  :key="social.label"
+                  :href="social.href"
+                  :aria-label="social.label"
+                  :class="`p-2 rounded-lg text-neutral-500 ${social.color} transition-all duration-200 hover:scale-110`"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <UIcon :name="social.icon" class="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </Motion>
