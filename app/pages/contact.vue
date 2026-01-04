@@ -76,13 +76,6 @@ const contactInfo = [
     href: 'mailto:info@momixsquad.com'
   },
   {
-    icon: 'i-heroicons-phone',
-    title: 'WhatsApp Us',
-    description: 'Available for urgent inquiries',
-    value: '+92 310 0207414',
-    href: 'tel:+923100207414'
-  },
-  {
     icon: 'i-heroicons-clock',
     title: 'Response Time',
     description: "We're here for you",
@@ -91,33 +84,26 @@ const contactInfo = [
   }
 ];
 
-// Social links temporarily disabled
-// const socialLinks = [
-//   {
-//     icon: 'i-simple-icons-instagram',
-//     href: 'https://instagram.com/momixsquad',
-//     label: 'Instagram',
-//     color: 'hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-600'
-//   },
-//   {
-//     icon: 'i-simple-icons-facebook',
-//     href: 'https://facebook.com/momixsquad',
-//     label: 'Facebook',
-//     color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600'
-//   },
-//   {
-//     icon: 'i-simple-icons-twitter',
-//     href: 'https://twitter.com/momixsquad',
-//     label: 'Twitter',
-//     color: 'hover:bg-sky-100 dark:hover:bg-sky-900/50 hover:text-sky-500'
-//   },
-//   {
-//     icon: 'i-simple-icons-linkedin',
-//     href: 'https://linkedin.com/company/momixsquad',
-//     label: 'LinkedIn',
-//     color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-700'
-//   }
-// ];
+const socialLinks = [
+  {
+    icon: 'i-simple-icons-instagram',
+    href: 'https://www.instagram.com/momix_squad/',
+    label: 'Instagram',
+    color: 'hover:bg-pink-100 dark:hover:bg-pink-900/50 hover:text-pink-600'
+  },
+  {
+    icon: 'i-simple-icons-facebook',
+    href: 'https://www.facebook.com/profile.php?id=61584283265491',
+    label: 'Facebook',
+    color: 'hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600'
+  },
+  {
+    icon: 'i-simple-icons-youtube',
+    href: 'https://www.youtube.com/@momixsquad',
+    label: 'YouTube',
+    color: 'hover:bg-red-100 dark:hover:bg-red-900/50 hover:text-red-600'
+  }
+];
 </script>
 
 <template>
@@ -392,8 +378,7 @@ const contactInfo = [
                 <p class="mt-2 text-neutral-600 dark:text-neutral-400">
                   Follow us on social media for tips, updates, and mom community moments.
                 </p>
-                <!-- Social Media - Temporarily Disabled -->
-                <!--
+                <!-- Social Media -->
                 <div class="mt-6 flex gap-3">
                   <a
                     v-for="social in socialLinks"
@@ -408,7 +393,6 @@ const contactInfo = [
                     <UIcon :name="social.icon" class="h-6 w-6" />
                   </a>
                 </div>
-                -->
               </div>
 
               <!-- FAQ Teaser -->
