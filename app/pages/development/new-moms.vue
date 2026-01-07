@@ -318,6 +318,242 @@ definePageMeta({
       </div>
     </section>
 
+    <!-- Islamic Faith-Based Guidance -->
+    <section
+      class="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20"
+    >
+      <div class="mx-auto max-w-6xl">
+        <Motion
+          :initial="{ opacity: 0, y: 20 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5 }"
+        >
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+              Suggestions for Muslim Moms rooted in Faith
+            </h2>
+            <p class="text-lg text-neutral-600 dark:text-emerald-200 max-w-3xl mx-auto">
+              Navigate your new motherhood journey with Islamic wisdom and spiritual guidance for
+              postpartum care.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Postpartum Islamic Care -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.1 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/50">
+                  <UIcon
+                    name="i-heroicons-heart"
+                    class="h-6 w-6 text-emerald-600 dark:text-emerald-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Postpartum Care
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-emerald-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Nifas Period</strong> - 40-day postpartum confinement with specific
+                    Islamic guidelines</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Ghusl after Nifas</strong> - Ritual purification before resuming
+                    prayers</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Postponed Fasting</strong> - Make up missed Ramadan fasts later</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Rest & Recovery</strong> - Accept help from family and community</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">
+                <a
+                  href="https://thegoodchild.org/companion" target="_blank" rel="noopener" class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Postpartum Guide
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Breastfeeding in Islam -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.2 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-teal-200 dark:ring-teal-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-teal-100 dark:bg-teal-900/50">
+                  <UIcon
+                    name="i-heroicons-sparkles"
+                    class="h-6 w-6 text-teal-600 dark:text-teal-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Breastfeeding
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-teal-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Rida'ah Rights</strong> - 2 years of breastfeeding as Islamic
+                    right</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Du'a for Milk</strong> - Prophet's prayer for abundant milk
+                    supply</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Halal Nutrition</strong> - Maintain halal diet while
+                    breastfeeding</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Modesty in Feeding</strong> - Follow Islamic guidelines for
+                    privacy</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg">
+                <a
+                  href="https://www.muslimparenting.net/" target="_blank" rel="noopener" class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Breastfeeding in Islam
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Baby's Islamic Upbringing -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.3 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-cyan-200 dark:ring-cyan-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-cyan-100 dark:bg-cyan-900/50">
+                  <UIcon
+                    name="i-heroicons-academic-cap"
+                    class="h-6 w-6 text-cyan-600 dark:text-cyan-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Baby's Upbringing
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-cyan-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span><strong>Adhan & Iqamah</strong> - Call prayer in baby's ear at birth</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span><strong>Aqiqah</strong> - Sacrifice and shave baby's head on 7th day</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Tahneek</strong> - Chew date and place in baby's mouth for
+                    blessings</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Quran Recitation</strong> - Play Quran softly for baby's comfort</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg">
+                <a
+                  href="https://www.muslimpulse.com/parenting-tips-from-quran-and-sunnah" target="_blank" rel="noopener" class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Newborn Islamic Care
+                </a>
+              </div>
+            </Motion>
+          </div>
+
+          <!-- Additional Resources -->
+          <div
+            class="mt-8 bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-900 dark:text-white mb-4 flex items-center gap-2"
+            >
+              <UIcon
+                name="i-heroicons-sparkles"
+                class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+              />
+              Authentic Islamic Resources
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <a href="https://www.jameelaho.com/" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors">
+                <UIcon
+                  name="i-heroicons-globe-alt"
+                  class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300"
+                  >
+                    Jameela Ho
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-emerald-200">
+                    Muslim parenting articles and guidance
+                  </p>
+                </div>
+              </a>
+              <a href="https://www.bayyinahtv.com/" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors">
+                <UIcon name="i-heroicons-heart" class="h-8 w-8 text-teal-600 dark:text-teal-400" />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-300"
+                  >
+                    Bayyinah TV
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-teal-200">
+                    Islamic education for new moms
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </Motion>
+      </div>
+    </section>
+
     <!-- Baby Care Essentials Section -->
     <section class="px-4 sm:px-6 lg:px-8 py-20">
       <div class="mx-auto max-w-7xl">
