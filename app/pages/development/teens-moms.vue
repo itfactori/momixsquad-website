@@ -658,7 +658,10 @@ definePageMeta({
                 rel="noopener"
                 class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
               >
-                <UIcon name="i-heroicons-globe-alt" class="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
+                <UIcon
+                  name="i-heroicons-globe-alt"
+                  class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+                />
                 <div>
                   <h4
                     class="font-semibold text-neutral-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300"
@@ -676,7 +679,10 @@ definePageMeta({
                 rel="noopener"
                 class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
               >
-                <UIcon name="i-heroicons-academic-cap" class="h-8 w-8 text-teal-600 dark:text-teal-400" />
+                <UIcon
+                  name="i-heroicons-academic-cap"
+                  class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                />
                 <div>
                   <h4
                     class="font-semibold text-neutral-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-300"

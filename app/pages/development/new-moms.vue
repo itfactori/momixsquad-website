@@ -387,7 +387,10 @@ definePageMeta({
               </ul>
               <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">
                 <a
-                  href="https://thegoodchild.org/companion" target="_blank" rel="noopener" class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
+                  href="https://thegoodchild.org/companion"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
                 >
                   <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
                   Islamic Postpartum Guide
@@ -445,7 +448,10 @@ definePageMeta({
               </ul>
               <div class="mt-4 p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg">
                 <a
-                  href="https://www.muslimparenting.net/" target="_blank" rel="noopener" class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
+                  href="https://www.muslimparenting.net/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
                 >
                   <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
                   Breastfeeding in Islam
@@ -496,7 +502,10 @@ definePageMeta({
               </ul>
               <div class="mt-4 p-3 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg">
                 <a
-                  href="https://www.muslimpulse.com/parenting-tips-from-quran-and-sunnah" target="_blank" rel="noopener" class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
+                  href="https://www.muslimpulse.com/parenting-tips-from-quran-and-sunnah"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
                 >
                   <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
                   Newborn Islamic Care
@@ -519,7 +528,12 @@ definePageMeta({
               Authentic Islamic Resources
             </h3>
             <div class="grid gap-4 md:grid-cols-2">
-              <a href="https://www.jameelaho.com/" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors">
+              <a
+                href="https://www.jameelaho.com/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+              >
                 <UIcon
                   name="i-heroicons-globe-alt"
                   class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
@@ -535,7 +549,12 @@ definePageMeta({
                   </p>
                 </div>
               </a>
-              <a href="https://www.bayyinahtv.com/" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors">
+              <a
+                href="https://www.bayyinahtv.com/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
+              >
                 <UIcon name="i-heroicons-heart" class="h-8 w-8 text-teal-600 dark:text-teal-400" />
                 <div>
                   <h4

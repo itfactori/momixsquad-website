@@ -625,7 +625,12 @@ definePageMeta({
               Authentic Islamic Resources
             </h3>
             <div class="grid gap-4 md:grid-cols-2">
-              <a href="https://thegoodchild.org/companion" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors">
+              <a
+                href="https://thegoodchild.org/companion"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+              >
                 <UIcon
                   name="i-heroicons-globe-alt"
                   class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
