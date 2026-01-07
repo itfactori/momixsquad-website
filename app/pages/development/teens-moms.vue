@@ -440,6 +440,266 @@ definePageMeta({
       </div>
     </section>
 
+    <!-- Islamic Faith-Based Guidance -->
+    <section
+      class="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20"
+    >
+      <div class="mx-auto max-w-6xl">
+        <Motion
+          :initial="{ opacity: 0, y: 20 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5 }"
+        >
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+              Suggestions for Muslim Moms rooted in Faith
+            </h2>
+            <p class="text-lg text-neutral-600 dark:text-emerald-200 max-w-3xl mx-auto">
+              Navigate the teenage years with Islamic wisdom and guidance for raising righteous
+              Muslim youth.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Islamic Parenting Teens -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.1 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/50">
+                  <UIcon
+                    name="i-heroicons-book-open"
+                    class="h-6 w-6 text-emerald-600 dark:text-emerald-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Islamic Parenting
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-emerald-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Respect & Honor</strong> - Balance Islamic respect with modern
+                    understanding</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Islamic Education</strong> - Ensure Quran and Islamic studies
+                    continue</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Friend Selection</strong> - Guide toward righteous Muslim friends</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Digital Boundaries</strong> - Islamic guidelines for social media
+                    use</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">
+                <a
+                  href="https://www.jameelaho.com/2023/09/how-to-connect-with-your-teen.html"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Teen Parenting
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Faith & Identity -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.2 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-teal-200 dark:ring-teal-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-teal-100 dark:bg-teal-900/50">
+                  <UIcon
+                    name="i-heroicons-sparkles"
+                    class="h-6 w-6 text-teal-600 dark:text-teal-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Faith & Identity
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-teal-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Prayer Consistency</strong> - Help teens maintain regular Salah</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span><strong>Hijab Support</strong> - Guide modesty choices with wisdom</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Mosque Involvement</strong> - Connect with Muslim youth groups</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Islamic Identity</strong> - Build strong Muslim character and
+                    values</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg">
+                <a
+                  href="https://yaqeeninstitute.org/read/paper/islamic-parenting-strategies-how-to-help-children-feel-safe-in-their-attachment-to-god-and-parents"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Muslim Youth Identity
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Modern Challenges -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.3 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-cyan-200 dark:ring-cyan-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-cyan-100 dark:bg-cyan-900/50">
+                  <UIcon
+                    name="i-heroicons-shield-check"
+                    class="h-6 w-6 text-cyan-600 dark:text-cyan-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Modern Challenges
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-cyan-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Social Media Wisdom</strong> - Islamic guidance for online
+                    behavior</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Dating Guidelines</strong> - Islamic approach to relationships</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Peer Pressure</strong> - Islamic strategies to resist negative
+                    influence</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Future Planning</strong> - Education and career from Islamic
+                    perspective</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg">
+                <a
+                  href="https://www.muslimpulse.com/parenting-tips-from-quran-and-sunnah"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Muslim Youth Challenges
+                </a>
+              </div>
+            </Motion>
+          </div>
+
+          <!-- Additional Resources -->
+          <div
+            class="mt-8 bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-900 dark:text-white mb-4 flex items-center gap-2"
+            >
+              <UIcon
+                name="i-heroicons-sparkles"
+                class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+              />
+              Authentic Islamic Resources
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <a
+                href="https://soltlane.com/upbringing-of-children/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-globe-alt"
+                  class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300"
+                  >
+                    Solt Lane
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-emerald-200">
+                    Islamic upbringing guidance for teens
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://www.bayyinahtv.com/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-academic-cap"
+                  class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-300"
+                  >
+                    Bayyinah TV
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-teal-200">
+                    Islamic education for youth development
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </Motion>
+      </div>
+    </section>
+
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">
       <div class="mx-auto max-w-6xl">

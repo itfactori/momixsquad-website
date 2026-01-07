@@ -58,25 +58,39 @@ const socialLinks = [
             :transition="{ duration: 0.6 }"
           >
             <!-- Logo -->
-            <NuxtLink to="/" class="group inline-flex items-center gap-3">
+            <NuxtLink to="/" class="group inline-flex items-center gap-4">
               <div class="relative">
-                <img
-                  src="/logo.png"
-                  alt="Momix Squad"
-                  class="h-14 w-14 rounded-2xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
-                />
+                <!-- Enhanced logo container with glow effect -->
                 <div
-                  class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                />
-              </div>
-              <span class="font-display text-3xl lg:text-4xl font-bold">
-                <span
-                  class="bg-gradient-to-r from-pink-600 via-pink-500 to-purple-600 dark:from-pink-400 dark:via-pink-300 dark:to-purple-400 bg-clip-text text-transparent"
+                  class="absolute inset-0 bg-gradient-to-r from-pink-500/30 to-purple-500/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+                <div
+                  class="relative bg-white dark:bg-purple-900/50 p-3 rounded-3xl shadow-2xl shadow-pink-500/20 dark:shadow-purple-500/20 border-2 border-pink-200/50 dark:border-purple-700/50 transition-all duration-500 group-hover:shadow-3xl group-hover:shadow-pink-500/30 dark:group-hover:shadow-purple-500/30 group-hover:border-pink-400 dark:group-hover:border-purple-500 group-hover:scale-110"
                 >
-                  Momix
+                  <img
+                    src="/logo.png"
+                    alt="Momix Squad"
+                    class="h-16 w-16 rounded-2xl transition-all duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <!-- Animated ring effect -->
+                <div
+                  class="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-60 transition-all duration-500 group-hover:animate-pulse"
+                ></div>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display text-3xl lg:text-4xl font-bold leading-tight">
+                  <span
+                    class="bg-gradient-to-r from-pink-600 via-pink-500 to-purple-600 dark:from-pink-400 dark:via-pink-300 dark:to-purple-400 bg-clip-text text-transparent"
+                  >
+                    Momix
+                  </span>
+                  <span class="text-purple-600 dark:text-purple-400">Squad</span>
                 </span>
-                <span class="text-purple-600 dark:text-purple-400">Squad</span>
-              </span>
+                <span class="text-sm font-medium text-neutral-600 dark:text-pink-300 mt-1"
+                  >Empowering Mothers</span
+                >
+              </div>
             </NuxtLink>
 
             <!-- Description -->

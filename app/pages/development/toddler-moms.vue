@@ -413,6 +413,266 @@ definePageMeta({
       </div>
     </section>
 
+    <!-- Islamic Faith-Based Guidance -->
+    <section
+      class="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20"
+    >
+      <div class="mx-auto max-w-6xl">
+        <Motion
+          :initial="{ opacity: 0, y: 20 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5 }"
+        >
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+              Suggestions for Muslim Moms rooted in Faith
+            </h2>
+            <p class="text-lg text-neutral-600 dark:text-emerald-200 max-w-3xl mx-auto">
+              Raise your toddler with Islamic values and nurturing guidance for early development.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Islamic Parenting Principles -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.1 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/50">
+                  <UIcon
+                    name="i-heroicons-book-open"
+                    class="h-6 w-6 text-emerald-600 dark:text-emerald-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Islamic Parenting
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-emerald-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Gentle Discipline</strong> - Follow Prophet's example of kindness over
+                    harshness</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Respectful Communication</strong> - Speak to children with dignity and
+                    patience</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Dua for Children</strong> - Prophet's prayers for righteous
+                    offspring</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Leading by Example</strong> - Model Islamic behavior in daily
+                    life</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">
+                <a
+                  href="https://soltlane.com/upbringing-of-children/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Toddler Parenting
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Islamic Education & Play -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.2 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-teal-200 dark:ring-teal-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-teal-100 dark:bg-teal-900/50">
+                  <UIcon
+                    name="i-heroicons-sparkles"
+                    class="h-6 w-6 text-teal-600 dark:text-teal-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Learning & Play
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-teal-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Quran Stories</strong> - Age-appropriate Islamic stories and prophets'
+                    tales</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Arabic Alphabet</strong> - Early introduction to Arabic letters and
+                    sounds</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Islamic Rhymes</strong> - Nasheeds and Islamic children's songs</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Halal Toys</strong> - Educational toys free from haram elements</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg">
+                <a
+                  href="https://salaam-mummy.com/free-islamic-parenting-resources/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Early Learning
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Nutrition & Health -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.3 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-cyan-200 dark:ring-cyan-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-cyan-100 dark:bg-cyan-900/50">
+                  <UIcon
+                    name="i-heroicons-heart"
+                    class="h-6 w-6 text-cyan-600 dark:text-cyan-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Halal Nutrition
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-cyan-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span><strong>Healthy Snacks</strong> - Dates, yogurt, fruits as per Sunnah</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Bismillah Habit</strong> - Teach saying Bismillah before eating</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Table Manners</strong> - Islamic etiquette for eating and
+                    drinking</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Food Gratitude</strong> - Thank Allah for meals and teach
+                    gratitude</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg">
+                <a
+                  href="https://www.effectiveislamicparenting.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Halal Toddler Meals
+                </a>
+              </div>
+            </Motion>
+          </div>
+
+          <!-- Additional Resources -->
+          <div
+            class="mt-8 bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-900 dark:text-white mb-4 flex items-center gap-2"
+            >
+              <UIcon
+                name="i-heroicons-sparkles"
+                class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+              />
+              Authentic Islamic Resources
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <a
+                href="https://thegoodchild.org/companion"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-globe-alt"
+                  class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300"
+                  >
+                    The Good Child
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-emerald-200">
+                    Muslim parent companion program
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://www.muslimparenting.net/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-academic-cap"
+                  class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-300"
+                  >
+                    Muslim Parenting Net
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-teal-200">
+                    Expert guidance for toddler years
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </Motion>
+      </div>
+    </section>
+
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-purple-900/50">
       <div class="mx-auto max-w-6xl">

@@ -326,6 +326,269 @@ definePageMeta({
       </div>
     </section>
 
+    <!-- Islamic Faith-Based Guidance -->
+    <section
+      class="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/20 dark:via-teal-950/20 dark:to-cyan-950/20"
+    >
+      <div class="mx-auto max-w-6xl">
+        <Motion
+          :initial="{ opacity: 0, y: 20 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5 }"
+        >
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+              Suggestions for Muslim Moms rooted in Faith
+            </h2>
+            <p class="text-lg text-neutral-600 dark:text-emerald-200 max-w-3xl mx-auto">
+              Embrace your super-mom journey with Islamic wisdom, spiritual growth, and family
+              harmony.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Spiritual Leadership -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.1 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/50">
+                  <UIcon
+                    name="i-heroicons-crown"
+                    class="h-6 w-6 text-emerald-600 dark:text-emerald-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Spiritual Leadership
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-emerald-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Family Imam</strong> - Lead family in Islamic practices and
+                    prayers</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Quran Reflection</strong> - Share wisdom and life experiences with
+                    family</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Charity Leadership</strong> - Organize Sadaqah and community
+                    service</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500 mt-1">•</span>
+                  <span
+                    ><strong>Dua for Family</strong> - Regular prayers for children's guidance</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">
+                <a
+                  href="https://www.islamicity.org/101613/guiding-little-hearts-islamic-parenting-strategies-for-spiritual-growth/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-emerald-700 dark:text-emerald-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Family Leadership
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Intergenerational Wisdom -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.2 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-teal-200 dark:ring-teal-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-teal-100 dark:bg-teal-900/50">
+                  <UIcon
+                    name="i-heroicons-users"
+                    class="h-6 w-6 text-teal-600 dark:text-teal-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Family Wisdom
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-teal-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Grandparent Guidance</strong> - Share Islamic wisdom with
+                    grandchildren</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Family Stories</strong> - Pass down Islamic heritage and
+                    traditions</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Conflict Resolution</strong> - Islamic approach to family
+                    disputes</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-teal-500 mt-1">•</span>
+                  <span
+                    ><strong>Elder Respect</strong> - Honor parents while maintaining Islamic
+                    values</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-teal-50 dark:bg-teal-900/30 rounded-lg">
+                <a
+                  href="https://www.amaliah.com/post/67013/parenting-tips-muslim-families"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-teal-700 dark:text-teal-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Islamic Family Harmony
+                </a>
+              </div>
+            </Motion>
+
+            <!-- Community Contribution -->
+            <Motion
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.5, delay: 0.3 }"
+              class="bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-cyan-200 dark:ring-cyan-800"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div class="p-2 rounded-xl bg-cyan-100 dark:bg-cyan-900/50">
+                  <UIcon
+                    name="i-heroicons-heart"
+                    class="h-6 w-6 text-cyan-600 dark:text-cyan-400"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold text-neutral-900 dark:text-white">
+                  Community Service
+                </h3>
+              </div>
+              <ul class="space-y-3 text-neutral-700 dark:text-cyan-100">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span><strong>Mentorship</strong> - Guide younger Muslim moms in community</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Mosque Activities</strong> - Organize Islamic education and
+                    events</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Islamic Volunteering</strong> - Support Muslim charities and
+                    causes</span
+                  >
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-500 mt-1">•</span>
+                  <span
+                    ><strong>Wisdom Sharing</strong> - Teach Islamic parenting to next
+                    generation</span
+                  >
+                </li>
+              </ul>
+              <div class="mt-4 p-3 bg-cyan-50 dark:bg-cyan-900/30 rounded-lg">
+                <a
+                  href="https://salaam-mummy.com/free-islamic-parenting-resources/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-cyan-700 dark:text-cyan-300 font-medium hover:underline flex items-center gap-2"
+                >
+                  <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-4 w-4" />
+                  Muslim Senior Service
+                </a>
+              </div>
+            </Motion>
+          </div>
+
+          <!-- Additional Resources -->
+          <div
+            class="mt-8 bg-white dark:bg-emerald-950/60 rounded-2xl p-6 shadow-lg ring-1 ring-emerald-200 dark:ring-emerald-800"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-900 dark:text-white mb-4 flex items-center gap-2"
+            >
+              <UIcon
+                name="i-heroicons-sparkles"
+                class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+              />
+              Authentic Islamic Resources
+            </h3>
+            <div class="grid gap-4 md:grid-cols-2">
+              <a
+                href="https://www.effectiveislamicparenting.com/"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-globe-alt"
+                  class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-300"
+                  >
+                    Effective Islamic Parenting
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-emerald-200">
+                    Expert guidance for senior moms
+                  </p>
+                </div>
+              </a>
+              <a
+                href="https://thegoodchild.org/companion"
+                target="_blank"
+                rel="noopener"
+                class="group flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/30 hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors"
+              >
+                <UIcon
+                  name="i-heroicons-academic-cap"
+                  class="h-8 w-8 text-teal-600 dark:text-teal-400"
+                />
+                <div>
+                  <h4
+                    class="font-semibold text-neutral-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-300"
+                  >
+                    The Good Child
+                  </h4>
+                  <p class="text-sm text-neutral-600 dark:text-teal-200">
+                    Leadership and wisdom for senior moms
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </Motion>
+      </div>
+    </section>
+
     <!-- Life Milestones Section -->
     <section class="px-4 sm:px-6 lg:px-8 py-20">
       <div class="mx-auto max-w-7xl">
