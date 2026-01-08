@@ -80,7 +80,7 @@ const closeAllMenus = () => {
           <img
             src="/logo.png"
             alt="Momix Squad"
-            class="h-8 sm:h-10 lg:h-12 w-auto transition-all duration-300 group-hover:opacity-90"
+            class="h-12 sm:h-14 lg:h-16 w-auto transition-all duration-300 group-hover:opacity-90"
           />
         </NuxtLink>
       </Motion>
