@@ -11,18 +11,18 @@
   --font-display: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* Custom deep-purple color palette for logo theme */
-  --color-deep-purple-50: #f5f3ff;
-  --color-deep-purple-100: #ede9fe;
-  --color-deep-purple-200: #ddd6fe;
-  --color-deep-purple-300: #c4b5fd;
-  --color-deep-purple-400: #a78bfa;
-  --color-deep-purple-500: #8b5cf6;
-  --color-deep-purple-600: #7c3aed;
-  --color-deep-purple-700: #6d28d9;
-  --color-deep-purple-800: #5b21b6;
-  --color-deep-purple-900: #4c1d95;
-  --color-deep-purple-950: #1a0d2e;
+  /* Custom deep-purple palette — warm plum-purple derived from logo */
+  --color-deep-purple-50: #faf0ff;
+  --color-deep-purple-100: #f3e0fe;
+  --color-deep-purple-200: #e6bffd;
+  --color-deep-purple-300: #d494f9;
+  --color-deep-purple-400: #bc5df2;
+  --color-deep-purple-500: #a033d9;
+  --color-deep-purple-600: #8526b8;
+  --color-deep-purple-700: #6d1f96;
+  --color-deep-purple-800: #571a78;
+  --color-deep-purple-900: #3d1259;
+  --color-deep-purple-950: #250b38;
 }
 
 /* Keyframe animations */
@@ -75,6 +75,30 @@
   }
 }
 
+@keyframes spinBounce {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0);
+  }
+}
+
 /* CSS Custom Properties for themes */
 :root {
   --ui-container: var(--container-7xl);
@@ -92,12 +116,57 @@
   }
 }
 
-/* Smooth dark/light mode transitions */
-body, section, div, main, footer, header, nav,
-article, aside, details, summary,
-input, textarea, select {
-  transition: background-color 0.3s ease, color 0.3s ease,
-              border-color 0.3s ease, box-shadow 0.3s ease;
+/* Smooth dark/light mode transitions — broad coverage for seamless toggle */
+body,
+main,
+section,
+div,
+header,
+nav,
+footer,
+article,
+aside,
+details,
+summary,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+label,
+td,
+th,
+tr,
+input,
+textarea,
+select,
+img {
+  transition:
+    background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SVG icon color transitions */
+svg,
+path,
+circle,
+rect,
+line,
+polyline,
+polygon {
+  transition:
+    fill 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Base styles */
@@ -123,13 +192,17 @@ h6 {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Interactive elements */
+/* Interactive elements — combine interaction transitions with theme transitions */
 button,
 a,
 [role='button'],
 .cursor-pointer {
   cursor: pointer;
-  transition: all 0.3s ease-out;
+  transition:
+    all 0.3s ease-out,
+    background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Ensure all clickable elements have pointer cursor */

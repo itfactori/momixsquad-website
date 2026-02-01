@@ -17,7 +17,8 @@ definePageMeta({
 const toddlerMomSurvey = {
   title: 'Toddler Mom Check-In',
   subtitle: 'Reflect on emotional, practical, and spiritual aspects of raising toddlers (ages 1-4)',
-  instructions: 'Choose the answer that best reflects your experience. Take a moment to reflect — this is for your growth, not perfection.',
+  instructions:
+    'Choose the answer that best reflects your experience. Take a moment to reflect — this is for your growth, not perfection.',
   scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
   scaleScores: [4, 3, 2, 1],
   sections: [
@@ -82,7 +83,8 @@ const toddlerMomSurvey = {
       min: 0,
       max: 31,
       label: 'Seek Support',
-      description: 'You may feel stretched — seek support, rest, and remember Allah rewards intention.'
+      description:
+        'You may feel stretched — seek support, rest, and remember Allah rewards intention.'
     }
   ],
   lightMoments: [
@@ -98,7 +100,7 @@ const toddlerMomSurvey = {
     'Allah sees my effort in every messy moment.',
     'Small wins are still wins.'
   ],
-  importantNote: 'Your effort, patience, and du\'a are counted — even on the toughest toddler days.'
+  importantNote: "Your effort, patience, and du'a are counted — even on the toughest toddler days."
 };
 </script>
 
@@ -130,7 +132,7 @@ const toddlerMomSurvey = {
               <img
                 src="/hero/home-3.jpg"
                 alt="Toddlers playing and learning"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>

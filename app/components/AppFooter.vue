@@ -137,15 +137,25 @@ const socialLinks = [
               <p class="text-sm text-neutral-600 dark:text-pink-300">
                 Get weekly tips and exclusive resources delivered to your inbox
               </p>
-              <div v-if="subscribeSuccess" class="rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800">
+              <div
+                v-if="subscribeSuccess"
+                class="rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800"
+              >
                 <div class="flex items-center gap-2">
-                  <UIcon name="i-heroicons-check-circle" class="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                  <UIcon
+                    name="i-heroicons-check-circle"
+                    class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+                  />
                   <p class="text-sm font-medium text-emerald-800 dark:text-emerald-200">
                     You're subscribed! Check your inbox for a welcome email.
                   </p>
                 </div>
               </div>
-              <form v-else class="flex flex-col sm:flex-row gap-3" @submit.prevent="handleNewsletter">
+              <form
+                v-else
+                class="flex flex-col sm:flex-row gap-3"
+                @submit.prevent="handleNewsletter"
+              >
                 <input
                   v-model="newsletterEmail"
                   type="email"

@@ -35,8 +35,7 @@ const superMomsSurvey = {
         },
         { text: 'I forgive myself for mistakes made during their upbringing.' }
       ],
-      reflectionPrompt:
-        'One moment this week where I felt connected or proud of my adult child'
+      reflectionPrompt: 'One moment this week where I felt connected or proud of my adult child'
     },
     {
       title: 'Faith & Spiritual Integration',
@@ -56,8 +55,7 @@ const superMomsSurvey = {
       ],
       duaPrompt:
         'Ya Allah, guide my children in wisdom, iman, and good character. Ya Allah, grant me patience and contentment as my children grow and thrive independently.',
-      reflectionPrompt:
-        'One way I consciously practiced faith or gratitude this week'
+      reflectionPrompt: 'One way I consciously practiced faith or gratitude this week'
     },
     {
       title: 'Self-Care & Personal Growth',
@@ -73,8 +71,7 @@ const superMomsSurvey = {
           text: 'I embrace this new phase of life as an opportunity for growth.'
         }
       ],
-      reflectionPrompt:
-        'One way I cared for myself or tried something new this week'
+      reflectionPrompt: 'One way I cared for myself or tried something new this week'
     },
     {
       title: 'Challenges',
@@ -86,7 +83,7 @@ const superMomsSurvey = {
           text: 'I have adjusted well to new routines and household dynamics.'
         },
         {
-          text: 'I manage my worries about my adult children\'s choices with trust in Allah.'
+          text: "I manage my worries about my adult children's choices with trust in Allah."
         },
         {
           text: 'I balance my own needs with supporting my children without feeling stretched.'
@@ -95,8 +92,7 @@ const superMomsSurvey = {
           text: 'I have a clear sense of identity and purpose beyond motherhood.'
         }
       ],
-      reflectionPrompt:
-        'One challenge I faced this week and how I responded'
+      reflectionPrompt: 'One challenge I faced this week and how I responded'
     },
     {
       title: 'Gratitude & Positive Reflection',
@@ -145,17 +141,16 @@ const superMomsSurvey = {
     { prompt: 'Something funny or memorable my adult child did recently...' },
     { prompt: 'One lesson I learned from my child this week...' },
     {
-      prompt:
-        'One way I embraced my independence or new routines this week...'
+      prompt: 'One way I embraced my independence or new routines this week...'
     }
   ],
   importantNote:
-    'Motherhood is lifelong. Your du\'a, patience, and reflection continue to impact your children and yourself positively.',
+    "Motherhood is lifelong. Your du'a, patience, and reflection continue to impact your children and yourself positively.",
   affirmations: [
     'My role as a mother continues to matter.',
     'Allah guided me as a mother, and my effort continues to be rewarded.',
     'This new phase is an opportunity, not an ending.',
-    'My du\'a for my children never expires.'
+    "My du'a for my children never expires."
   ]
 };
 </script>
@@ -188,7 +183,7 @@ const superMomsSurvey = {
               <img
                 src="/hero/home-6.jpg"
                 alt="Mothers celebrating together"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>

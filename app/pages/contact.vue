@@ -106,8 +106,8 @@ const contactInfo = [
     icon: 'i-heroicons-clock',
     title: 'Response Time',
     description: "We're here for you",
-    value: 'Within 24-48 hours',
-    href: '#'
+    value: 'Within 24 hours',
+    href: 'mailto:info@momixsquad.com'
   }
 ];
 
@@ -197,9 +197,7 @@ const socialLinks = [
                 <p class="mt-1 text-sm text-neutral-600 dark:text-pink-200">
                   {{ info.description }}
                 </p>
-                <span
-                  class="mt-2 block font-medium text-primary-600 dark:text-primary-400"
-                >
+                <span class="mt-2 block font-medium text-primary-600 dark:text-primary-400">
                   {{ info.value }}
                 </span>
               </div>
@@ -258,7 +256,7 @@ const socialLinks = [
                     Message Sent Successfully!
                   </h3>
                   <p class="mt-2 text-sm text-emerald-700 dark:text-emerald-300">
-                    Thank you for reaching out. We'll get back to you within 24-48 hours.
+                    Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
                   <UButton
                     color="success"
@@ -436,9 +434,7 @@ const socialLinks = [
                     />
                   </div>
                   <div>
-                    <h3
-                      class="font-display text-xl font-bold text-neutral-900 dark:text-white"
-                    >
+                    <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-white">
                       Frequently Asked Questions
                     </h3>
                     <p class="mt-2 text-neutral-600 dark:text-pink-200">
@@ -475,9 +471,15 @@ const socialLinks = [
                   Subscribe to our newsletter for exclusive tips, resources, and mom community
                   updates.
                 </p>
-                <div v-if="subscribeSuccess" class="mt-6 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800">
+                <div
+                  v-if="subscribeSuccess"
+                  class="mt-6 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800"
+                >
                   <div class="flex items-center gap-2">
-                    <UIcon name="i-heroicons-check-circle" class="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                    <UIcon
+                      name="i-heroicons-check-circle"
+                      class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+                    />
                     <p class="text-sm font-medium text-emerald-800 dark:text-emerald-200">
                       You're subscribed! Check your inbox for a welcome email.
                     </p>

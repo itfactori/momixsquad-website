@@ -18,7 +18,8 @@ export default defineEventHandler(async event => {
   if (!apiKey) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'Email service is not configured. Please set RESEND_API_KEY environment variable.'
+      statusMessage:
+        'Email service is not configured. Please set RESEND_API_KEY environment variable.'
     });
   }
 
@@ -33,7 +34,7 @@ export default defineEventHandler(async event => {
     });
   }
 
-  const recipientEmail = process.env.CONTACT_EMAIL || 'info@momixsquad.com';
+  const recipientEmail = process.env.CONTACT_EMAIL || 'affanrehman1278@gmail.com';
   const fullSubject = `Contact Form: ${subject}${category ? ` (${category})` : ''}`;
 
   const emailHtml = `

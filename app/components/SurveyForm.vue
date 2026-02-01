@@ -107,7 +107,10 @@ function resetSurvey() {
           </div>
 
           <div v-if="!showResults" class="p-6 sm:p-8">
-            <div v-if="instructions" class="mb-8 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-800">
+            <div
+              v-if="instructions"
+              class="mb-8 p-4 rounded-xl bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-800"
+            >
               <p class="text-sm text-primary-800 dark:text-primary-200">
                 <strong>How to Respond:</strong> {{ instructions }}
               </p>
@@ -123,7 +126,9 @@ function resetSurvey() {
             </div>
 
             <div class="mb-6 flex items-center gap-4">
-              <div class="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+              <div
+                class="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden"
+              >
                 <div
                   class="h-full bg-gradient-to-r from-primary-500 to-purple-500 rounded-full transition-all duration-500"
                   :style="{ width: `${progressPercent}%` }"
@@ -136,8 +141,12 @@ function resetSurvey() {
 
             <div class="space-y-10">
               <div v-for="(section, sIdx) in sections" :key="section.title">
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
-                  <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50 text-sm font-bold text-primary-600 dark:text-primary-400">
+                <h3
+                  class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3"
+                >
+                  <span
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50 text-sm font-bold text-primary-600 dark:text-primary-400"
+                  >
                     {{ String.fromCharCode(65 + sIdx) }}
                   </span>
                   {{ section.title }}
@@ -168,7 +177,7 @@ function resetSurvey() {
                             ? 'bg-primary-500 text-white shadow-md'
                             : 'bg-white dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 ring-1 ring-neutral-200 dark:ring-neutral-600 hover:ring-primary-300 dark:hover:ring-primary-600'
                         "
-                        @click="selectAnswer(sIdx, qIdx, scaleScores[scoreIdx])"
+                        @click="selectAnswer(sIdx, qIdx, scaleScores[scoreIdx] ?? 0)"
                       >
                         {{ label }}
                       </button>
@@ -189,7 +198,9 @@ function resetSurvey() {
                 </div>
 
                 <div v-if="section.reflectionPrompt" class="mt-4">
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2"
+                  >
                     {{ section.reflectionPrompt }}
                   </label>
                   <textarea
@@ -237,12 +248,7 @@ function resetSurvey() {
                   <UIcon name="i-heroicons-chart-bar" class="h-5 w-5" />
                 </template>
               </UButton>
-              <UButton
-                color="neutral"
-                variant="outline"
-                size="xl"
-                @click="resetSurvey"
-              >
+              <UButton color="neutral" variant="outline" size="xl" @click="resetSurvey">
                 Reset
               </UButton>
             </div>
@@ -257,21 +263,21 @@ function resetSurvey() {
 
           <div v-else class="p-6 sm:p-8">
             <div class="text-center mb-8">
-              <div class="inline-flex items-center justify-center h-20 w-20 rounded-full bg-primary-100 dark:bg-primary-900/50 mb-4">
+              <div
+                class="inline-flex items-center justify-center h-20 w-20 rounded-full bg-primary-100 dark:bg-primary-900/50 mb-4"
+              >
                 <span class="text-3xl font-bold text-primary-600 dark:text-primary-400">
                   {{ totalScore }}
                 </span>
               </div>
-              <p class="text-sm text-neutral-500 dark:text-neutral-400">
-                out of {{ maxScore }}
-              </p>
+              <p class="text-sm text-neutral-500 dark:text-neutral-400">out of {{ maxScore }}</p>
             </div>
 
             <div
               v-if="currentRange"
               class="p-6 rounded-2xl mb-8"
               :class="
-                totalScore >= scoreRanges[0].min
+                totalScore >= (scoreRanges[0]?.min ?? 0)
                   ? 'bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800'
                   : totalScore >= (scoreRanges[1]?.min ?? 0)
                     ? 'bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800'
@@ -286,21 +292,21 @@ function resetSurvey() {
               </p>
             </div>
 
-            <div v-if="importantNote" class="p-4 rounded-xl bg-neutral-100 dark:bg-neutral-800 mb-8">
+            <div
+              v-if="importantNote"
+              class="p-4 rounded-xl bg-neutral-100 dark:bg-neutral-800 mb-8"
+            >
               <p class="text-sm text-neutral-600 dark:text-neutral-400 italic">
                 {{ importantNote }}
               </p>
             </div>
 
-            <div
-              v-if="closingReflections && closingReflections.length > 0"
-              class="mb-8 space-y-3"
-            >
-              <h3 class="text-lg font-bold text-neutral-900 dark:text-white">
-                Closing Reflection
-              </h3>
+            <div v-if="closingReflections && closingReflections.length > 0" class="mb-8 space-y-3">
+              <h3 class="text-lg font-bold text-neutral-900 dark:text-white">Closing Reflection</h3>
               <div v-for="(prompt, idx) in closingReflections" :key="idx">
-                <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                <label
+                  class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                >
                   {{ prompt }}
                 </label>
                 <input
@@ -331,12 +337,7 @@ function resetSurvey() {
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4">
-              <UButton
-                color="primary"
-                size="xl"
-                class="flex-1 justify-center"
-                @click="resetSurvey"
-              >
+              <UButton color="primary" size="xl" class="flex-1 justify-center" @click="resetSurvey">
                 Retake Survey
                 <template #trailing>
                   <UIcon name="i-heroicons-arrow-path" class="h-5 w-5" />

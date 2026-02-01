@@ -7,8 +7,18 @@ const dayAbbrevs = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const dimensions = [
   { key: 'physical', label: 'Physical Energy', icon: 'i-heroicons-bolt', color: 'text-rose-500' },
   { key: 'emotional', label: 'Emotional Mood', icon: 'i-heroicons-heart', color: 'text-amber-500' },
-  { key: 'spiritual', label: 'Spiritual Well-Being', icon: 'i-heroicons-sparkles', color: 'text-emerald-500' },
-  { key: 'baby', label: 'Baby Connection', icon: 'i-heroicons-face-smile', color: 'text-purple-500' },
+  {
+    key: 'spiritual',
+    label: 'Spiritual Well-Being',
+    icon: 'i-heroicons-sparkles',
+    color: 'text-emerald-500'
+  },
+  {
+    key: 'baby',
+    label: 'Baby Connection',
+    icon: 'i-heroicons-face-smile',
+    color: 'text-purple-500'
+  },
   { key: 'selfcare', label: 'Self-Care', icon: 'i-heroicons-sun', color: 'text-pink-500' }
 ] as const;
 
@@ -48,7 +58,9 @@ function loadState(): PlannerState {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) return JSON.parse(stored);
-  } catch {}
+  } catch {
+    // Ignore corrupted localStorage data
+  }
   return createEmptyState();
 }
 
@@ -125,7 +137,9 @@ const progressPercent = computed(() => {
 
           <div class="p-6 sm:p-8">
             <div class="mb-6 flex items-center gap-4">
-              <div class="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+              <div
+                class="flex-1 h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden"
+              >
                 <div
                   class="h-full bg-gradient-to-r from-rose-500 to-purple-500 rounded-full transition-all duration-500"
                   :style="{ width: `${progressPercent}%` }"
@@ -141,7 +155,9 @@ const progressPercent = computed(() => {
               <table class="w-full text-sm">
                 <thead>
                   <tr>
-                    <th class="text-left py-2 px-1 text-neutral-600 dark:text-neutral-400 font-medium min-w-[120px]">
+                    <th
+                      class="text-left py-2 px-1 text-neutral-600 dark:text-neutral-400 font-medium min-w-[120px]"
+                    >
                       Dimension
                     </th>
                     <th
@@ -155,11 +171,17 @@ const progressPercent = computed(() => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="dim in dimensions" :key="dim.key" class="border-t border-neutral-100 dark:border-neutral-800">
+                  <tr
+                    v-for="dim in dimensions"
+                    :key="dim.key"
+                    class="border-t border-neutral-100 dark:border-neutral-800"
+                  >
                     <td class="py-3 px-1">
                       <div class="flex items-center gap-2">
                         <UIcon :name="dim.icon" :class="`h-4 w-4 ${dim.color}`" />
-                        <span class="text-neutral-800 dark:text-neutral-200 font-medium text-xs sm:text-sm">
+                        <span
+                          class="text-neutral-800 dark:text-neutral-200 font-medium text-xs sm:text-sm"
+                        >
                           {{ dim.label }}
                         </span>
                       </div>
@@ -188,23 +210,35 @@ const progressPercent = computed(() => {
               </table>
             </div>
 
-            <div class="mt-4 flex items-center justify-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-              <span v-for="option in levelOptions" :key="option.value" class="flex items-center gap-1">
+            <div
+              class="mt-4 flex items-center justify-center gap-4 text-xs text-neutral-500 dark:text-neutral-400"
+            >
+              <span
+                v-for="option in levelOptions"
+                :key="option.value"
+                class="flex items-center gap-1"
+              >
                 {{ option.emoji }} {{ option.label }}
               </span>
             </div>
 
             <!-- Weekly Goals -->
             <div class="mt-10">
-              <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
-                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50 text-sm font-bold text-primary-600 dark:text-primary-400">
+              <h3
+                class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3"
+              >
+                <span
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/50 text-sm font-bold text-primary-600 dark:text-primary-400"
+                >
                   <UIcon name="i-heroicons-flag" class="h-4 w-4" />
                 </span>
                 Weekly Goals
               </h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     Physical Goal
                   </label>
                   <input
@@ -215,7 +249,9 @@ const progressPercent = computed(() => {
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     Emotional Goal
                   </label>
                   <input
@@ -226,7 +262,9 @@ const progressPercent = computed(() => {
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     Spiritual Goal
                   </label>
                   <input
@@ -237,7 +275,9 @@ const progressPercent = computed(() => {
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     Baby Prep Goal
                   </label>
                   <input
@@ -252,15 +292,21 @@ const progressPercent = computed(() => {
 
             <!-- Weekly Reflection & Gratitude -->
             <div class="mt-10">
-              <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3">
-                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-sm font-bold text-emerald-600 dark:text-emerald-400">
+              <h3
+                class="text-xl font-bold text-neutral-900 dark:text-white mb-6 flex items-center gap-3"
+              >
+                <span
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-sm font-bold text-emerald-600 dark:text-emerald-400"
+                >
                   <UIcon name="i-heroicons-pencil-square" class="h-4 w-4" />
                 </span>
                 Weekly Reflection & Gratitude
               </h3>
               <div class="space-y-4">
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     How am I feeling about this week overall?
                   </label>
                   <textarea
@@ -271,7 +317,9 @@ const progressPercent = computed(() => {
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <label
+                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1"
+                  >
                     Three things I am grateful for this week
                   </label>
                   <textarea
@@ -336,7 +384,8 @@ const progressPercent = computed(() => {
                 Du'a for the Week
               </p>
               <p class="text-emerald-700 dark:text-emerald-300 italic">
-                "Allah chose me for this child. My effort, intention, and du'a are enough. I am allowed to grow into motherhood. Allah's help will come at the right time."
+                "Allah chose me for this child. My effort, intention, and du'a are enough. I am
+                allowed to grow into motherhood. Allah's help will come at the right time."
               </p>
             </div>
 

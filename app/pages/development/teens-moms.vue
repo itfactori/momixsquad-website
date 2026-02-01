@@ -15,8 +15,9 @@ definePageMeta({
 });
 
 const surveyData = {
-  title: "How Balanced Is My Motherhood? — Moms of Teenagers Edition",
-  subtitle: "A self-check to reflect on how you're navigating the teenage years with faith, patience, and love.",
+  title: 'How Balanced Is My Motherhood? — Moms of Teenagers Edition',
+  subtitle:
+    "A self-check to reflect on how you're navigating the teenage years with faith, patience, and love.",
   instructions: 'Rate each statement based on how true it feels for you right now.',
   scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
   scaleScores: [4, 3, 2, 1],
@@ -28,7 +29,7 @@ const surveyData = {
         { text: 'I make time for one-on-one conversations with my teenager.' },
         { text: 'I listen to my teen without immediately jumping to advice or judgment.' },
         { text: 'My teen feels comfortable sharing their feelings or problems with me.' },
-        { text: 'I acknowledge and validate my teen\'s emotions, even when I disagree.' }
+        { text: "I acknowledge and validate my teen's emotions, even when I disagree." }
       ]
     },
     {
@@ -44,11 +45,12 @@ const surveyData = {
       title: 'Faith & Character Building',
       questions: [
         { text: 'I model the Islamic values I want my teen to adopt.' },
-        { text: 'I encourage my teen\'s connection to prayer, Quran, and Islamic learning.' },
+        { text: "I encourage my teen's connection to prayer, Quran, and Islamic learning." },
         { text: 'I discuss Islamic perspectives on modern challenges with my teen.' },
         { text: 'I help my teen build a strong Muslim identity with confidence.' }
       ],
-      duaPrompt: 'Rabbi hab li min ladunka dhurriyyatan tayyibah — My Lord, grant me righteous offspring.'
+      duaPrompt:
+        'Rabbi hab li min ladunka dhurriyyatan tayyibah — My Lord, grant me righteous offspring.'
     },
     {
       title: 'Self-Care & Balance',
@@ -63,9 +65,9 @@ const surveyData = {
     {
       title: 'Communication & Understanding',
       questions: [
-        { text: 'I try to understand my teen\'s perspective before responding.' },
+        { text: "I try to understand my teen's perspective before responding." },
         { text: 'I use "I" statements rather than blame when discussing issues.' },
-        { text: 'I check in on my teen\'s emotional state regularly.' },
+        { text: "I check in on my teen's emotional state regularly." },
         { text: 'I apologize to my teen when I make a mistake.' }
       ]
     },
@@ -75,15 +77,15 @@ const surveyData = {
         { text: 'I involve my teen in setting household rules and expectations.' },
         { text: 'I trust my teen while maintaining safety awareness.' },
         { text: 'I gradually increase responsibilities as my teen matures.' },
-        { text: 'I respect my teen\'s privacy while keeping communication open.' }
+        { text: "I respect my teen's privacy while keeping communication open." }
       ]
     },
     {
       title: 'Academic & Extracurricular Stress',
       questions: [
-        { text: 'I focus on my teen\'s effort rather than only their grades.' },
+        { text: "I focus on my teen's effort rather than only their grades." },
         { text: 'I help my teen manage academic pressure without adding to it.' },
-        { text: 'I support my teen\'s interests even if they differ from my expectations.' },
+        { text: "I support my teen's interests even if they differ from my expectations." },
         { text: 'I help my teen develop time management and study skills.' }
       ]
     },
@@ -99,10 +101,12 @@ const surveyData = {
     {
       title: 'Social & Peer Influence',
       questions: [
-        { text: 'I know who my teen\'s close friends are and what they do together.' },
+        { text: "I know who my teen's close friends are and what they do together." },
         { text: 'I discuss healthy relationships, peer pressure, and online safety.' },
         { text: 'I encourage my teen to connect with positive Muslim youth communities.' },
-        { text: 'I guide my teen on social media use with understanding rather than just restriction.' }
+        {
+          text: 'I guide my teen on social media use with understanding rather than just restriction.'
+        }
       ]
     }
   ],
@@ -111,33 +115,37 @@ const surveyData = {
       min: 116,
       max: 144,
       label: 'Thriving — MashaAllah!',
-      description: 'You are navigating the teen years with strong faith, open communication, and balanced guidance. Keep nurturing this beautiful relationship with your teenager.'
+      description:
+        'You are navigating the teen years with strong faith, open communication, and balanced guidance. Keep nurturing this beautiful relationship with your teenager.'
     },
     {
       min: 72,
       max: 115,
-      label: 'Growing — You\'re on the Right Path',
-      description: 'You are making sincere effort and there is room to strengthen certain areas. Focus on communication, self-care, or faith-building — small changes bring big rewards.'
+      label: "Growing — You're on the Right Path",
+      description:
+        'You are making sincere effort and there is room to strengthen certain areas. Focus on communication, self-care, or faith-building — small changes bring big rewards.'
     },
     {
       min: 0,
       max: 71,
-      label: 'Needs Extra Support — And That\'s Okay',
-      description: 'Parenting teenagers is one of the hardest stages. Seeking support — whether from a trusted friend, counselor, or Islamic scholar — is a sign of strength, not weakness.'
+      label: "Needs Extra Support — And That's Okay",
+      description:
+        'Parenting teenagers is one of the hardest stages. Seeking support — whether from a trusted friend, counselor, or Islamic scholar — is a sign of strength, not weakness.'
     }
   ],
   lightMoments: [
     { prompt: 'The most surprising thing my teenager said this week was...' },
-    { prompt: 'My teen\'s current obsession that I don\'t understand is...' },
-    { prompt: 'If my teen had to describe me in 3 words, they\'d probably say...' }
+    { prompt: "My teen's current obsession that I don't understand is..." },
+    { prompt: "If my teen had to describe me in 3 words, they'd probably say..." }
   ],
   affirmations: [
     'I am the parent Allah chose for this teenager, and that is enough.',
-    'My love and du\'a for my child will never be wasted.',
-    'I don\'t have to be perfect — I have to be present.',
+    "My love and du'a for my child will never be wasted.",
+    "I don't have to be perfect — I have to be present.",
     'Every difficult conversation is an investment in our relationship.'
   ],
-  importantNote: 'This survey is a personal reflection tool, not a diagnostic assessment. Parenting teens is deeply challenging — your effort and intention matter immensely. If you are struggling, reaching out for professional or community support is always encouraged.'
+  importantNote:
+    'This survey is a personal reflection tool, not a diagnostic assessment. Parenting teens is deeply challenging — your effort and intention matter immensely. If you are struggling, reaching out for professional or community support is always encouraged.'
 };
 </script>
 
@@ -169,7 +177,7 @@ const surveyData = {
               <img
                 src="/hero/home-5.jpg"
                 alt="Teenagers with supportive adults"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>

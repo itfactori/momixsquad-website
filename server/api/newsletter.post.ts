@@ -18,7 +18,8 @@ export default defineEventHandler(async event => {
   if (!apiKey) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'Email service is not configured. Please set RESEND_API_KEY environment variable.'
+      statusMessage:
+        'Email service is not configured. Please set RESEND_API_KEY environment variable.'
     });
   }
 

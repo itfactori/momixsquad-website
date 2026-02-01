@@ -117,8 +117,7 @@ const surveyData = {
     'I am allowed to grow into motherhood.',
     "Allah's help will come at the right time."
   ],
-  importantNote:
-    'Struggle does not indicate weakness; it indicates responsibility and care.'
+  importantNote: 'Struggle does not indicate weakness; it indicates responsibility and care.'
 };
 </script>
 
@@ -150,7 +149,7 @@ const surveyData = {
               <img
                 src="/hero/home-1.jpg"
                 alt="Pregnancy and motherhood preparation"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>

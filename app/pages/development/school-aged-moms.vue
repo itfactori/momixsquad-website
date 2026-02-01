@@ -29,7 +29,7 @@ const schoolAgedMomsSurvey = {
         { text: 'I listen to my child without immediately correcting or lecturing.' },
         { text: 'I show affection daily, even during busy school weeks.' },
         { text: 'I handle conflicts calmly, without letting frustration take over.' },
-        { text: 'I encourage my child\'s independence while providing guidance.' }
+        { text: "I encourage my child's independence while providing guidance." }
       ],
       reflectionPrompt: 'One moment today where I connected with my child'
     },
@@ -41,7 +41,7 @@ const schoolAgedMomsSurvey = {
         { text: 'I maintain a reasonable daily routine for school, meals, and sleep.' },
         { text: 'I encourage effort and learning, not only grades.' }
       ],
-      reflectionPrompt: 'One thing that worked well in supporting my child\'s learning this week'
+      reflectionPrompt: "One thing that worked well in supporting my child's learning this week"
     },
     {
       title: 'Self-Care & Time Management',
@@ -51,20 +51,18 @@ const schoolAgedMomsSurvey = {
         { text: 'I ask for help when I feel stretched.' },
         { text: 'I speak to myself kindly and avoid harsh self-criticism.' }
       ],
-      duaPrompt:
-        'Ya Allah, grant me patience, wisdom, and balance in guiding my children.',
+      duaPrompt: 'Ya Allah, grant me patience, wisdom, and balance in guiding my children.',
       reflectionPrompt: 'One thing I did for myself this week'
     },
     {
       title: 'Faith & Values Integration',
       questions: [
         { text: 'I remind my child about gratitude, honesty, and kindness.' },
-        { text: 'I make du\'a for my child\'s guidance and protection regularly.' },
+        { text: "I make du'a for my child's guidance and protection regularly." },
         { text: 'I model good akhlaq in daily interactions, even under stress.' },
         { text: 'I trust that Allah rewards my sincere effort in parenting.' }
       ],
-      duaPrompt:
-        'Ya Allah, help me raise my child with iman, good character, and love.',
+      duaPrompt: 'Ya Allah, help me raise my child with iman, good character, and love.',
       reflectionPrompt: 'One moment where I consciously modeled Islamic values this week'
     }
   ],
@@ -74,15 +72,14 @@ const schoolAgedMomsSurvey = {
       min: 52,
       max: 64,
       label: 'Well Balanced',
-      description:
-        'You\'re balancing love, guidance, and self-care well. Celebrate your effort.'
+      description: "You're balancing love, guidance, and self-care well. Celebrate your effort."
     },
     {
       min: 32,
       max: 51,
       label: 'Growing Balance',
       description:
-        'You\'re aware of balance gaps — small adjustments in routines, du\'a, or self-care can help.'
+        "You're aware of balance gaps — small adjustments in routines, du'a, or self-care can help."
     },
     {
       min: 0,
@@ -105,7 +102,7 @@ const schoolAgedMomsSurvey = {
     'Every small act of kindness matters.'
   ],
   importantNote:
-    'Your effort, patience, and du\'a are seen and rewarded. Balance is a journey, not a destination.'
+    "Your effort, patience, and du'a are seen and rewarded. Balance is a journey, not a destination."
 };
 </script>
 
@@ -137,7 +134,7 @@ const schoolAgedMomsSurvey = {
               <img
                 src="/hero/home-4.jpg"
                 alt="School-aged children learning"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>

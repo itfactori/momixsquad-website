@@ -38,7 +38,7 @@ const newMomsSurvey = {
       questions: [
         { text: 'I rest whenever I reasonably can.' },
         { text: 'I eat regularly and nourish my body.' },
-        { text: 'I listen to my body\'s signals (fatigue, pain, overwhelm).' },
+        { text: "I listen to my body's signals (fatigue, pain, overwhelm)." },
         { text: 'I accept help when it is offered.' },
         { text: 'I do not feel guilty for needing rest.' }
       ],
@@ -51,7 +51,7 @@ const newMomsSurvey = {
         { text: 'I keep my expectations of myself realistic.' },
         { text: 'I understand that learning motherhood takes time.' },
         { text: 'I do not compare my journey with other mothers.' },
-        { text: 'I give myself grace when plans don\'t go as expected.' },
+        { text: "I give myself grace when plans don't go as expected." },
         { text: 'I remind myself that "good enough" is enough.' }
       ],
       duaPrompt: 'Ya Allah, ease my burdens and lighten my heart.',
@@ -72,7 +72,7 @@ const newMomsSurvey = {
       max: 47,
       label: 'Growing Balance',
       description:
-        'You are learning and adjusting. Small shifts in self-care, rest, or du\'a can help.'
+        "You are learning and adjusting. Small shifts in self-care, rest, or du'a can help."
     },
     {
       min: 0,
@@ -120,7 +120,7 @@ const newMomsSurvey = {
               <img
                 src="/hero/home-2.jpg"
                 alt="New moms supporting each other"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>
