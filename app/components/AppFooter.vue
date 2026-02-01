@@ -1,11 +1,38 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
 
+const newsletterEmail = ref('');
+const isSubscribing = ref(false);
+const subscribeSuccess = ref(false);
+const subscribeError = ref('');
+
+const handleNewsletter = async () => {
+  if (!newsletterEmail.value) return;
+  isSubscribing.value = true;
+  subscribeError.value = '';
+
+  try {
+    const response = await $fetch('/api/newsletter', {
+      method: 'POST',
+      body: { email: newsletterEmail.value }
+    });
+
+    if (response.success) {
+      subscribeSuccess.value = true;
+      newsletterEmail.value = '';
+    }
+  } catch (error: any) {
+    subscribeError.value = error?.data?.message || 'Something went wrong. Please try again.';
+  } finally {
+    isSubscribing.value = false;
+  }
+};
+
 const footerLinks = {
   resources: [
     { label: 'Mom Development', to: '/development' },
-    { label: 'Mom Care', to: '/care' },
-    { label: 'Hobbies & Tips', to: '/hobbies' },
+    { label: 'Mom Care', to: '/care/care' },
+    { label: 'Hobbies & Tips', to: '/hobbies/hobbies' },
     { label: 'Food & Nutrition', to: '/nutrition' }
   ],
   support: []
@@ -110,8 +137,17 @@ const socialLinks = [
               <p class="text-sm text-neutral-600 dark:text-pink-300">
                 Get weekly tips and exclusive resources delivered to your inbox
               </p>
-              <form class="flex flex-col sm:flex-row gap-3" @submit.prevent>
+              <div v-if="subscribeSuccess" class="rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800">
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-check-circle" class="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                  <p class="text-sm font-medium text-emerald-800 dark:text-emerald-200">
+                    You're subscribed! Check your inbox for a welcome email.
+                  </p>
+                </div>
+              </div>
+              <form v-else class="flex flex-col sm:flex-row gap-3" @submit.prevent="handleNewsletter">
                 <input
+                  v-model="newsletterEmail"
                   type="email"
                   placeholder="Enter your email address"
                   class="flex-1 rounded-xl border border-neutral-300 dark:border-purple-700 bg-white dark:bg-purple-900/50 px-4 py-3 text-sm text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-purple-400 focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-400 focus:border-transparent transition-all duration-200"
@@ -122,11 +158,16 @@ const socialLinks = [
                   size="lg"
                   variant="solid"
                   type="submit"
+                  :loading="isSubscribing"
+                  :disabled="isSubscribing"
                   class="px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
                 >
-                  Subscribe
+                  {{ isSubscribing ? 'Subscribing...' : 'Subscribe' }}
                 </UButton>
               </form>
+              <p v-if="subscribeError" class="text-sm text-red-600 dark:text-red-400">
+                {{ subscribeError }}
+              </p>
             </div>
           </Motion>
         </div>

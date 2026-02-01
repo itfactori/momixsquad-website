@@ -13,6 +13,93 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const toddlerMomSurvey = {
+  title: 'Toddler Mom Check-In',
+  subtitle: 'Reflect on emotional, practical, and spiritual aspects of raising toddlers (ages 1-4)',
+  instructions: 'Choose the answer that best reflects your experience. Take a moment to reflect — this is for your growth, not perfection.',
+  scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
+  scaleScores: [4, 3, 2, 1],
+  sections: [
+    {
+      title: 'Emotional & Daily Life Check',
+      questions: [
+        { text: 'I allow myself patience when my toddler tests boundaries.' },
+        { text: 'I celebrate small wins, like a potty success or new word learned.' },
+        { text: 'I laugh (or try to) when things go chaotic.' },
+        { text: 'I feel connected to my toddler despite busy days.' }
+      ],
+      reflectionPrompt: 'One moment today where I connected with my toddler'
+    },
+    {
+      title: 'Spiritual & Islamic Integration',
+      questions: [
+        { text: 'I remember that my child is an amanah (trust) from Allah.' },
+        { text: "I make du'a for my child's guidance and protection." },
+        { text: 'I model good akhlaq (character) in everyday moments.' },
+        { text: 'I remind myself that Allah sees my effort, even when things feel messy.' }
+      ],
+      duaPrompt: 'Ya Allah, bless my child with health, iman, and good character.',
+      reflectionPrompt: 'One moment today where I acted with patience or kindness'
+    },
+    {
+      title: 'Practical Toddler Management',
+      questions: [
+        { text: 'I have a simple routine that my toddler can follow.' },
+        { text: 'I balance playtime, learning, and rest without too much stress.' },
+        { text: 'I handle tantrums without losing perspective.' },
+        { text: 'I encourage independence while ensuring safety.' }
+      ],
+      reflectionPrompt: 'One thing that worked well today with my toddler'
+    },
+    {
+      title: 'Self-Care & Support',
+      questions: [
+        { text: 'I take short moments for myself during the day.' },
+        { text: 'I ask for help when I feel overwhelmed.' },
+        { text: 'I speak to myself kindly instead of self-criticizing.' },
+        { text: "I remind myself that toddlers test boundaries — it's normal!" }
+      ],
+      duaPrompt: 'Ya Allah, grant me patience, energy, and clarity in raising my child.',
+      reflectionPrompt: 'One way I cared for myself today'
+    }
+  ],
+  maxScore: 64,
+  scoreRanges: [
+    {
+      min: 52,
+      max: 64,
+      label: 'Strong Connection',
+      description: 'Strong connection, patience, and awareness. Keep celebrating small wins.'
+    },
+    {
+      min: 32,
+      max: 51,
+      label: 'Doing Well',
+      description: "You're doing well — reflect on support and du'a for extra calm."
+    },
+    {
+      min: 0,
+      max: 31,
+      label: 'Seek Support',
+      description: 'You may feel stretched — seek support, rest, and remember Allah rewards intention.'
+    }
+  ],
+  lightMoments: [
+    { prompt: "My toddler's favorite phrase today was..." },
+    { prompt: 'My most repeated phrase today was...' },
+    { prompt: 'My toddler made me laugh because...' },
+    { prompt: 'My toddler surprised me by...' },
+    { prompt: 'Something I learned from my toddler today...' }
+  ],
+  affirmations: [
+    'My toddler is learning, and so am I.',
+    'Patience is a practice, not a perfection.',
+    'Allah sees my effort in every messy moment.',
+    'Small wins are still wins.'
+  ],
+  importantNote: 'Your effort, patience, and du\'a are counted — even on the toughest toddler days.'
+};
 </script>
 
 <template>
@@ -672,6 +759,21 @@ definePageMeta({
         </Motion>
       </div>
     </section>
+
+    <!-- Toddler Mom Check-In Survey -->
+    <SurveyForm
+      :title="toddlerMomSurvey.title"
+      :subtitle="toddlerMomSurvey.subtitle"
+      :instructions="toddlerMomSurvey.instructions"
+      :scale="toddlerMomSurvey.scale"
+      :scale-scores="toddlerMomSurvey.scaleScores"
+      :sections="toddlerMomSurvey.sections"
+      :max-score="toddlerMomSurvey.maxScore"
+      :score-ranges="toddlerMomSurvey.scoreRanges"
+      :light-moments="toddlerMomSurvey.lightMoments"
+      :affirmations="toddlerMomSurvey.affirmations"
+      :important-note="toddlerMomSurvey.importantNote"
+    />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-purple-900/50">

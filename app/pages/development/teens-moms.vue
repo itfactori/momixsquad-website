@@ -13,6 +13,132 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const surveyData = {
+  title: "How Balanced Is My Motherhood? — Moms of Teenagers Edition",
+  subtitle: "A self-check to reflect on how you're navigating the teenage years with faith, patience, and love.",
+  instructions: 'Rate each statement based on how true it feels for you right now.',
+  scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
+  scaleScores: [4, 3, 2, 1],
+  maxScore: 144,
+  sections: [
+    {
+      title: 'Emotional Connection & Communication',
+      questions: [
+        { text: 'I make time for one-on-one conversations with my teenager.' },
+        { text: 'I listen to my teen without immediately jumping to advice or judgment.' },
+        { text: 'My teen feels comfortable sharing their feelings or problems with me.' },
+        { text: 'I acknowledge and validate my teen\'s emotions, even when I disagree.' }
+      ]
+    },
+    {
+      title: 'Guidance & Independence Balance',
+      questions: [
+        { text: 'I give my teen age-appropriate freedom to make decisions.' },
+        { text: 'I set clear boundaries while respecting their growing autonomy.' },
+        { text: 'I guide my teen without being controlling or overbearing.' },
+        { text: 'I allow my teen to experience natural consequences as learning opportunities.' }
+      ]
+    },
+    {
+      title: 'Faith & Character Building',
+      questions: [
+        { text: 'I model the Islamic values I want my teen to adopt.' },
+        { text: 'I encourage my teen\'s connection to prayer, Quran, and Islamic learning.' },
+        { text: 'I discuss Islamic perspectives on modern challenges with my teen.' },
+        { text: 'I help my teen build a strong Muslim identity with confidence.' }
+      ],
+      duaPrompt: 'Rabbi hab li min ladunka dhurriyyatan tayyibah — My Lord, grant me righteous offspring.'
+    },
+    {
+      title: 'Self-Care & Balance',
+      questions: [
+        { text: 'I take time for my own emotional and spiritual well-being.' },
+        { text: 'I seek support from friends, family, or professionals when I feel overwhelmed.' },
+        { text: 'I maintain my own interests and hobbies alongside parenting.' },
+        { text: 'I practice patience with myself when parenting feels difficult.' }
+      ],
+      duaPrompt: 'Ya Allah, grant me sabr and wisdom to guide my teenager with mercy.'
+    },
+    {
+      title: 'Communication & Understanding',
+      questions: [
+        { text: 'I try to understand my teen\'s perspective before responding.' },
+        { text: 'I use "I" statements rather than blame when discussing issues.' },
+        { text: 'I check in on my teen\'s emotional state regularly.' },
+        { text: 'I apologize to my teen when I make a mistake.' }
+      ]
+    },
+    {
+      title: 'Managing Independence & Boundaries',
+      questions: [
+        { text: 'I involve my teen in setting household rules and expectations.' },
+        { text: 'I trust my teen while maintaining safety awareness.' },
+        { text: 'I gradually increase responsibilities as my teen matures.' },
+        { text: 'I respect my teen\'s privacy while keeping communication open.' }
+      ]
+    },
+    {
+      title: 'Academic & Extracurricular Stress',
+      questions: [
+        { text: 'I focus on my teen\'s effort rather than only their grades.' },
+        { text: 'I help my teen manage academic pressure without adding to it.' },
+        { text: 'I support my teen\'s interests even if they differ from my expectations.' },
+        { text: 'I help my teen develop time management and study skills.' }
+      ]
+    },
+    {
+      title: 'Emotional & Behavioral Changes',
+      questions: [
+        { text: 'I remain calm during arguments or emotional outbursts.' },
+        { text: 'I recognize that mood swings are a normal part of adolescent development.' },
+        { text: 'I watch for warning signs of anxiety, depression, or risky behavior.' },
+        { text: 'I create a safe space at home where my teen can express themselves.' }
+      ]
+    },
+    {
+      title: 'Social & Peer Influence',
+      questions: [
+        { text: 'I know who my teen\'s close friends are and what they do together.' },
+        { text: 'I discuss healthy relationships, peer pressure, and online safety.' },
+        { text: 'I encourage my teen to connect with positive Muslim youth communities.' },
+        { text: 'I guide my teen on social media use with understanding rather than just restriction.' }
+      ]
+    }
+  ],
+  scoreRanges: [
+    {
+      min: 116,
+      max: 144,
+      label: 'Thriving — MashaAllah!',
+      description: 'You are navigating the teen years with strong faith, open communication, and balanced guidance. Keep nurturing this beautiful relationship with your teenager.'
+    },
+    {
+      min: 72,
+      max: 115,
+      label: 'Growing — You\'re on the Right Path',
+      description: 'You are making sincere effort and there is room to strengthen certain areas. Focus on communication, self-care, or faith-building — small changes bring big rewards.'
+    },
+    {
+      min: 0,
+      max: 71,
+      label: 'Needs Extra Support — And That\'s Okay',
+      description: 'Parenting teenagers is one of the hardest stages. Seeking support — whether from a trusted friend, counselor, or Islamic scholar — is a sign of strength, not weakness.'
+    }
+  ],
+  lightMoments: [
+    { prompt: 'The most surprising thing my teenager said this week was...' },
+    { prompt: 'My teen\'s current obsession that I don\'t understand is...' },
+    { prompt: 'If my teen had to describe me in 3 words, they\'d probably say...' }
+  ],
+  affirmations: [
+    'I am the parent Allah chose for this teenager, and that is enough.',
+    'My love and du\'a for my child will never be wasted.',
+    'I don\'t have to be perfect — I have to be present.',
+    'Every difficult conversation is an investment in our relationship.'
+  ],
+  importantNote: 'This survey is a personal reflection tool, not a diagnostic assessment. Parenting teens is deeply challenging — your effort and intention matter immensely. If you are struggling, reaching out for professional or community support is always encouraged.'
+};
 </script>
 
 <template>
@@ -699,6 +825,21 @@ definePageMeta({
         </Motion>
       </div>
     </section>
+
+    <!-- Teen Moms Survey -->
+    <SurveyForm
+      :title="surveyData.title"
+      :subtitle="surveyData.subtitle"
+      :instructions="surveyData.instructions"
+      :scale="surveyData.scale"
+      :scale-scores="surveyData.scaleScores"
+      :sections="surveyData.sections"
+      :max-score="surveyData.maxScore"
+      :score-ranges="surveyData.scoreRanges"
+      :light-moments="surveyData.lightMoments"
+      :affirmations="surveyData.affirmations"
+      :important-note="surveyData.importantNote"
+    />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">

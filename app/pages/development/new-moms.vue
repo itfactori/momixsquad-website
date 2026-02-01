@@ -13,6 +13,83 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const newMomsSurvey = {
+  title: 'How Balanced Is My Motherhood?',
+  subtitle: 'New Moms Edition — This is not a test. Motherhood is adjustment, not perfection.',
+  instructions: 'Choose the option that feels closest to your current experience.',
+  scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
+  scaleScores: [4, 3, 2, 1],
+  sections: [
+    {
+      title: 'Emotional Well-Being',
+      questions: [
+        { text: 'I allow myself to feel my emotions without judging them.' },
+        { text: 'I feel emotionally connected to my baby.' },
+        { text: 'I am kind to myself on difficult days.' },
+        { text: 'I express my feelings instead of bottling them up.' },
+        { text: 'I remind myself that this phase is temporary and make dua for myself.' }
+      ],
+      duaPrompt: 'Ya Allah, grant me patience and peace in this new chapter.',
+      reflectionPrompt: 'One feeling I want to honor today'
+    },
+    {
+      title: 'Physical Care & Rest',
+      questions: [
+        { text: 'I rest whenever I reasonably can.' },
+        { text: 'I eat regularly and nourish my body.' },
+        { text: 'I listen to my body\'s signals (fatigue, pain, overwhelm).' },
+        { text: 'I accept help when it is offered.' },
+        { text: 'I do not feel guilty for needing rest.' }
+      ],
+      duaPrompt: 'Ya Allah, restore my strength and bless my body.',
+      reflectionPrompt: 'One way I rested or cared for myself today'
+    },
+    {
+      title: 'Mental Load & Expectations',
+      questions: [
+        { text: 'I keep my expectations of myself realistic.' },
+        { text: 'I understand that learning motherhood takes time.' },
+        { text: 'I do not compare my journey with other mothers.' },
+        { text: 'I give myself grace when plans don\'t go as expected.' },
+        { text: 'I remind myself that "good enough" is enough.' }
+      ],
+      duaPrompt: 'Ya Allah, ease my burdens and lighten my heart.',
+      reflectionPrompt: 'One thing I did well today as a mother'
+    }
+  ],
+  maxScore: 60,
+  scoreRanges: [
+    {
+      min: 48,
+      max: 60,
+      label: 'Strong Balance',
+      description:
+        'You are navigating new motherhood with grace and self-awareness. Keep nurturing yourself.'
+    },
+    {
+      min: 30,
+      max: 47,
+      label: 'Growing Balance',
+      description:
+        'You are learning and adjusting. Small shifts in self-care, rest, or du\'a can help.'
+    },
+    {
+      min: 0,
+      max: 29,
+      label: 'Needs Support',
+      description:
+        'This phase may feel overwhelming. Lean on your support network and remember Allah rewards your intention.'
+    }
+  ],
+  importantNote: 'Motherhood is a journey, not a destination. Your effort is seen and valued.',
+  affirmations: [
+    'I am learning and that is enough.',
+    'My baby needs my presence, not perfection.',
+    'Asking for help is strength, not weakness.',
+    'Allah sees my effort even when I cannot.'
+  ]
+};
 </script>
 
 <template>
@@ -655,6 +732,20 @@ definePageMeta({
         </div>
       </div>
     </section>
+
+    <!-- Motherhood Balance Survey -->
+    <SurveyForm
+      :title="newMomsSurvey.title"
+      :subtitle="newMomsSurvey.subtitle"
+      :instructions="newMomsSurvey.instructions"
+      :scale="newMomsSurvey.scale"
+      :scale-scores="newMomsSurvey.scaleScores"
+      :sections="newMomsSurvey.sections"
+      :max-score="newMomsSurvey.maxScore"
+      :score-ranges="newMomsSurvey.scoreRanges"
+      :important-note="newMomsSurvey.importantNote"
+      :affirmations="newMomsSurvey.affirmations"
+    />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">

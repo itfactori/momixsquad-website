@@ -18,6 +18,10 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
 
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY
+  },
+
   app: {
     head: {
       htmlAttrs: {

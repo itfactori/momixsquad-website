@@ -13,6 +13,100 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const schoolAgedMomsSurvey = {
+  title: 'How Balanced Is My Motherhood?',
+  subtitle:
+    'School-Aged Kids Edition — Reflect on your balance, patience, and connection with your school-aged child.',
+  instructions:
+    'Choose the answer that best reflects your current experience. Be honest — this is for self-awareness, not judgment.',
+  scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
+  scaleScores: [4, 3, 2, 1],
+  sections: [
+    {
+      title: 'Emotional & Relationship Balance',
+      questions: [
+        { text: 'I listen to my child without immediately correcting or lecturing.' },
+        { text: 'I show affection daily, even during busy school weeks.' },
+        { text: 'I handle conflicts calmly, without letting frustration take over.' },
+        { text: 'I encourage my child\'s independence while providing guidance.' }
+      ],
+      reflectionPrompt: 'One moment today where I connected with my child'
+    },
+    {
+      title: 'Academic & Routine',
+      questions: [
+        { text: 'I support my child with homework without taking over.' },
+        { text: 'I communicate with teachers or school staff when needed.' },
+        { text: 'I maintain a reasonable daily routine for school, meals, and sleep.' },
+        { text: 'I encourage effort and learning, not only grades.' }
+      ],
+      reflectionPrompt: 'One thing that worked well in supporting my child\'s learning this week'
+    },
+    {
+      title: 'Self-Care & Time Management',
+      questions: [
+        { text: 'I take intentional breaks for myself without guilt.' },
+        { text: 'I balance household responsibilities with time for my child.' },
+        { text: 'I ask for help when I feel stretched.' },
+        { text: 'I speak to myself kindly and avoid harsh self-criticism.' }
+      ],
+      duaPrompt:
+        'Ya Allah, grant me patience, wisdom, and balance in guiding my children.',
+      reflectionPrompt: 'One thing I did for myself this week'
+    },
+    {
+      title: 'Faith & Values Integration',
+      questions: [
+        { text: 'I remind my child about gratitude, honesty, and kindness.' },
+        { text: 'I make du\'a for my child\'s guidance and protection regularly.' },
+        { text: 'I model good akhlaq in daily interactions, even under stress.' },
+        { text: 'I trust that Allah rewards my sincere effort in parenting.' }
+      ],
+      duaPrompt:
+        'Ya Allah, help me raise my child with iman, good character, and love.',
+      reflectionPrompt: 'One moment where I consciously modeled Islamic values this week'
+    }
+  ],
+  maxScore: 64,
+  scoreRanges: [
+    {
+      min: 52,
+      max: 64,
+      label: 'Well Balanced',
+      description:
+        'You\'re balancing love, guidance, and self-care well. Celebrate your effort.'
+    },
+    {
+      min: 32,
+      max: 51,
+      label: 'Growing Balance',
+      description:
+        'You\'re aware of balance gaps — small adjustments in routines, du\'a, or self-care can help.'
+    },
+    {
+      min: 0,
+      max: 31,
+      label: 'Needs Support',
+      description:
+        'You may feel overwhelmed — lean on support systems and remember Allah values your intention.'
+    }
+  ],
+  lightMoments: [
+    { prompt: 'Today, my child surprised me by...' },
+    { prompt: 'This week, my child made me laugh because...' },
+    { prompt: 'My proudest parenting moment this week was...' },
+    { prompt: 'Something my child taught me this week...' }
+  ],
+  affirmations: [
+    'My child needs my presence more than my perfection.',
+    'I am planting seeds that will grow over time.',
+    'Allah is guiding me as I guide my child.',
+    'Every small act of kindness matters.'
+  ],
+  importantNote:
+    'Your effort, patience, and du\'a are seen and rewarded. Balance is a journey, not a destination.'
+};
 </script>
 
 <template>
@@ -661,6 +755,21 @@ definePageMeta({
         </Motion>
       </div>
     </section>
+
+    <!-- Motherhood Balance Survey -->
+    <SurveyForm
+      :title="schoolAgedMomsSurvey.title"
+      :subtitle="schoolAgedMomsSurvey.subtitle"
+      :instructions="schoolAgedMomsSurvey.instructions"
+      :scale="schoolAgedMomsSurvey.scale"
+      :scale-scores="schoolAgedMomsSurvey.scaleScores"
+      :sections="schoolAgedMomsSurvey.sections"
+      :max-score="schoolAgedMomsSurvey.maxScore"
+      :score-ranges="schoolAgedMomsSurvey.scoreRanges"
+      :light-moments="schoolAgedMomsSurvey.lightMoments"
+      :affirmations="schoolAgedMomsSurvey.affirmations"
+      :important-note="schoolAgedMomsSurvey.importantNote"
+    />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">
