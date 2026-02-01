@@ -25,7 +25,7 @@ const questionnaireCategories = [
       {
         title: 'CDC Developmental Milestones Checklist',
         source: 'Centers for Disease Control and Prevention',
-        url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
+        url: 'https://www.cdc.gov/act-early/milestones/?CDC_AAref_Val=https://www.cdc.gov/ncbddd/actearly/milestones/index.html',
         description:
           "Track your child's development from 2 months to 5 years with CDC's milestone checklists.",
         ageRange: '2 months - 5 years',

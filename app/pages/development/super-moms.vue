@@ -13,6 +13,146 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const superMomsSurvey = {
+  title: 'How Balanced Is My Motherhood?',
+  subtitle:
+    'Moms of Adult Children / Empty Nest \u2014 Reflect on emotional balance, connection, faith, and self-care during the empty nest stage.',
+  instructions:
+    'Be honest \u2014 this survey is for self-reflection, not evaluation. Take 5-10 minutes.',
+  scale: ['Always', 'Often', 'Sometimes', 'Rarely'],
+  scaleScores: [4, 3, 2, 1],
+  sections: [
+    {
+      title: 'Emotional Connection & Reflection',
+      questions: [
+        {
+          text: 'I feel emotionally connected to my adult children even if they live independently.'
+        },
+        { text: 'I allow myself to feel pride and nostalgia without guilt.' },
+        {
+          text: 'I handle loneliness or "empty nest" emotions with patience and reflection.'
+        },
+        { text: 'I forgive myself for mistakes made during their upbringing.' }
+      ],
+      reflectionPrompt: 'One moment this week where I felt connected or proud of my adult child'
+    },
+    {
+      title: 'Faith & Spiritual Integration',
+      questions: [
+        {
+          text: "I trust Allah's plan for my children and their independence."
+        },
+        {
+          text: "I make du'a for my children's guidance, health, and iman."
+        },
+        {
+          text: 'I model good akhlaq and Islamic values in interactions with my adult children.'
+        },
+        {
+          text: 'I remind myself that my efforts and intentions as a mother are rewarded by Allah.'
+        }
+      ],
+      duaPrompt:
+        'Ya Allah, guide my children in wisdom, iman, and good character. Ya Allah, grant me patience and contentment as my children grow and thrive independently.',
+      reflectionPrompt: 'One way I consciously practiced faith or gratitude this week'
+    },
+    {
+      title: 'Self-Care & Personal Growth',
+      questions: [
+        { text: 'I take intentional time for myself without guilt.' },
+        {
+          text: 'I nurture hobbies, interests, or friendships outside motherhood.'
+        },
+        {
+          text: 'I prioritize health \u2014 mental, emotional, and physical.'
+        },
+        {
+          text: 'I embrace this new phase of life as an opportunity for growth.'
+        }
+      ],
+      reflectionPrompt: 'One way I cared for myself or tried something new this week'
+    },
+    {
+      title: 'Challenges',
+      questions: [
+        {
+          text: 'I feel content even when my children are not around daily.'
+        },
+        {
+          text: 'I have adjusted well to new routines and household dynamics.'
+        },
+        {
+          text: "I manage my worries about my adult children's choices with trust in Allah."
+        },
+        {
+          text: 'I balance my own needs with supporting my children without feeling stretched.'
+        },
+        {
+          text: 'I have a clear sense of identity and purpose beyond motherhood.'
+        }
+      ],
+      reflectionPrompt: 'One challenge I faced this week and how I responded'
+    },
+    {
+      title: 'Gratitude & Positive Reflection',
+      questions: [
+        {
+          text: "I acknowledge the positive impact I had on my children's lives."
+        },
+        {
+          text: 'I celebrate milestones or successes of my adult children without comparison.'
+        },
+        {
+          text: 'I find moments of joy in my own life independent of parenting.'
+        },
+        {
+          text: 'I express gratitude to Allah for my children and this new phase.'
+        }
+      ],
+      reflectionPrompt: 'One thing I am grateful for this week'
+    }
+  ],
+  maxScore: 84,
+  scoreRanges: [
+    {
+      min: 67,
+      max: 84,
+      label: 'Embracing Balance',
+      description:
+        'You are embracing balance, faith, and connection in this stage. Celebrate your growth.'
+    },
+    {
+      min: 42,
+      max: 66,
+      label: 'Adjusting & Growing',
+      description:
+        "You are aware of adjustment areas \u2014 self-care, reflection, or du'a can help strengthen balance."
+    },
+    {
+      min: 0,
+      max: 41,
+      label: 'Needs Support',
+      description:
+        'You may feel stretched or nostalgic \u2014 lean on support, seek spiritual reassurance, and remember Allah values your intention.'
+    }
+  ],
+  lightMoments: [
+    { prompt: 'Something funny or memorable my adult child did recently...' },
+    { prompt: 'One lesson I learned from my child this week...' },
+    {
+      prompt: 'One way I embraced my independence or new routines this week...'
+    }
+  ],
+  importantNote:
+    "Motherhood is lifelong. Your du'a, patience, and reflection continue to impact your children and yourself positively.",
+  affirmations: [
+    'My role as a mother continues to matter.',
+    'Allah guided me as a mother, and my effort continues to be rewarded.',
+    'This new phase is an opportunity, not an ending.',
+    "My du'a for my children never expires."
+  ]
+};
 </script>
 
 <template>
@@ -43,7 +183,7 @@ definePageMeta({
               <img
                 src="/hero/home-6.jpg"
                 alt="Mothers celebrating together"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>
@@ -671,6 +811,21 @@ definePageMeta({
         </div>
       </div>
     </section>
+
+    <!-- Motherhood Balance Survey -->
+    <SurveyForm
+      :title="superMomsSurvey.title"
+      :subtitle="superMomsSurvey.subtitle"
+      :instructions="superMomsSurvey.instructions"
+      :scale="superMomsSurvey.scale"
+      :scale-scores="superMomsSurvey.scaleScores"
+      :sections="superMomsSurvey.sections"
+      :max-score="superMomsSurvey.maxScore"
+      :score-ranges="superMomsSurvey.scoreRanges"
+      :light-moments="superMomsSurvey.lightMoments"
+      :important-note="superMomsSurvey.importantNote"
+      :affirmations="superMomsSurvey.affirmations"
+    />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">

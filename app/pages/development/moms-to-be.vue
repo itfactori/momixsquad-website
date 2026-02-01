@@ -13,6 +13,112 @@ useHead({
 definePageMeta({
   layout: 'default'
 });
+
+const surveyData = {
+  title: 'Motherhood Readiness Survey',
+  subtitle: 'Measure awareness, not worth. Intentions carry great weight in our lives.',
+  instructions: 'Rate each statement based on how true it feels right now.',
+  scale: ['Strongly Agree', 'Agree', 'Unsure', 'Disagree'],
+  scaleScores: [4, 3, 2, 1],
+  maxScore: 108,
+  sections: [
+    {
+      title: 'Tawakkul & Trust in Allah',
+      questions: [
+        { text: 'I believe Allah has chosen me for this child with wisdom.' },
+        { text: 'I trust that Allah will give me strength when I need it.' },
+        { text: 'I remind myself that ease follows hardship.' },
+        { text: "I turn to du'a when I feel anxious about motherhood." },
+        { text: 'I believe my sincere effort is valued by Allah.' }
+      ],
+      duaPrompt: 'Ya Allah, place tranquility in my heart and trust in Your plan.',
+      reflectionPrompt: 'One feeling I want to acknowledge today'
+    },
+    {
+      title: 'Emotional Readiness',
+      questions: [
+        { text: 'I allow myself to feel emotions without guilt.' },
+        { text: 'I practice patience with myself during this phase.' },
+        { text: 'I accept that fear and hope can exist together.' },
+        { text: 'I remind myself that growth takes time.' },
+        { text: 'I forgive myself for moments of weakness.' }
+      ],
+      duaPrompt: 'Ya Allah, grant me sabr that brings peace, not exhaustion.',
+      reflectionPrompt: 'One intention I make today for myself or my child'
+    },
+    {
+      title: 'Amanah & Intention (Niyyah)',
+      questions: [
+        { text: 'I see motherhood as an amanah from Allah.' },
+        { text: 'I intend to raise my child with love and good character.' },
+        { text: 'I focus on effort over perfection.' },
+        { text: "I make du'a for my child's faith and character." },
+        { text: 'I remind myself that small acts done sincerely matter.' },
+        { text: 'I understand that childbirth and motherhood may not go as planned.' },
+        { text: 'I am open to change.' },
+        { text: 'I remind myself that comparison is unnecessary.' }
+      ],
+      duaPrompt: 'Ya Allah, help me fulfill this amanah with mercy and wisdom.'
+    },
+    {
+      title: 'Self-Compassion & Balance',
+      questions: [
+        { text: 'I care for my body, health & fitness.' },
+        { text: 'I allow myself rest without guilt.' },
+        { text: 'I listen to my body and rest when needed.' },
+        { text: 'I express discomfort or concerns instead of ignoring them.' },
+        { text: 'I eat mindfully without obsessing over perfection.' },
+        { text: 'I manage stress in healthy ways.' },
+        { text: 'I feel emotionally supported during pregnancy.' },
+        { text: 'I believe caring for myself helps me care for my child.' },
+        { text: 'I allow myself small moments of joy or relaxation.' }
+      ],
+      duaPrompt: 'Ya Allah, help me be gentle with myself as You are Gentle with me.',
+      reflectionPrompt: 'One way I will care for myself today'
+    }
+  ],
+  scoreRanges: [
+    {
+      min: 87,
+      max: 108,
+      label: 'Strong Tawakkul & Emotional Readiness',
+      description:
+        'You are approaching motherhood with faith, awareness, and trust. Continue nurturing your connection with Allah and yourself.'
+    },
+    {
+      min: 55,
+      max: 86,
+      label: 'Growing',
+      description:
+        "You are on a healthy path of learning and adjustment. Strengthen support systems and increase moments of du'a and rest."
+    },
+    {
+      min: 0,
+      max: 54,
+      label: 'Needing Extra Support',
+      description:
+        'This phase may feel heavy. Seeking support\u2014spiritual, emotional, or professional\u2014is encouraged and rewarded in Islam.'
+    }
+  ],
+  lightMoments: [
+    { prompt: 'When people give me pregnancy advice, I...' },
+    { prompt: 'My emotions during pregnancy are...' },
+    { prompt: 'When I think about labor, I feel...' },
+    { prompt: 'My current sleep quality is...' }
+  ],
+  closingReflections: [
+    "One du'a I want to make daily for myself",
+    "One du'a I want to make daily for my child",
+    'One Islamic value I hope to model as a mother'
+  ],
+  affirmations: [
+    'Allah chose me for this child.',
+    "My effort, intention, and du'a are enough.",
+    'I am allowed to grow into motherhood.',
+    "Allah's help will come at the right time."
+  ],
+  importantNote: 'Struggle does not indicate weakness; it indicates responsibility and care.'
+};
 </script>
 
 <template>
@@ -43,7 +149,7 @@ definePageMeta({
               <img
                 src="/hero/home-1.jpg"
                 alt="Pregnancy and motherhood preparation"
-                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg h-48 sm:h-64 md:h-80 lg:h-96"
+                class="mx-auto rounded-2xl lg:rounded-3xl w-full max-w-4xl object-cover shadow-lg aspect-video max-h-[28rem]"
               />
             </div>
           </div>
@@ -622,6 +728,25 @@ definePageMeta({
         </Motion>
       </div>
     </section>
+
+    <!-- Motherhood Readiness Survey -->
+    <SurveyForm
+      :title="surveyData.title"
+      :subtitle="surveyData.subtitle"
+      :instructions="surveyData.instructions"
+      :scale="surveyData.scale"
+      :scale-scores="surveyData.scaleScores"
+      :sections="surveyData.sections"
+      :max-score="surveyData.maxScore"
+      :score-ranges="surveyData.scoreRanges"
+      :light-moments="surveyData.lightMoments"
+      :closing-reflections="surveyData.closingReflections"
+      :affirmations="surveyData.affirmations"
+      :important-note="surveyData.importantNote"
+    />
+
+    <!-- Weekly Wellness Planner -->
+    <WeeklyPlanner />
 
     <!-- Evidence-Based Sources -->
     <section class="px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-neutral-950">

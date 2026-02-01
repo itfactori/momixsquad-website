@@ -100,13 +100,13 @@ const handleError = () => clearError({ redirect: '/' });
                 Mom Development
               </NuxtLink>
               <NuxtLink
-                to="/care"
+                to="/care/care"
                 class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
               >
                 Mom Care
               </NuxtLink>
               <NuxtLink
-                to="/hobbies"
+                to="/hobbies/hobbies"
                 class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline"
               >
                 Hobbies & Tips

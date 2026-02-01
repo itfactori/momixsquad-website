@@ -20,14 +20,14 @@ const categories = [
   },
   {
     title: 'Mom Care',
-    to: '/care',
+    to: '/care/care',
     icon: 'i-heroicons-heart',
     color: 'secondary' as const,
     description: 'Self-care, wellness, mental health & work-life balance'
   },
   {
     title: 'Hobbies & Tips',
-    to: '/hobbies',
+    to: '/hobbies/hobbies',
     icon: 'i-heroicons-sparkles',
     color: 'accent' as const,
     description: 'Creative hobbies and personal growth activities for moms'
