@@ -7,7 +7,7 @@ export default defineAppConfig({
       alt: 'Momix Squad logo'
     },
     meetingLink: '/contact',
-    email: 'hello@momixsquad.com',
+    email: 'info@momixsquad.com',
     available: true
   },
   ui: {

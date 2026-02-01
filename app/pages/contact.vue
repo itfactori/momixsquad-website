@@ -32,6 +32,33 @@ const categories = [
 const isSubmitting = ref(false);
 const isSubmitted = ref(false);
 
+const newsletterEmail = ref('');
+const isSubscribing = ref(false);
+const subscribeSuccess = ref(false);
+const subscribeError = ref('');
+
+const handleNewsletter = async () => {
+  if (!newsletterEmail.value) return;
+  isSubscribing.value = true;
+  subscribeError.value = '';
+
+  try {
+    const response = await $fetch('/api/newsletter', {
+      method: 'POST',
+      body: { email: newsletterEmail.value }
+    });
+
+    if (response.success) {
+      subscribeSuccess.value = true;
+      newsletterEmail.value = '';
+    }
+  } catch (error: any) {
+    subscribeError.value = error?.data?.message || 'Something went wrong. Please try again.';
+  } finally {
+    isSubscribing.value = false;
+  }
+};
+
 const handleSubmit = async () => {
   isSubmitting.value = true;
 
@@ -79,8 +106,8 @@ const contactInfo = [
     icon: 'i-heroicons-clock',
     title: 'Response Time',
     description: "We're here for you",
-    value: 'Within 24-48 hours',
-    href: '#'
+    value: 'Within 24 hours',
+    href: 'mailto:info@momixsquad.com'
   }
 ];
 
@@ -109,7 +136,7 @@ const socialLinks = [
 <template>
   <div>
     <!-- Page Header -->
-    <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-20 sm:py-28">
+    <section class="relative overflow-hidden bg-neutral-50 dark:bg-deep-purple-950 py-20 sm:py-28">
       <div class="absolute inset-0 mesh-bg" />
       <div
         class="absolute inset-0 bg-gradient-to-b from-primary-100/30 dark:from-primary-900/20 to-transparent"
@@ -128,12 +155,12 @@ const socialLinks = [
             Get in Touch
           </div>
           <h1
-            class="font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 sm:text-5xl lg:text-6xl"
+            class="font-display text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:text-6xl"
           >
             We'd Love to Hear from You
           </h1>
           <p
-            class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-xl"
+            class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-pink-200 sm:text-xl"
           >
             Whether you have a question, feedback, or just want to say hi - we're here for you.
             Reach out and let's connect!
@@ -143,7 +170,7 @@ const socialLinks = [
     </section>
 
     <!-- Contact Info Cards -->
-    <section class="bg-white dark:bg-neutral-900 py-12 sm:py-16">
+    <section class="bg-white dark:bg-deep-purple-900 py-12 sm:py-16">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
           <Motion
@@ -153,9 +180,10 @@ const socialLinks = [
             :animate="{ opacity: 1, y: 0 }"
             :transition="{ duration: 0.5, delay: index * 0.1 }"
           >
-            <a
-              :href="info.href"
-              class="group flex items-start gap-4 rounded-2xl bg-neutral-50 dark:bg-neutral-800 p-6 shadow-lg ring-1 ring-neutral-200 dark:ring-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary-300 dark:hover:ring-primary-700"
+            <component
+              :is="info.href !== '#' ? 'a' : 'div'"
+              :href="info.href !== '#' ? info.href : undefined"
+              class="group flex items-start gap-4 rounded-2xl bg-neutral-50 dark:bg-deep-purple-950/60 p-6 shadow-lg ring-1 ring-neutral-200 dark:ring-purple-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-primary-300 dark:hover:ring-primary-700"
             >
               <div
                 class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 transition-colors group-hover:bg-primary-500 group-hover:text-white"
@@ -163,27 +191,24 @@ const socialLinks = [
                 <UIcon :name="info.icon" class="h-6 w-6" />
               </div>
               <div>
-                <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-neutral-50">
+                <h3 class="font-display text-lg font-bold text-neutral-900 dark:text-white">
                   {{ info.title }}
                 </h3>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                <p class="mt-1 text-sm text-neutral-600 dark:text-pink-200">
                   {{ info.description }}
                 </p>
-                <a
-                  :href="info.href"
-                  class="mt-2 block font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-                >
+                <span class="mt-2 block font-medium text-primary-600 dark:text-primary-400">
                   {{ info.value }}
-                </a>
+                </span>
               </div>
-            </a>
+            </component>
           </Motion>
         </div>
       </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="relative overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-20 sm:py-28">
+    <section class="relative overflow-hidden bg-neutral-50 dark:bg-deep-purple-950 py-20 sm:py-28">
       <div class="absolute inset-0 mesh-bg opacity-50" />
 
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -195,14 +220,14 @@ const socialLinks = [
             :transition="{ duration: 0.6 }"
           >
             <div
-              class="rounded-3xl bg-white dark:bg-neutral-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-neutral-800 sm:p-10"
+              class="rounded-3xl bg-white dark:bg-deep-purple-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-purple-800 sm:p-10"
             >
               <h2
-                class="font-display text-2xl font-bold text-neutral-900 dark:text-neutral-50 sm:text-3xl"
+                class="font-display text-2xl font-bold text-neutral-900 dark:text-white sm:text-3xl"
               >
                 Send Us a Message
               </h2>
-              <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+              <p class="mt-2 text-neutral-600 dark:text-pink-200">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
 
@@ -231,7 +256,7 @@ const socialLinks = [
                     Message Sent Successfully!
                   </h3>
                   <p class="mt-2 text-sm text-emerald-700 dark:text-emerald-300">
-                    Thank you for reaching out. We'll get back to you within 24-48 hours.
+                    Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
                   <UButton
                     color="success"
@@ -252,7 +277,7 @@ const socialLinks = [
                   <div>
                     <label
                       for="name"
-                      class="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                      class="block text-sm font-medium text-neutral-700 dark:text-pink-200"
                     >
                       Your Name *
                     </label>
@@ -262,7 +287,7 @@ const socialLinks = [
                       type="text"
                       required
                       placeholder="Jane Smith"
-                      class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                      class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-purple-800 bg-white dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                     />
                   </div>
 
@@ -270,7 +295,7 @@ const socialLinks = [
                   <div>
                     <label
                       for="email"
-                      class="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                      class="block text-sm font-medium text-neutral-700 dark:text-pink-200"
                     >
                       Email Address *
                     </label>
@@ -280,7 +305,7 @@ const socialLinks = [
                       type="email"
                       required
                       placeholder="jane@example.com"
-                      class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                      class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-purple-800 bg-white dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                     />
                   </div>
                 </div>
@@ -289,14 +314,14 @@ const socialLinks = [
                 <div>
                   <label
                     for="category"
-                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    class="block text-sm font-medium text-neutral-700 dark:text-pink-200"
                   >
                     Category
                   </label>
                   <select
                     id="category"
                     v-model="form.category"
-                    class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-purple-800 bg-white dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                   >
                     <option value="">Select a category</option>
                     <option v-for="cat in categories" :key="cat.value" :value="cat.value">
@@ -309,7 +334,7 @@ const socialLinks = [
                 <div>
                   <label
                     for="subject"
-                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    class="block text-sm font-medium text-neutral-700 dark:text-pink-200"
                   >
                     Subject *
                   </label>
@@ -319,7 +344,7 @@ const socialLinks = [
                     type="text"
                     required
                     placeholder="What's this about?"
-                    class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    class="mt-2 block w-full rounded-xl border-neutral-300 dark:border-purple-800 bg-white dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
 
@@ -327,7 +352,7 @@ const socialLinks = [
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    class="block text-sm font-medium text-neutral-700 dark:text-pink-200"
                   >
                     Your Message *
                   </label>
@@ -337,7 +362,7 @@ const socialLinks = [
                     required
                     rows="5"
                     placeholder="Tell us how we can help..."
-                    class="mt-2 block w-full resize-none rounded-xl border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    class="mt-2 block w-full resize-none rounded-xl border-neutral-300 dark:border-purple-800 bg-white dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
 
@@ -370,12 +395,12 @@ const socialLinks = [
             <div class="space-y-8">
               <!-- Social Links -->
               <div
-                class="rounded-3xl bg-white dark:bg-neutral-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-neutral-800"
+                class="rounded-3xl bg-white dark:bg-deep-purple-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-purple-800"
               >
-                <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
+                <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-white">
                   Connect With Us
                 </h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+                <p class="mt-2 text-neutral-600 dark:text-pink-200">
                   Follow us on social media for tips, updates, and mom community moments.
                 </p>
                 <!-- Social Media -->
@@ -387,7 +412,7 @@ const socialLinks = [
                     target="_blank"
                     rel="noopener noreferrer"
                     :aria-label="social.label"
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 dark:bg-deep-purple-950/60 text-neutral-500 dark:text-pink-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     :class="social.color"
                   >
                     <UIcon :name="social.icon" class="h-6 w-6" />
@@ -397,11 +422,11 @@ const socialLinks = [
 
               <!-- FAQ Teaser -->
               <div
-                class="rounded-3xl bg-gradient-to-br from-primary-100 to-amber-100 dark:from-primary-950/50 dark:to-amber-950/50 p-8 shadow-xl ring-1 ring-neutral-200/50 dark:ring-neutral-700/50"
+                class="rounded-3xl bg-gradient-to-br from-primary-100 to-amber-100 dark:from-primary-950/50 dark:to-amber-950/50 p-8 shadow-xl ring-1 ring-neutral-200/50 dark:ring-purple-800/50"
               >
                 <div class="flex items-start gap-4">
                   <div
-                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 dark:bg-neutral-900/80 shadow-lg"
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 dark:bg-deep-purple-900/80 shadow-lg"
                   >
                     <UIcon
                       name="i-heroicons-question-mark-circle"
@@ -409,12 +434,10 @@ const socialLinks = [
                     />
                   </div>
                   <div>
-                    <h3
-                      class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50"
-                    >
+                    <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-white">
                       Frequently Asked Questions
                     </h3>
-                    <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+                    <p class="mt-2 text-neutral-600 dark:text-pink-200">
                       Have questions? Check out our FAQ section for quick answers to common
                       questions.
                     </p>
@@ -439,25 +462,51 @@ const socialLinks = [
 
               <!-- Newsletter -->
               <div
-                class="rounded-3xl bg-white dark:bg-neutral-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-neutral-800"
+                class="rounded-3xl bg-white dark:bg-deep-purple-900 p-8 shadow-xl ring-1 ring-neutral-200 dark:ring-purple-800"
               >
-                <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-neutral-50">
+                <h3 class="font-display text-xl font-bold text-neutral-900 dark:text-white">
                   Stay in the Loop
                 </h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">
+                <p class="mt-2 text-neutral-600 dark:text-pink-200">
                   Subscribe to our newsletter for exclusive tips, resources, and mom community
                   updates.
                 </p>
-                <form class="mt-6 flex gap-2" @submit.prevent>
+                <div
+                  v-if="subscribeSuccess"
+                  class="mt-6 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 p-4 border border-emerald-200 dark:border-emerald-800"
+                >
+                  <div class="flex items-center gap-2">
+                    <UIcon
+                      name="i-heroicons-check-circle"
+                      class="h-5 w-5 text-emerald-600 dark:text-emerald-400"
+                    />
+                    <p class="text-sm font-medium text-emerald-800 dark:text-emerald-200">
+                      You're subscribed! Check your inbox for a welcome email.
+                    </p>
+                  </div>
+                </div>
+                <form v-else class="mt-6 flex gap-2" @submit.prevent="handleNewsletter">
                   <input
+                    v-model="newsletterEmail"
                     type="email"
                     placeholder="Your email"
-                    class="flex-1 rounded-xl border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 px-4 py-3 text-neutral-900 dark:text-neutral-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    class="flex-1 rounded-xl border-neutral-300 dark:border-purple-800 bg-neutral-50 dark:bg-deep-purple-950/60 px-4 py-3 text-neutral-900 dark:text-pink-100 placeholder-neutral-500 dark:placeholder-neutral-400 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                    required
                   />
-                  <UButton color="primary" size="lg" variant="solid" type="submit">
-                    Subscribe
+                  <UButton
+                    color="primary"
+                    size="lg"
+                    variant="solid"
+                    type="submit"
+                    :loading="isSubscribing"
+                    :disabled="isSubscribing"
+                  >
+                    {{ isSubscribing ? 'Subscribing...' : 'Subscribe' }}
                   </UButton>
                 </form>
+                <p v-if="subscribeError" class="mt-2 text-sm text-red-600 dark:text-red-400">
+                  {{ subscribeError }}
+                </p>
               </div>
             </div>
           </Motion>
